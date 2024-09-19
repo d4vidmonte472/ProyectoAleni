@@ -15,9 +15,31 @@
     <script src="validacion.js" defer></script>
 </head>
 <body>
-<form id="formularioQueja" method="POST" action="GuardarConsumidor.jsp">
-    <div class="dformC">
-    
+   
+    <nav>
+        <ul>
+            <li>
+                <a href="">MENU PRINCIPAL</a>
+            </li>
+
+            <li>
+                <a href="">QUEJAS DIACO</a>
+            </li>
+
+            <li>
+                <a href="">CARDIONICA</a>
+            </li>
+
+            <li>
+                <a href="">CONTACTO  </a>
+            </li>
+        </ul>
+    </nav>
+    <h1>FORMULARIO DE QUEJAS DIACO</h1>
+    <form id="formularioQueja" method="POST" action="GuardarConsumidor.jsp">
+
+    <div class="dformC" id="seccion1">
+        
         <label for="nacionalidad">Elige una nacionalidad:</label>
         <select id="nacionalidad" name="nacionalidad" required>
             <option value="guatemalteco">Guatemalteco</option>
@@ -149,22 +171,24 @@
     <label>
     No<input type="radio" id="comI" name="comI" required value="n"> 
     </label>
-    <div>
+    </div>
     
 </div>
 
     <div>
+        
             <label for="empresa">Nombre de la Empresa:</label>
+           
             <input type="text" id="empresa" name="empresa" required minlength="3" placeholder="Nombre de la Empresa">
         
             <label for="razon-social">Razón Social:</label>
             <input type="text" id="razon-social" name="razon-social" required minlength="3" placeholder="Razón Social">
         
             <label for="NIT">NIT:</label>
-            <input type="number" id="NIT" name="NIT" required placeholder="Ingrese el NIT">
+            <input type="number" id="NITP" name="NITP" required placeholder="Ingrese el NIT">
         
             <label for="direccion">Dirección:</label>
-            <input type="text" id="direccion" name="direccion" required minlength="5" placeholder="Ingrese la dirección">
+            <input type="text" id="direccionP" name="direccionP" required minlength="5" placeholder="Ingrese la dirección">
         
             <label for="zonaP">Zona:</label>
             <select id="zonaP" name="zonaP" required>
@@ -228,10 +252,12 @@
                 <textarea id="detalle" name="detalle" class="textarea-grande" placeholder="Escribe el detalle de queja aquí..."></textarea>
             </p>
             <p>
-                <label for="Solicitud">Solicitud:</laber><br>
+                <label for="Solicitud">Solicitud:</label><br>
                 <textarea id="solicitud" name="solicitud" class="textarea-grande" placeholder="Escribe su solicitud aquí..."></textarea>
 
             </p>
+            <label for="pruebas">ADJUNTAR PRUEBAS</label>
+            <input type="file" name="pruebas">aqui puede adjuntar archivos o imagenes para poder probar lo que dice.
         
     </div>
     <input type="submit" value="Enviar">

@@ -1,2 +1,3 @@
 com\aleni\mavenproject1\resources\JakartaEE10Resource.class
+com\aleni\mavenproject1\servlets\svGuardarConsumidor.class
 com\aleni\mavenproject1\JakartaRestConfiguration.class

@@ -33,10 +33,11 @@
             <li>
                 <a href="">CONTACTO  </a>
             </li>
+            <li><a href="Inicio_sesion.jsp">INICIO DE SESION</a></li>
         </ul>
     </nav>
     <h1>FORMULARIO DE QUEJAS DIACO</h1>
-    <form id="formularioQueja" method="POST" action="GuardarConsumidor.jsp">
+    <form id="formularioQueja" method="POST" action="GuardarConsumidor">
 
     <div class="dformC" id="seccion1">
         
@@ -260,6 +261,7 @@
             <input type="file" name="pruebas">aqui puede adjuntar archivos o imagenes para poder probar lo que dice.
         
     </div>
+
     <input type="submit" value="Enviar">
 </form>
     <script src="municipiosP.js"></script>

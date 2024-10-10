@@ -4,9 +4,25 @@
         <servlet-name>svGuardarConsumidor</servlet-name>
         <servlet-class>Servlets.svGuardarConsumidor</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>svGuardarUsuario</servlet-name>
+        <servlet-class>Servlets.svGuardarProveedor</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>svGuardarQueja</servlet-name>
+        <servlet-class>Servlets.svGuardarQueja</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
         <url-pattern>/svGuardarConsumidor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>svGuardarUsuario</servlet-name>
+        <url-pattern>/svGuardarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>svGuardarQueja</servlet-name>
+        <url-pattern>/svGuardarQueja</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

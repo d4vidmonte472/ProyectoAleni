@@ -16,7 +16,13 @@ import java.util.ArrayList;
 import java.util.List;
 import Clases.Consumidor;
 import java.io.File;
-/**
+import jakarta.servlet.AsyncContext;
+import java.nio.file.Path;
+
+
+
+
+/*
  *
  * @author david
  */
@@ -71,17 +77,21 @@ public class svGuardarConsumidor extends HttpServlet {
         listaConsumidor.add(consumidor);
         
         
+        
         try {
-            File myObj = new File("C:\\Users\\david\\OneDrive\\Desktop\\consumidor.csv");
+            
+            
+            File myObj = new File("C:\\Users\\david\\OneDrive\\Desktop\\consumidores.csv");
+         
       if (myObj.exists()==false) {
         
-                try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\consumidor.txt")) {
+                try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\consumidores.txt")) {
                     myWriter.append("nacionalidad,tipoConsumidor,nit,dpi,nombre1,nombre2,apellido1,apellido2,apellidoCasada,direccion,zona,departamento,municipio,sede,telDom,tel,telRef,correo,autorizacion,sexo");
                 }
-      } else {
+      } else {  
         System.out.println("File already exists.");
       }
-            try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\consumidor.txt", true)) {
+            try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\consumidores.txt", true)) {
                 
                 
                myWriter.append("\n"+consumidor.nacionalidad+","+consumidor.tipoConsumidor+","+consumidor.nit+","+consumidor.dpi+","

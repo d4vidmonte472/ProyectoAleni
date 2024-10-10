@@ -159,7 +159,7 @@
 
     <label for="compI">Autorizo a publicar informacion:</label>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="true" id="flexCheckDefault">
+  <input class="form-check-input" type="checkbox" value="true" id="flexCheckDefault" name="check">
   <label class="form-check-label" for="flexCheckDefault">
     Autorizo
   </label>

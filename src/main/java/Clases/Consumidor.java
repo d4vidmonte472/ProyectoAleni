@@ -29,13 +29,13 @@ public class Consumidor {
         public  int tel;
         public  int telRef;
         public  String correo;
-        public  String autorizacion;
+        public  boolean autorizacion;
         public String sexo;
         
 //Constructores
 public Consumidor(){};
 
-public Consumidor(String nacionalidad, String tipoConsumidor, int nit, int dpi, String nombre1, String nombre2, String apellido1, String apellido2, String apellidoCasada, String direccion, String zona, String departamento, String municipio, String sedeDiaco, int telDom, int tel, int telRef, String correo, String autorizacion, String sexo) {
+public Consumidor(String nacionalidad, String tipoConsumidor, int nit, int dpi, String nombre1, String nombre2, String apellido1, String apellido2, String apellidoCasada, String direccion, String zona, String departamento, String municipio, String sedeDiaco, int telDom, int tel, int telRef, String correo, boolean autorizacion, String sexo) {
     this.nacionalidad = nacionalidad;
     this.tipoConsumidor = tipoConsumidor;
     this.nit = nit;
@@ -130,7 +130,7 @@ public String getCorreo() {
     return correo;
 }
 
-public String getAutorizacion() {
+public boolean getAutorizacion() {
     return autorizacion;
 }
 
@@ -212,7 +212,7 @@ public void setCorreo(String correo) {
     this.correo = correo;
 }
 
-public void setAutorizacion(String autorizacion) {
+public void setAutorizacion(boolean autorizacion) {
     this.autorizacion = autorizacion;
 }
 

@@ -18,6 +18,8 @@ import Clases.Consumidor;
 import java.io.File;
 import jakarta.servlet.AsyncContext;
 import java.nio.file.Path;
+import Clases.Proveedor;
+import Clases.Quejas;
 
 
 
@@ -109,6 +111,88 @@ public class svGuardarConsumidor extends HttpServlet {
       e.printStackTrace();
     }
 
+        
+         String nombreEmpresa = request.getParameter("empresa");
+        String razonSocial = request.getParameter("razon-social");
+        int nitP = Integer.parseInt(request.getParameter("NITP"));
+        String direccionP = request.getParameter("direccionP");
+        String zonaP = request.getParameter("zonaP");
+        String departamentoP = request.getParameter("departamentoP");
+        String municipioP = request.getParameter("municipioP");
+        int telefono = Integer.parseInt(request.getParameter("telefono"));
+        String email = request.getParameter("email");
+     
+        
+        
+        Proveedor proveedor = new Proveedor(nombreEmpresa, razonSocial, nitP,direccionP,zonaP,departamentoP,municipioP,telefono,email);
+        List<Proveedor> listaProveedor = new ArrayList<>();
+        
+        listaProveedor.add(proveedor);
+        
+
+try {
+           File myObj = new File("C:\\Users\\david\\OneDrive\\Desktop\\proveedores.csv");
+         
+      if (myObj.exists()==false) {
+        
+                try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\proveedores.txt")) {
+                    myWriter.append("empresa,razon-social,NITP,direccionP,zonaP,departamentoP,municipioP,telefono,email");
+                }
+      } else {  
+        System.out.println("File already exists.");
+      }
+            try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\proveedores.txt", true)) {
+                
+                
+               myWriter.append("\n"+proveedor.getNombreEmpresa()+","+proveedor.getRazonSocial()+","+proveedor.getNit()+","+proveedor.getDireccion()+","+proveedor.getZona()
++","+ proveedor.getDepartamento()+","+proveedor.getMunicipio()+","+proveedor.getTelefono()+","+proveedor.getCorreo());
+            myWriter.close();
+            }
+      
+     
+     
+      System.out.println("Successfully wrote to the file.");
+    } catch (IOException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
+
+int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
+         String fecha = request.getParameter("fecha");
+         String detalle = request.getParameter("detalle");
+         String solicitud = request.getParameter("solicitud");
+         File pruebas = new File(request.getParameter("pruebas"));
+         
+         Quejas quejas = new Quejas(numDoc, fecha, detalle, solicitud);
+         List<Quejas> listaQuejas = new ArrayList<>();
+         listaQuejas.add(quejas);
+         
+         
+         try {
+           File myObj = new File("C:\\Users\\david\\OneDrive\\Desktop\\quejas.csv");
+         
+      if (myObj.exists()==false) {
+        
+                try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\quejas.txt")) {
+                    myWriter.append("NumDoc,fecha,detalle,solicitud");
+                }
+      } else {  
+        System.out.println("File already exists.");
+      }
+            try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\quejas.txt", true)) {
+                
+                
+               myWriter.append("\n"+quejas.getNumDoc()+","+quejas.getFecha()+","+quejas.getDetalle()+","+quejas.getSolicitud());
+            myWriter.close();
+            }
+      
+     
+     
+      System.out.println("Successfully wrote to the file.");
+    } catch (IOException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
         // Respuesta de éxito
         response.getWriter().println("Datos guardados correctamente.");
     

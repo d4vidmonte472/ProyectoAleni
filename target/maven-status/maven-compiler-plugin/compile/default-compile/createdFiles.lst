@@ -1,6 +1,8 @@
 Servlets\svGuardarConsumidor.class
+Servlets\svGuardarProveedor.class
 Clases\Proveedor.class
 Clases\Quejas.class
 Clases\Consumidor.class
+Servlets\svGuardarQueja.class
 com\aleni\proyectoaleni\JakartaRestConfiguration.class
 com\aleni\proyectoaleni\resources\JakartaEE10Resource.class

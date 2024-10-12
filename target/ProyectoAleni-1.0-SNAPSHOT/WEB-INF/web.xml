@@ -4,9 +4,17 @@
         <servlet-name>svGuardarConsumidor</servlet-name>
         <servlet-class>Servlets.svGuardarConsumidor</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SvLogin</servlet-name>
+        <servlet-class>Servlets.SvLogin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
         <url-pattern>/svGuardarConsumidor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvLogin</servlet-name>
+        <url-pattern>/SvLogin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

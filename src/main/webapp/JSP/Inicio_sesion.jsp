@@ -28,7 +28,7 @@
 
 <div class="container">
     <h1>Inicio de Sesión</h1>
-    <form action="dashboard.html" method="POST"> <!-- Cambia la acción según tu necesidad -->
+    <form action="SvLogin.java" method="POST"> <!-- Cambia la acción según tu necesidad -->
         <label for="username">Nombre de usuario:</label>
         <input type="text" id="username" name="username" required>
 

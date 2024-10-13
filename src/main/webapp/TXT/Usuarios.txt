@@ -1,0 +1,2 @@
+ferxo,1234,true
+boa,5678,false

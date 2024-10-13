@@ -4,12 +4,16 @@
  */
 package Servlets;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.nio.file.*;
+import java.util.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.*;
+
+import Clases.Usuario;
 
 /**
  *
@@ -28,19 +32,8 @@ public class SvLogin extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet SvLogin</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet SvLogin at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -67,9 +60,50 @@ public class SvLogin extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Obtener los parámetros del formulario
+        String usernameIngresado = request.getParameter("username");
+        String passwordIngresado = request.getParameter("password");
+
+        // Obtener el ServletContext
+        ServletContext contexto = getServletContext();
+
+        // Obtener la ruta real del archivo usuarios.txt
+        String rutaArchivo = contexto.getRealPath("/TXT/Usuarios.txt");
+
+        // Leer las líneas del archivo
+        List<String> lineas = Files.readAllLines(Paths.get(rutaArchivo));
+        System.out.println("Ruta del archivo: " + rutaArchivo);
+
+        // Lista para almacenar los usuarios
+        List<Usuario> usuarios = new ArrayList<>();
+
+        // Crear objetos Usuario a partir de cada línea del archivo
+        for (String linea : lineas) {
+            String[] partes = linea.split(",");
+            if (partes.length == 3) {
+                String usuarioTxt = partes[0].trim();
+                String passwordTxt = partes[1].trim();
+                boolean esMaster = Boolean.parseBoolean(partes[2].trim());
+
+                usuarios.add(new Usuario(usuarioTxt, passwordTxt, esMaster));
+            }
+        }
+
+        // Verificar las credenciales del usuario ingresado
+        boolean loginExitoso = usuarios.stream()
+                .anyMatch(u -> u.Login(usernameIngresado, passwordIngresado));
+
+        if (loginExitoso) {
+            // Redirigir a una página JSP si el login es exitoso
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Menu_master.jsp");
+            dispatcher.forward(request, response);
+        } else {
+            // Mostrar un mensaje de error en la misma página
+            request.setAttribute("loginError", "Usuario o contraseña incorrectos");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+            dispatcher.forward(request, response);
+        }
     }
 
     /**

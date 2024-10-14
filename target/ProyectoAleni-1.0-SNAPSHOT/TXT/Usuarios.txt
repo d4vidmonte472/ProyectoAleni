@@ -1,2 +1,2 @@
-ferxo,1234,true
-boa,5678,false
+ferxo,1234,Master
+boa,5678,Admin

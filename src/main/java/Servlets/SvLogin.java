@@ -77,35 +77,57 @@ public class SvLogin extends HttpServlet {
 
         // Lista para almacenar los usuarios
         List<Usuario> usuarios = new ArrayList<>();
+        Usuario tipo =  new Usuario();
+        
 
+
+
+
+        
         // Crear objetos Usuario a partir de cada línea del archivo
         for (String linea : lineas) {
             String[] partes = linea.split(",");
             if (partes.length == 3) {
                 String usuarioTxt = partes[0].trim();
                 String passwordTxt = partes[1].trim();
-                boolean esMaster = Boolean.parseBoolean(partes[2].trim());
+                String esMaster = partes[2].trim();
 
+                
                 usuarios.add(new Usuario(usuarioTxt, passwordTxt, esMaster));
+            }
+        }
+        
+       for (Usuario u : usuarios) {
+            if (u.Login(usernameIngresado, passwordIngresado)) {
+                tipo = u;
+                break;  // Detenemos el bucle si encontramos el usuario.
             }
         }
 
         // Verificar las credenciales del usuario ingresado
-        boolean loginExitoso = usuarios.stream()
-                .anyMatch(u -> u.Login(usernameIngresado, passwordIngresado));
+        boolean loginExitoso = usuarios.stream().anyMatch(u -> u.Login(usernameIngresado, passwordIngresado));
 
         if (loginExitoso) {
             // Redirigir a una página JSP si el login es exitoso
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Menu_master.jsp");
-            dispatcher.forward(request, response);
-        } else {
-            // Mostrar un mensaje de error en la misma página
-            request.setAttribute("loginError", "Usuario o contraseña incorrectos");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
-            dispatcher.forward(request, response);
-        }
-    }
+            if ("Master".equals(tipo.getMaster())) {
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Master/Menu_master.jsp");
+                dispatcher.forward(request, response);
+            } 
+            else {
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Admin/Menu_admin.jsp");
+                dispatcher.forward(request, response);
+            }
 
+            
+            } 
+        else {
+                // Mostrar un mensaje de error en la misma página
+                request.setAttribute("loginError", "Usuario o contraseña incorrectos");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+                dispatcher.forward(request, response);
+            }
+    }
+        
     /**
      * Returns a short description of the servlet.
      *

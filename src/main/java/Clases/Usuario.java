@@ -11,12 +11,12 @@ package Clases;
 public class Usuario {
     private String Usuario;
     private String password;
-    private boolean master;
+    private String  master;
 
     public Usuario(){
         
     }
-    public Usuario(String Usuario, String password, boolean master) {
+    public Usuario(String Usuario, String password, String master) {
         this.Usuario = Usuario;
         this.password = password;
         this.master = master;
@@ -38,14 +38,15 @@ public class Usuario {
         this.password = password;
     }
 
-    public boolean isMaster() {
+    public String getMaster() {
         return master;
     }
 
-    public void setMaster(boolean master) {
+    public void setMaster(String master) {
         this.master = master;
     }
     
+     
     public boolean Login (String usr, String pass){
         
         boolean x = false; 

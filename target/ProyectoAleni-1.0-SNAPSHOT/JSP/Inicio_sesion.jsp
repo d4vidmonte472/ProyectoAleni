@@ -11,13 +11,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
-    <link rel="stylesheet" href="../CSS/styles.css"> <!-- Asegúrate de que la ruta sea correcta -->
+    <link rel="stylesheet" href="../CSS/styles.css"> 
 </head>
 <body>
 
     <nav>
         <ul>
-            <li><a href="Inicio.jsp">INICIO</a></li>
+            <li><a href="../index.jsp">INICIO</a></li>
             <li><a href="Cardionica.jsp">CARDIONICA</a></li>
             <li><a href="planes.jsp">PLANES</a></li>
             <li><a href="Quejas.jsp">QUEJAS DIACO</a></li>
@@ -28,7 +28,7 @@
 
 <div class="container">
     <h1>Inicio de Sesión</h1>
-    <form action="dashboard.html" method="POST"> <!-- Cambia la acción según tu necesidad -->
+    <form action="${pageContext.request.contextPath}/SvLogin" method="POST"> 
         <label for="username">Nombre de usuario:</label>
         <input type="text" id="username" name="username" required>
 

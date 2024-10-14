@@ -24,7 +24,7 @@
             <li><a href="JSP/servicios.jsp">PLANES</a></li>
             <li><a href="JSP/Contacto.jsp">CONTACTO</a></li>
             <li><a href="JSP/Quejas.jsp">QUEJAS DIACO</a></li>
-            <li><a href="JSP/servicios.jsp">INICIO SESION</a></li>
+            <li><a href="JSP/Inicio_sesion.jsp">INICIO SESION</a></li>
         </ul>
     </nav>
 

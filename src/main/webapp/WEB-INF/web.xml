@@ -5,26 +5,21 @@
         <servlet-class>Servlets.svGuardarConsumidor</servlet-class>
     </servlet>
     <servlet>
-<<<<<<< HEAD
         <servlet-name>svEditar</servlet-name>
         <servlet-class>Servlets.svEditar</servlet-class>
-=======
+
         <servlet-name>SvLogin</servlet-name>
         <servlet-class>Servlets.SvLogin</servlet-class>
->>>>>>> d69911d12ed2d456ebfd4a3476144a433de18a97
     </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
         <url-pattern>/svGuardarConsumidor</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-<<<<<<< HEAD
         <servlet-name>svEditar</servlet-name>
         <url-pattern>/svEditar</url-pattern>
-=======
         <servlet-name>SvLogin</servlet-name>
         <url-pattern>/SvLogin</url-pattern>
->>>>>>> d69911d12ed2d456ebfd4a3476144a433de18a97
     </servlet-mapping>
     <session-config>
         <session-timeout>

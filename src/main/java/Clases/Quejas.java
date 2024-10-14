@@ -13,16 +13,18 @@ public class Quejas {
     private String detalle;
     private String solicitud;
     private Proveedor prov;
-    private Consumidor Con;
+    private Consumidor con;
             
     //Constructores
     public Quejas(){};
 
-    public Quejas(int numDoc, String fecha, String detalle, String solicitud) {
+    public Quejas(int numDoc, String fecha, String detalle, String solicitud, Proveedor prov, Consumidor con) {
         this.numDoc = numDoc;
         this.fecha = fecha;
         this.detalle = detalle;
         this.solicitud = solicitud;
+        this.prov = prov; 
+        this.con = con; 
     }
 
     //Getters
@@ -40,6 +42,14 @@ public class Quejas {
 
     public String getSolicitud() {
         return solicitud;
+    }
+    
+    public Proveedor getProveedor(){
+        return prov;
+    }
+    
+    public Consumidor getConsumidor(){
+        return con;
     }
 
 
@@ -60,6 +70,13 @@ public class Quejas {
         this.solicitud = solicitud;
     }
     
+    public void setProveedor(Proveedor prov){
+        this.prov = prov;
+    }
+    
+    public void setConsumidor(Consumidor con){
+        this.con = con;
+    }
     
     public void guardarQueja(){
         

@@ -163,7 +163,7 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
          String solicitud = request.getParameter("solicitud");
          File pruebas = new File(request.getParameter("pruebas"));
          
-         Quejas quejas = new Quejas(numDoc, fecha, detalle, solicitud);
+         Quejas quejas = new Quejas(numDoc, fecha, detalle, solicitud, proveedor, consumidor);
          List<Quejas> listaQuejas = new ArrayList<>();
          listaQuejas.add(quejas);
          
@@ -182,7 +182,7 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
             try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\quejas.txt", true)) {
                 
                 
-               myWriter.append("\n"+quejas.getNumDoc()+","+quejas.getFecha()+","+quejas.getDetalle()+","+quejas.getSolicitud());
+               myWriter.append("\n"+quejas.getNumDoc()+","+quejas.getFecha()+","+quejas.getDetalle()+","+quejas.getSolicitud()+","+quejas.getProveedor()+","+quejas.getConsumidor());
             myWriter.close();
             }
       
@@ -194,7 +194,8 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
       e.printStackTrace();
     }
         // Respuesta de éxito
-        response.getWriter().println("Datos guardados correctamente.");
+        response.getWriter().println("Datos guardados correctamente. Su numero de queja es: ");
+        
     
     }
     @Override

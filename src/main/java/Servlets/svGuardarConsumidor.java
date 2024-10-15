@@ -12,14 +12,19 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.FileReader;
+import java.util.*;
 import Clases.Consumidor;
 import java.io.File;
 import jakarta.servlet.AsyncContext;
 import java.nio.file.Path;
 import Clases.Proveedor;
 import Clases.Quejas;
+import java.io.BufferedReader;
+import jakarta.servlet.*;
+import java.nio.file.*;
+import java.io.*;
+
 
 
 
@@ -79,10 +84,10 @@ public class svGuardarConsumidor extends HttpServlet {
         listaConsumidor.add(consumidor);
         
         
-        
+   
         try {
             
-            
+       /*     
             File myObj = new File("C:\\Users\\david\\OneDrive\\Desktop\\consumidores.csv");
          
       if (myObj.exists()==false) {
@@ -92,8 +97,13 @@ public class svGuardarConsumidor extends HttpServlet {
                 }
       } else {  
         System.out.println("File already exists.");
-      }
-            try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\consumidores.txt", true)) {
+      }*/
+       
+       ServletContext context = getServletContext();
+       String rutaArchivoConsumidor = context.getRealPath("/TXT/consumidores.txt");
+       
+       
+            try (FileWriter myWriter = new FileWriter(rutaArchivoConsumidor, true)) {
                 
                 
                myWriter.append("\n"+consumidor.nacionalidad+","+consumidor.tipoConsumidor+","+consumidor.nit+","+consumidor.dpi+","
@@ -131,7 +141,7 @@ public class svGuardarConsumidor extends HttpServlet {
         
 
 try {
-           File myObj = new File("C:\\Users\\david\\OneDrive\\Desktop\\proveedores.csv");
+       /*    File myObj = new File("C:\\Users\\david\\OneDrive\\Desktop\\proveedores.csv");
          
       if (myObj.exists()==false) {
         
@@ -140,8 +150,11 @@ try {
                 }
       } else {  
         System.out.println("File already exists.");
-      }
-            try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\proveedores.txt", true)) {
+      }*/
+       
+       ServletContext context = getServletContext();
+       String rutaArchivoProveedores = context.getRealPath("/TXT/proveedores.txt");
+            try (FileWriter myWriter = new FileWriter(rutaArchivoProveedores, true)) {
                 
                 
                myWriter.append("\n"+proveedor.getNombreEmpresa()+","+proveedor.getRazonSocial()+","+proveedor.getNit()+","+proveedor.getDireccion()+","+proveedor.getZona()
@@ -163,26 +176,63 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
          String solicitud = request.getParameter("solicitud");
          File pruebas = new File(request.getParameter("pruebas"));
          
-         Quejas quejas = new Quejas(numDoc, fecha, detalle, solicitud, proveedor, consumidor);
+         
+         
+         
+         
+          int ultimoNumero = 0;
+        String linea;
+        
+        ServletContext context = getServletContext();
+        
+        String rutaArchivoNumQuejas = context.getRealPath("/TXT/NumQuejas.txt");
+
+        try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivoNumQuejas))) {
+            // Leer línea por línea hasta el final
+            while ((linea = br.readLine()) != null) {
+                try {
+                    // Convertir la línea en un número entero
+                    ultimoNumero = Integer.parseInt(linea);
+                } catch (NumberFormatException e) {
+                    System.out.println("Línea inválida en el archivo: " + linea);
+                }
+            }
+        }
+         
+        int nuevoNumero = ultimoNumero +1;
+        int numQueja = nuevoNumero;
+        
+        try (FileWriter fw = new FileWriter(rutaArchivoNumQuejas, false)) { // 'true' para agregar al final del archivo
+            fw.write(nuevoNumero + "\n"); // Escribir el nuevo número en una nueva línea
+        }
+         
+         Quejas quejas = new Quejas(numDoc, fecha, detalle, solicitud, proveedor.getNit(), consumidor.getNit(), numQueja);
          List<Quejas> listaQuejas = new ArrayList<>();
          listaQuejas.add(quejas);
          
          
          try {
+             /*
            File myObj = new File("C:\\Users\\david\\OneDrive\\Desktop\\quejas.csv");
          
       if (myObj.exists()==false) {
         
                 try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\quejas.txt")) {
-                    myWriter.append("NumDoc,fecha,detalle,solicitud");
+                    myWriter.append("NumDoc,fecha,detalle,solicitud,proveedor,consumidor,numQueja");
                 }
       } else {  
         System.out.println("File already exists.");
-      }
-            try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\quejas.txt", true)) {
+      }*/
+             
+           
+             
+             String rutaArchivoQuejas = context.getRealPath("/TXT/quejas.txt");
+             
+             
+            try (FileWriter myWriter = new FileWriter(rutaArchivoQuejas, true)) {
                 
                 
-               myWriter.append("\n"+quejas.getNumDoc()+","+quejas.getFecha()+","+quejas.getDetalle()+","+quejas.getSolicitud()+","+quejas.getProveedor()+","+quejas.getConsumidor());
+               myWriter.append("\n"+quejas.getNumDoc()+","+quejas.getFecha()+","+quejas.getDetalle()+","+quejas.getSolicitud()+","+quejas.getNitProveedor()+","+quejas.getNitConsumidor()+","+quejas.getNumQueja());
             myWriter.close();
             }
       
@@ -194,7 +244,7 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
       e.printStackTrace();
     }
         // Respuesta de éxito
-        response.getWriter().println("Datos guardados correctamente. Su numero de queja es: ");
+        response.getWriter().println("Datos guardados correctamente. Su numero de queja es: " + quejas.getNumQueja());
         
     
     }

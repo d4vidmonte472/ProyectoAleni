@@ -12,20 +12,24 @@ public class Quejas {
     private String fecha;
     private String detalle;
     private String solicitud;
-    private Proveedor prov;
-    private Consumidor con;
+    private int nitProveedor;
+    private int nitConsumidor;
+    private int numQueja;
             
     //Constructores
     public Quejas(){};
 
-    public Quejas(int numDoc, String fecha, String detalle, String solicitud, Proveedor prov, Consumidor con) {
+    public Quejas(int numDoc, String fecha, String detalle, String solicitud, int nitProveedor, int nitConsumidor, int numQueja) {
         this.numDoc = numDoc;
         this.fecha = fecha;
         this.detalle = detalle;
         this.solicitud = solicitud;
-        this.prov = prov; 
-        this.con = con; 
+        this.nitProveedor = nitProveedor;
+        this.nitConsumidor = nitConsumidor; 
+        this.numQueja=numQueja;
     }
+    
+    
 
     //Getters
     public int getNumDoc() {
@@ -44,12 +48,16 @@ public class Quejas {
         return solicitud;
     }
     
-    public Proveedor getProveedor(){
-        return prov;
+    public int getNitProveedor(){
+        return nitProveedor;
     }
     
-    public Consumidor getConsumidor(){
-        return con;
+    public int getNitConsumidor(){
+        return nitConsumidor;
+    }
+    
+    public int getNumQueja(){
+        return numQueja;
     }
 
 
@@ -70,12 +78,16 @@ public class Quejas {
         this.solicitud = solicitud;
     }
     
-    public void setProveedor(Proveedor prov){
-        this.prov = prov;
+    public void setNitProveedor(int nitProveedor){
+        this.nitProveedor = nitProveedor;
     }
     
-    public void setConsumidor(Consumidor con){
-        this.con = con;
+    public void setNitConsumidor(int nitConsumidor){
+        this.nitConsumidor = nitConsumidor;
+    }
+    
+    public void setNumQueja (int numQueja){
+        this.numQueja = numQueja;
     }
     
     public void guardarQueja(){

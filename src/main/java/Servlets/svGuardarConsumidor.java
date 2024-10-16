@@ -21,6 +21,7 @@ import java.nio.file.Path;
 import Clases.Proveedor;
 import Clases.Quejas;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import jakarta.servlet.*;
 import java.nio.file.*;
 import java.io.*;
@@ -77,7 +78,7 @@ public class svGuardarConsumidor extends HttpServlet {
         
         Consumidor consumidor = new Consumidor(nacionalidad, tipoConsumidor, nit, dpi, nombre1, nombre2, apellido1, apellido2, apellidoCasada, direccion, zona, departamento, municipio, sede, telDom, tel, telRef, correo, autorizacion, sexo);
     
-        System.out.println(consumidor.apellido1 + consumidor.apellido2 + consumidor.correo);
+       
         
         List<Consumidor> listaConsumidor = new ArrayList<>();
         
@@ -85,41 +86,27 @@ public class svGuardarConsumidor extends HttpServlet {
         
         
    
-        try {
+       
            ServletContext context = getServletContext();
+
        String rutaArchivoConsumidor = context.getRealPath("/TXT/consumidores.txt");
-        
-       
-            Path archivoCon = Files.createFile(Paths.get(rutaArchivoConsumidor));
-            System.out.println("Ruta del archivo: " + rutaArchivoConsumidor);
-            File myObj = new File(rutaArchivoConsumidor);
+       Path archivoCon = Paths.get(rutaArchivoConsumidor);
+       System.out.println("Ruta del archivo consumidor: " + rutaArchivoConsumidor);
             
-       /*  
-      if (Files.notExists(archivoCon)) {
-        
-                try {
-                    String mensajeI= "nacionalidad,tipoConsumidor,nit,dpi,nombre1,nombre2,apellido1,apellido2,apellidoCasada,direccion,zona,departamento,municipio,sede,telDom,tel,telRef,correo,autorizacion,sexo";
-                Files.write(archivoCon, mensajeI.getBytes());
-                }
-                catch (IOException e) {
-      System.out.println("An error occurred.");
-      e.printStackTrace();
-    }
-      } else {  
-        System.out.println("File already exists.");
-      }
-       
-       */
+        if (Files.notExists(archivoCon)) {
+            Files.createFile(archivoCon);
+        }
+
+        String datosConsumidor = "\n"+consumidor.nacionalidad+","+consumidor.tipoConsumidor+","+consumidor.nit+","+consumidor.dpi+","
+                       +consumidor.nombre1 +","+consumidor.nombre2+","+consumidor.apellido1+","+consumidor.apellido2+","+
+                       consumidor.apellidoCasada+","+consumidor.direccion+","+consumidor.zona+","+consumidor.departamento+","+consumidor.municipio+","+consumidor.sedeDiaco
+                       +","+consumidor.telDom+","+consumidor.tel+","+consumidor.telRef+","+consumidor.correo+","+consumidor.autorizacion+","+consumidor.sexo;    
+      
        
        
             try {
-                
-                
-               String datosConsumidor = "\n"+consumidor.nacionalidad+","+consumidor.tipoConsumidor+","+consumidor.nit+","+consumidor.dpi+","
-                       +consumidor.nombre1 +","+consumidor.nombre2+","+consumidor.apellido1+","+consumidor.apellido2+","+
-                       consumidor.apellidoCasada+","+consumidor.direccion+","+consumidor.zona+","+consumidor.departamento+","+consumidor.municipio+","+consumidor.sedeDiaco
-                       +","+consumidor.telDom+","+consumidor.tel+","+consumidor.telRef+","+consumidor.correo+","+consumidor.autorizacion+","+consumidor.sexo;
-               Files.write(archivoCon, datosConsumidor.getBytes());
+          
+                Files.write(archivoCon, datosConsumidor.getBytes(), StandardOpenOption.APPEND);
             }
        catch (IOException e) {
       System.out.println("An error occurred.");
@@ -128,10 +115,7 @@ public class svGuardarConsumidor extends HttpServlet {
      
      
       System.out.println("Successfully wrote to the file.");
-    } catch (IOException e) {
-      System.out.println("An error occurred.");
-      e.printStackTrace();
-    }
+   
 
         
          String nombreEmpresa = request.getParameter("empresa");
@@ -152,27 +136,17 @@ public class svGuardarConsumidor extends HttpServlet {
         listaProveedor.add(proveedor);
         
 
-try {
-       /*    File myObj = new File("C:\\Users\\david\\OneDrive\\Desktop\\proveedores.csv");
-         
-      if (myObj.exists()==false) {
-        
-                try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\proveedores.txt")) {
-                    myWriter.append("empresa,razon-social,NITP,direccionP,zonaP,departamentoP,municipioP,telefono,email");
-                }
-      } else {  
-        System.out.println("File already exists.");
-      }*/
+
        
-       ServletContext context = getServletContext();
        String rutaArchivoProveedores = context.getRealPath("/TXT/proveedores.txt");
-            try (FileWriter myWriter = new FileWriter(rutaArchivoProveedores, true)) {
+        
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(rutaArchivoProveedores, true))) {
                 
                 
-               myWriter.append("\n"+proveedor.getNombreEmpresa()+","+proveedor.getRazonSocial()+","+proveedor.getNit()+","+proveedor.getDireccion()+","+proveedor.getZona()
+               writer.write("\n"+proveedor.getNombreEmpresa()+","+proveedor.getRazonSocial()+","+proveedor.getNit()+","+proveedor.getDireccion()+","+proveedor.getZona()
 +","+ proveedor.getDepartamento()+","+proveedor.getMunicipio()+","+proveedor.getTelefono()+","+proveedor.getCorreo());
-            myWriter.close();
-            }
+            writer.close();
+            
       
      
      
@@ -195,7 +169,7 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
           int ultimoNumero = 0;
         String linea;
         
-        ServletContext context = getServletContext();
+        
         
         String rutaArchivoNumQuejas = context.getRealPath("/TXT/NumQuejas.txt");
 
@@ -224,18 +198,7 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
          
          
          try {
-             /*
-           File myObj = new File("C:\\Users\\david\\OneDrive\\Desktop\\quejas.csv");
-         
-      if (myObj.exists()==false) {
-        
-                try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\quejas.txt")) {
-                    myWriter.append("NumDoc,fecha,detalle,solicitud,proveedor,consumidor,numQueja");
-                }
-      } else {  
-        System.out.println("File already exists.");
-      }*/
-             
+  
            
              
              String rutaArchivoQuejas = context.getRealPath("/TXT/quejas.txt");

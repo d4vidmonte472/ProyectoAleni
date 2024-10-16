@@ -2,3 +2,8 @@ nacionalidad,tipoConsumidor,nit,dpi,nombre1,nombre2,apellido1,apellido2,apellido
 guatemalteco,individual,12345678,12345678,Cindy3,Cindy4,Garcia3,Garcia4,assg,askdakjs,zona-2,22,2217,Baja Verapaz,12345678,12345678,12345678,gadiel.monterroso@gmail.com,true,m
 guatemalteco,individual,12345678,12345678,Cindy3,Cindy4,Garcia3,Garcia4,assg,askdakjs,zona-2,22,2217,Baja Verapaz,12345678,12345678,12345678,gadiel.monterroso@gmail.com,true,m
 guatemalteco,individual,12345678,12345678,Cindy3,Cindy4,Garcia3,Garcia4,assg,askdakjs,zona-14,22,2217,Baja Verapaz,12345678,12345678,12345678,gadiel.monterroso@gmail.com,true,m
+guatemalteco,individual,12345678,12345678,Prueba,Prueba,Prueba,PRueba1,asda,asdsdsdfs,zona-21,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,m
+guatemalteco,individual,12345678,12345678,Prueba,Prueba,Prueba,PRueba1,asda,asdsdsdfs,zona-2,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,m
+guatemalteco,individual,12345678,12345678,Prueba,Prueba,Prueba,PRueba1,asda,asdsdsdfs,zona-25,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,m
+guatemalteco,individual,12345678,12345678,Prueba,Prueba,Prueba,PRueba1,asda,asdsdsdfs,zona-4,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,m
+guatemalteco,individual,12345678,12345678,Prueba,Prueba,Prueba,PRueba1,asda,asdsdsdfs,zona-1,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,h

@@ -86,33 +86,45 @@ public class svGuardarConsumidor extends HttpServlet {
         
    
         try {
-            
-       /*     
-            File myObj = new File("C:\\Users\\david\\OneDrive\\Desktop\\consumidores.csv");
-         
-      if (myObj.exists()==false) {
+           ServletContext context = getServletContext();
+       String rutaArchivoConsumidor = context.getRealPath("/TXT/consumidores.txt");
         
-                try (FileWriter myWriter = new FileWriter("C:\\Users\\david\\OneDrive\\Desktop\\consumidores.txt")) {
-                    myWriter.append("nacionalidad,tipoConsumidor,nit,dpi,nombre1,nombre2,apellido1,apellido2,apellidoCasada,direccion,zona,departamento,municipio,sede,telDom,tel,telRef,correo,autorizacion,sexo");
+       
+            Path archivoCon = Files.createFile(Paths.get(rutaArchivoConsumidor));
+            System.out.println("Ruta del archivo: " + rutaArchivoConsumidor);
+            File myObj = new File(rutaArchivoConsumidor);
+            
+       /*  
+      if (Files.notExists(archivoCon)) {
+        
+                try {
+                    String mensajeI= "nacionalidad,tipoConsumidor,nit,dpi,nombre1,nombre2,apellido1,apellido2,apellidoCasada,direccion,zona,departamento,municipio,sede,telDom,tel,telRef,correo,autorizacion,sexo";
+                Files.write(archivoCon, mensajeI.getBytes());
                 }
+                catch (IOException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
       } else {  
         System.out.println("File already exists.");
-      }*/
+      }
        
-       ServletContext context = getServletContext();
-       String rutaArchivoConsumidor = context.getRealPath("/TXT/consumidores.txt");
+       */
        
        
-            try (FileWriter myWriter = new FileWriter(rutaArchivoConsumidor, true)) {
+            try {
                 
                 
-               myWriter.append("\n"+consumidor.nacionalidad+","+consumidor.tipoConsumidor+","+consumidor.nit+","+consumidor.dpi+","
+               String datosConsumidor = "\n"+consumidor.nacionalidad+","+consumidor.tipoConsumidor+","+consumidor.nit+","+consumidor.dpi+","
                        +consumidor.nombre1 +","+consumidor.nombre2+","+consumidor.apellido1+","+consumidor.apellido2+","+
                        consumidor.apellidoCasada+","+consumidor.direccion+","+consumidor.zona+","+consumidor.departamento+","+consumidor.municipio+","+consumidor.sedeDiaco
-                       +","+consumidor.telDom+","+consumidor.tel+","+consumidor.telRef+","+consumidor.correo+","+consumidor.autorizacion+","+consumidor.sexo);
-            myWriter.close();
+                       +","+consumidor.telDom+","+consumidor.tel+","+consumidor.telRef+","+consumidor.correo+","+consumidor.autorizacion+","+consumidor.sexo;
+               Files.write(archivoCon, datosConsumidor.getBytes());
             }
-      
+       catch (IOException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
      
      
       System.out.println("Successfully wrote to the file.");

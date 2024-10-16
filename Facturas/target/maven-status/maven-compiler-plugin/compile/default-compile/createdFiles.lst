@@ -1,3 +1,6 @@
-com\mycompany\facturas\JakartaRestConfiguration.class
+com\cardionica\util\EmailUtil$1.class
+com\cardionica\util\PDFUtil.class
 com\mycompany\facturas\resources\JakartaEE10Resource.class
-ModoFactura.class
+com\cardionica\util\EmailUtil.class
+com\cardionica\servlets\CardionicaServlet.class
+com\mycompany\facturas\JakartaRestConfiguration.class

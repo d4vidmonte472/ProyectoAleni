@@ -9,16 +9,47 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Compra</title>
+        <title>Cardionica - Compra</title>
+        <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        form { max-width: 400px; margin: 0 auto; }
+        label { display: block; margin-top: 10px; }
+        input, select { width: 100%; padding: 5px; margin-top: 5px; }
+        button { margin-top: 20px; padding: 10px 20px; }
+    </style>
+    <script>
+        function calcularTotal() {
+            var cantidad = document.getElementById('cantidad').value;
+            var total = cantidad * 1500;
+            document.getElementById('precioTotal').value = 'Q' + total;
+        }
+    </script>
     </head>
     <body>
-        <h2>Formulario de Compra</h2>
-        <form action="CardionicaServlet?action=finalizarCompra" method="POST">
-            Nombre: <input type="text" name="nombre" required><br>
-            NIT (o C/F): <input type="text" name="nit" required><br>
-            Cantidad (1-10): <input type="number" name="cantidad" min="1" max="10" required><br>
-            <button type="submit">FINALIZAR</button>
-            <button type="button" onclick="window.location.href='CardionicaServlet'">REGRESAR</button>
-        </form>
+        <h1>Formulario de Compra</h1>
+        <form action="CardionicaServlet" method="post">
+        <input type="hidden" name="action" value="finalizarCompra">
+        
+        <label for="nombre">Nombre *</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="nit">NIT (o C/F)</label>
+        <input type="text" id="nit" name="nit" placeholder="C/F">
+        
+        <label for="cantidad">Cantidad</label>
+        <select id="cantidad" name="cantidad" onchange="calcularTotal()">
+            <% for(int i = 1; i <= 10; i++) { %>
+                <option value="<%= i %>"><%= i %></option>
+            <% } %>
+        </select>
+        
+        <label for="precioTotal">Precio Total</label>
+        <input type="text" id="precioTotal" name="precioTotal" readonly>
+        
+        <button type="submit">FINALIZAR</button>
+    </form>
+    <a href="MainServlet">REGRESAR</a>
+    
+    <script>calcularTotal();</script>
     </body>
 </html>

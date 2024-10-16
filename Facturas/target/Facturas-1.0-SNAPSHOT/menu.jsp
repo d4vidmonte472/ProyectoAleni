@@ -10,10 +10,23 @@
     <head>
         <meta charset="UTF-8">
         <title>Cardionica</title>
+        <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        h1 { color: #333; }
+        .button { 
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
     </head>
     <body>
         <h1>Cardionica!</h1>
-        <button onclick="window.location.href='CardionicaServlet?action=compra'">Compra</button>
-        <button onclick="window.location.href='CardionicaServlet?action=alquiler'">Alquiler</button>
+        <a href="CardionicaServlet?action=compra" class="button">Compra</a>
+        <a href="CardionicaServlet?action=alquiler" class="button">Alquiler</a>
     </body>
 </html>

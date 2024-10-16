@@ -1,0 +1,2 @@
+NumDoc,fecha,detalle,solicitud,proveedor,consumidor,numQueja
+12345678,2024-10-12,qwretghet,asvebt,12345678,12345678,2327

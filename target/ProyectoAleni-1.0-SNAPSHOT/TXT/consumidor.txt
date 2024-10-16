@@ -1,0 +1,2 @@
+nacionalidad,tipoConsumidor,nit,dpi,nombre1,nombre2,apellido1,apellido2,apellidoCasada,direccion,zona,departamento,municipio,sede,telDom,tel,telRef,correo,autorizacion,sexo
+guatemalteco,individual,12345678,12345678,Cindy3,Cindy4,Garcia3,Garcia4,assg,askdakjs,zona-3,22,2217,Baja Verapaz,12345678,12345678,12345678,gadiel.monterroso@gmail.com,false,m

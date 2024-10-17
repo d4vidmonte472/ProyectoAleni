@@ -1,18 +1,18 @@
 <%-- 
-    Document   : Menu_master
-    Created on : 9/10/2024, 11:12:10 a. m.
+    Document   : M.mConsumidores
+    Created on : 17/10/2024, 9:41:19 a. m.
     Author     : fboan
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link rel="stylesheet" href="CSS/styles.css">
+<link rel="stylesheet" href="../../CSS/styles.css">
 
 
 </head>
@@ -21,11 +21,11 @@
     <!-- Menú de navegación original -->
     <nav class="navbar navbar-dark bg-dark">
         <ul>
-            <li><a href="JSP/Master/Mcmenu.jsp">INICIO</a></li>
-            <li><a href="JSP/Master/MCardionica.jsp">CARDIONICA</a></li>
-            <li><a href="JSP/Master/Mservicios.jsp">PLANES</a></li>
-            <li><a href="JSP/Master/MContacto.jsp">CONTACTO</a></li>
-            <li><a href="JSP/Master/MQuejas.jsp">QUEJAS DIACO</a></li>
+            <li><a href="Mcmenu.jsp">INICIO</a></li>
+            <li><a href="MCardionica.jsp">CARDIONICA</a></li>
+            <li><a href="Mservicios.jsp">PLANES</a></li>
+            <li><a href="MContacto.jsp">CONTACTO</a></li>
+            <li><a href="MQuejas.jsp">QUEJAS DIACO</a></li>
             
 <li>
     <div class="container-fluid">
@@ -41,7 +41,7 @@
         <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="JSP/Master/M.Usuarios.jsp">USUARIOS</a>
+                <a class="nav-link active" aria-current="page" href="#">USUARIOS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">CONSUMIDORES</a>
@@ -76,18 +76,10 @@
 
 
     </nav>
-
-
-    <!-- Sección de la página principal -->
-    <header>
-        <h1>Bienvenido a ALENI, SEÑOR FERXO</h1>
-        <p>EN ESTE MENÚ PODRA EDITAR CUALQUIER ERROR EN VENTAS O ALGUNA DE LAS QUEJAS.</p>
-    </header>
-
-    <footer>
-        <p>&copy; 2024 ALENI. Todos los derechos reservados.</p>
-    </footer>
+    <body>
+        <h1>Hello World!</h1>
+    </body>
     
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </html>

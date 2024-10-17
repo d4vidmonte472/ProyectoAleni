@@ -62,13 +62,14 @@ public class svEditarUsuario extends HttpServlet {
         
     }
          }
+         int usuarioId = Integer.parseInt(request.getParameter("usuarioId"));
          
-         for(Usuario us : listaUsuarios){
+        
              
              
-             if(us.getMaster() == null ? request.getParameter("usuarioId") == null : us.getMaster().equals(request.getParameter("usuarioId"))){
-                 us.setUsuario(request.getParameter("usuario"));
-                 us.setPassword(request.getParameter("password"));
+          
+                 listaUsuarios.get(usuarioId).setUsuario(request.getParameter("usuario"));
+                listaUsuarios.get(usuarioId).setPassword(request.getParameter("password"));
                  
                   try {
   
@@ -88,10 +89,9 @@ public class svEditarUsuario extends HttpServlet {
       System.out.println("An error occurred.");
       e.printStackTrace();
     }
-                 break;
-                 
-             }
-         }
+                
+             
+         
          
     }
 

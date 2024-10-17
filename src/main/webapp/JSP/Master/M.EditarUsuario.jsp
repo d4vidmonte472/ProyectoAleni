@@ -1,11 +1,10 @@
 <%-- 
-    Document   : M.Usuarios
-    Created on : 17/10/2024, 3:23:58 p. m.
+    Document   : M.EditarUsuario
+    Created on : 17/10/2024, 5:36:51 p. m.
     Author     : fboan
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,19 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuarios</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link rel="stylesheet" href="../../CSS/styles.css">
-
-
-</head>
-<body>
-
-    <!-- Menú de navegación original -->
-    <nav class="navbar navbar-dark bg-dark">
+         <nav class="navbar navbar-dark bg-dark">
         <ul>
             <li><a href="Mcmenu.jsp">INICIO</a></li>
             <li><a href="MCardionica.jsp">CARDIONICA</a></li>
@@ -82,9 +69,6 @@
 
 
     </nav>
-        <h1>LISTA DE USUARIOS</h1>
-        <form id="Usuarios" method="GET" action="${pageContext.request.contextPath}/svMostrarUsuarios"> 
-            <button type="submit" class="btn btn-primary">Cargas Usuarios</button>
-        </form>
+        <h1> Hello World ! </h1>
     </body>
 </html>

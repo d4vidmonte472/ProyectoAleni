@@ -42,7 +42,7 @@ public class svMostrarUsuarios extends HttpServlet {
        
          for (String linea : lineas) {
             String[] partes = linea.split(",");
-            if (partes.length == 2) {
+            if (partes.length == 3) {
                 String usuarioTxt = partes[0].trim();
                 String contrasenaTxt = partes[1].trim();
                 String masterTxt = partes[2].trim();
@@ -53,8 +53,9 @@ public class svMostrarUsuarios extends HttpServlet {
          HttpSession misesion = request.getSession();
         misesion.setAttribute("listaUsuarios", listaUsuarios);
         
-        response.sendRedirect("mostrarUsuarios.jsp");
-        
+         response.sendRedirect("JSP/Master/M.mUsuarios.jsp");
+
+           
     }
     
 

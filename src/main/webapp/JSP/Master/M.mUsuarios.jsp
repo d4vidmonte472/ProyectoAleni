@@ -1,31 +1,18 @@
-<%-- 
-    Document   : M.Usuarios
-    Created on : 17/10/2024, 3:23:58 p. m.
-    Author     : fboan
---%>
-
+<%@page import="Clases.Usuario"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>USUARIOS</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../CSS/styles.css">
     </head>
     <body>
-        <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuarios</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link rel="stylesheet" href="../../CSS/styles.css">
-
-
-</head>
-<body>
-
-    <!-- Menú de navegación original -->
-    <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-dark bg-dark">
         <ul>
             <li><a href="Mcmenu.jsp">INICIO</a></li>
             <li><a href="MCardionica.jsp">CARDIONICA</a></li>
@@ -82,9 +69,54 @@
 
 
     </nav>
+
         <h1>LISTA DE USUARIOS</h1>
-        <form id="Usuarios" method="GET" action="${pageContext.request.contextPath}/svMostrarUsuarios"> 
-            <button type="submit" class="btn btn-primary">Cargas Usuarios</button>
-        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                      <th scope="col">#</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% 
+                    List<Usuario> lista = (List<Usuario>) request.getSession().getAttribute("listaUsuarios");
+                    int cont=0 ;
+                    if (lista != null && !lista.isEmpty()) {
+                        for (Usuario us : lista) {
+                        cont++;
+                %>
+                    <tr>
+                        <td> <%= cont %> </td>
+                        <td><%= us.getUsuario() %></td>
+                        <td><%= us.getPassword() %></td>
+                        <td><%= us.getMaster() %></td>
+                        <td> 
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <form action="GET"> 
+                                <input type="hidden" name="usuarioId" value="<%= cont-1 %>">
+                                <button type="button" class="tn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> </button>
+                            </form>  
+
+                            </div>
+                        </td>
+                    </tr>
+                <% 
+                        }
+                    } else { 
+                %>
+                    <tr>
+                        <td colspan="4">No hay usuarios disponibles.</td>
+                    </tr>
+                <% 
+                    }
+                %>
+            </tbody>
+        </table>
     </body>
+    <script src="https://kit.fontawesome.com/efd3b94f53.js" crossorigin="anonymous"></script>
 </html>

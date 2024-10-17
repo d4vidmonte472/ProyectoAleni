@@ -20,12 +20,12 @@
     <!-- Menú de navegación original -->
     <nav class="navbar navbar-dark bg-dark">
         <ul>
-            <li><a href="index.jsp">INICIO</a></li>
-            <li><a href="JSP/Cardionica.jsp">CARDIONICA</a></li>
-            <li><a href="JSP/servicios.jsp">PLANES</a></li>
-            <li><a href="JSP/Contacto.jsp">CONTACTO</a></li>
-            <li><a href="JSP/Quejas.jsp">QUEJAS DIACO</a></li>
-            <li><a href="JSP/servicios.jsp">INICIO SESION</a></li>
+            <li><a href="JSP/Master/Mcmenu.jsp">INICIO</a></li>
+            <li><a href="JSP/Master/MCardionica.jsp">CARDIONICA</a></li>
+            <li><a href="JSP/Master/Mservicios.jsp">PLANES</a></li>
+            <li><a href="JSP/Master/MContacto.jsp">CONTACTO</a></li>
+            <li><a href="JSP/Master/MQuejas.jsp">QUEJAS DIACO</a></li>
+            
 <li>
     <div class="container-fluid">
         <a class="navbar-brand" href="#">MASTER MENU</a>
@@ -61,9 +61,11 @@
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-                
-                
+            <li class="nav-item">
+                <a class="nav-link" href="../../index.jsp">Log out</a>
             </li>
+                
+           
             </ul>
         </div>
         </div>

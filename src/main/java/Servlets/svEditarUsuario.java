@@ -66,7 +66,7 @@ public class svEditarUsuario extends HttpServlet {
          for(Usuario us : listaUsuarios){
              
              
-             if(us.getMaster() == null ? request.getParameter("master") == null : us.getMaster().equals(request.getParameter("master"))){
+             if(us.getMaster() == null ? request.getParameter("usuarioId") == null : us.getMaster().equals(request.getParameter("usuarioId"))){
                  us.setUsuario(request.getParameter("usuario"));
                  us.setPassword(request.getParameter("password"));
                  
@@ -92,9 +92,6 @@ public class svEditarUsuario extends HttpServlet {
                  
              }
          }
-         
-         
-         
          
     }
 

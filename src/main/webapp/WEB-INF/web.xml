@@ -5,25 +5,34 @@
         <servlet-class>Servlets.svGuardarConsumidor</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>svEditar</servlet-name>
-        <servlet-class>Servlets.svEditar</servlet-class>
-
+        <servlet-name>svMostrarConsumidores</servlet-name>
+        <servlet-class>Servlets.svMostrarConsumidores</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>SvLogin</servlet-name>
         <servlet-class>Servlets.SvLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>svMostrarUsuarios</servlet-name>
+        <servlet-class>Servlets.svMostrarUsuarios</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
         <url-pattern>/svGuardarConsumidor</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>svEditar</servlet-name>
-        <url-pattern>/svEditar</url-pattern>
         <servlet-name>SvLogin</servlet-name>
         <url-pattern>/SvLogin</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>svMostrarConsumidores</servlet-name>
+        <url-pattern>/svMostrarConsumidores</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>svMostrarUsuarios</servlet-name>
+        <url-pattern>/svMostrarUsuarios</url-pattern>
+    </servlet-mapping>
     <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
+        <session-timeout>30</session-timeout>
     </session-config>
 </web-app>

@@ -7,3 +7,5 @@ guatemalteco,individual,12345678,12345678,Prueba,Prueba,Prueba,PRueba1,asda,asds
 guatemalteco,individual,12345678,12345678,Prueba,Prueba,Prueba,PRueba1,asda,asdsdsdfs,zona-25,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,m
 guatemalteco,individual,12345678,12345678,Prueba,Prueba,Prueba,PRueba1,asda,asdsdsdfs,zona-4,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,m
 guatemalteco,individual,12345678,12345678,Prueba,Prueba,Prueba,PRueba1,asda,asdsdsdfs,zona-1,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,h
+guatemalteco,individual,1381,813183,831,3813813,1381,83138,1381,12 calle 21-85 Z 11,sin-zona,9,910,Baja Verapaz,4113,13813131,411,3611813131318@gmail.com,true,h
+guatemalteco,individual,1381,813183,831,3813813,1381,83138,1381,12 calle 21-85 Z 11,sin-zona,9,910,Baja Verapaz,4113,13813131,411,3611813131318@gmail.com,true,h

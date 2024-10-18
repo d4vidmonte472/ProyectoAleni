@@ -34,7 +34,7 @@
         <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">USUARIOS</a>
+                <a class="nav-link active" aria-current="page" href="M.Usuarios.jsp">USUARIOS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">CONSUMIDORES</a>
@@ -98,7 +98,7 @@
                         <td> 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             <form action="${pageContext.request.contextPath}/svEditarUsuario" method="POST" > 
-                                <input type="hidden" name="usuarioId" value="<%= cont %>">
+                                <input type="hidden" name="usuarioId" value="<%= cont-1 %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> </button>
                             </form>  
 
@@ -119,4 +119,6 @@
         </table>
     </body>
     <script src="https://kit.fontawesome.com/efd3b94f53.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </html>

@@ -1,2 +1,2 @@
 ferxo,1234,Master
-boa,5678,Admin
+Coloch,5678,Admin

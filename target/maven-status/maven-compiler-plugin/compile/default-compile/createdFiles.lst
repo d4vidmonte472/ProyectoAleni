@@ -1,9 +1,13 @@
+Servlets\svEditarUsuarios.class
+Servlets\svEditarProveedores.class
 Clases\Proveedor.class
 Clases\Quejas.class
 Servlets\svMostrarConsumidores.class
 Clases\Consumidor.class
 Servlets\SvLogin.class
+Servlets\svEditarQuejas.class
 Servlets\svGuardarConsumidor.class
+Servlets\svEditarConsumidores.class
 Servlets\svMostrarUsuarios.class
 Servlets\svEditarUsuario.class
 Clases\Usuario.class

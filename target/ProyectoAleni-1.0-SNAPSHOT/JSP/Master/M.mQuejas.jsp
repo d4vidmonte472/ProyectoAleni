@@ -106,8 +106,8 @@
                         
                         <td> 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <form action="${pageContext.request.contextPath}/svEditarUsuario" method="POST" > 
-                                <input type="hidden" name="usuarioId" value="<%= cont-1 %>">
+                            <form action="${pageContext.request.contextPath}/svEditarQueja" method="POST" > 
+                                <input type="hidden" name="QuejasId" value="<%= que.getNumQueja() %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> </button>
                             </form>  
 

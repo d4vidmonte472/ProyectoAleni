@@ -5,6 +5,7 @@ Clases\Consumidor.class
 Servlets\SvLogin.class
 Servlets\svGuardarConsumidor.class
 Servlets\svMostrarUsuarios.class
+Servlets\svEditarUsuario.class
 Clases\Usuario.class
 com\aleni\proyectoaleni\JakartaRestConfiguration.class
 com\aleni\proyectoaleni\resources\JakartaEE10Resource.class

@@ -97,9 +97,9 @@
                         <td><%= us.getMaster() %></td>
                         <td> 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <form action="GET"> 
-                                <input type="hidden" name="usuarioId" value="<%= cont-1 %>">
-                                <button type="button" class="tn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> </button>
+                            <form action="${pageContext.request.contextPath}/svEditarUsuario" method="POST" > 
+                                <input type="hidden" name="usuarioId" value="<%= cont %>">
+                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> </button>
                             </form>  
 
                             </div>

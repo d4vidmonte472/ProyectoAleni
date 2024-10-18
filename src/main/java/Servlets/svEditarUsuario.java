@@ -7,12 +7,11 @@ package Servlets;
 import Clases.Usuario;
 import jakarta.servlet.ServletContext;
 import java.io.IOException;
-import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.FileWriter;
+import jakarta.servlet.http.HttpSession;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -50,7 +49,7 @@ public class svEditarUsuario extends HttpServlet {
        
          for (String linea : lineas) {
             String[] partes = linea.split(",");
-            if (partes.length == 2) {
+            if (partes.length == 3) {
                 String usuarioTxt = partes[0].trim();
                 String contrasenaTxt = partes[1].trim();
                 String masterTxt = partes[2].trim();
@@ -68,27 +67,13 @@ public class svEditarUsuario extends HttpServlet {
              
              
           
-                 listaUsuarios.get(usuarioId).setUsuario(request.getParameter("usuario"));
-                listaUsuarios.get(usuarioId).setPassword(request.getParameter("password"));
+                 Usuario usr = listaUsuarios.get(usuarioId);
                  
-                  try {
-  
-            try (FileWriter myWriter = new FileWriter(rutaArchivoUsuarios, false)) {
-                for(Usuario usuario : listaUsuarios){
-                    
-               myWriter.write("\n" + usuario.getUsuario() + usuario.getPassword() + usuario.getMaster());
-           
-                }
-                 myWriter.close();
-            }
-      
-     
-     
-      System.out.println("Successfully wrote to the file.");
-    } catch (IOException e) {
-      System.out.println("An error occurred.");
-      e.printStackTrace();
-    }
+                 HttpSession misesion = request.getSession();
+                misesion.setAttribute("usr", usr);
+        
+         response.sendRedirect("JSP/Master/M.EditarUsuario.jsp");
+                
                 
              
          

@@ -4,12 +4,16 @@
     Author     : fboan
 --%>
 
+<%@page import="Clases.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>USUARIOS</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../CSS/styles.css">
     </head>
     <body>
          <nav class="navbar navbar-dark bg-dark">
@@ -69,6 +73,25 @@
 
 
     </nav>
-        <h1> Hello World ! </h1>
+         <% Usuario editado = (Usuario) request.getSession().getAttribute("usr");  %>
+         
+         
+        <h1> EDITAR <%= editado.getUsuario() %> </h1>
+        
+            <form action="svActualizarUsuario" method="POST">
+                <label>Usuario:</label>
+                <input type="text" name="usuario" value="<%= editado.getUsuario() %>" required><br>
+
+                <label>Contraseña:</label>
+                <input type="password" name="password" value="<%= editado.getPassword() %>" required><br>
+                
+                <label>Nueva Contraseña:</label>
+                <input type="password" name="password" value="" required><br>
+
+                <label>Rol:</label>
+                <input type="text" name="master" value="<%= editado.getMaster() %>" required disabled><br>
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
     </body>
 </html>

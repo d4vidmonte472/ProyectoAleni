@@ -28,6 +28,18 @@
         <servlet-name>svEditarQueja</servlet-name>
         <servlet-class>Servlets.svEditarQueja</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>svEditarQuejas</servlet-name>
+        <servlet-class>Servlets.svEditarQuejas</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvEliminarQueja</servlet-name>
+        <servlet-class>Servlets.SvEliminarQueja</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvMosQueja</servlet-name>
+        <servlet-class>Servlets.SvMosQueja</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
         <url-pattern>/svGuardarConsumidor</url-pattern>
@@ -55,6 +67,18 @@
     <servlet-mapping>
         <servlet-name>svEditarQueja</servlet-name>
         <url-pattern>/svEditarQueja</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>svEditarQuejas</servlet-name>
+        <url-pattern>/svEditarQuejas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvEliminarQueja</servlet-name>
+        <url-pattern>/SvEliminarQueja</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvMosQueja</servlet-name>
+        <url-pattern>/SvMosQueja</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

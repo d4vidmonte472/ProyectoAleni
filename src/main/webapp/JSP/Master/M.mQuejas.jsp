@@ -76,7 +76,7 @@
 
     </nav>
 
-        <h1>LISTA DE USUARIOS</h1>
+        <h1>LISTA DE QUEJAS</h1>
 
         <table class="table">
             <thead>
@@ -110,7 +110,14 @@
                                 <input type="hidden" name="QuejasId" value="<%= que.getNumQueja() %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> </button>
                             </form>  
-
+                            <form action="${pageContext.request.contextPath}/SvEliminarQueja" method="GET"> 
+                                <input type="hidden" name="QuejasId" value="<%= que.getNumQueja() %>">
+                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-trash"></i> </button>
+                            </form>
+                            <form action="${pageContext.request.contextPath}/SvMostrarQueja" method="GET"> 
+                                <input type="hidden" name="QuejasId" value="<%= que.getNumQueja() %>">
+                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-eye"></i> </button>
+                            </form>
                             </div>
                         </td>
                     </tr>

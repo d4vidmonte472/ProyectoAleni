@@ -13,3 +13,4 @@ guatemalteco,individual,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,
 guatemalteco,juridico,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,villa nueva,sin-zona,2,201,Escuintla,4113,13813131,411,Mcospin2018ig@gmail.com,true,h
 guatemalteco,juridico,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,villa nueva,zona-2,12,1211,Cobán,4113,13813131,411,Mcospin2018ig@gmail.com,false,h
 guatemalteco,juridico,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,villa nueva,zona-2,11,1105,Cobán,4113,13813131,411,Mcospin2018ig@gmail.com,false,h
+guatemalteco,individual,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,villa nueva,zona-16,15,1504,Suchitepéquez,4113,13813131,411,Mcospin2018ig@gmail.com,true,h

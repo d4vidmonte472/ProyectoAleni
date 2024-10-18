@@ -1,15 +1,12 @@
 <%-- 
-    Document   : M.mQuejas
-    Created on : 17/10/2024, 9:49:45 p. m.
+    Document   : M.EditarQuejas
+    Created on : 17/10/2024, 11:06:56 p. m.
     Author     : fboan
 --%>
-
 <%@page import="Clases.Quejas"%>
-<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +15,7 @@
         <link rel="stylesheet" href="../../CSS/styles.css">
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark">
+         <nav class="navbar navbar-dark bg-dark">
         <ul>
             <li><a href="Mcmenu.jsp">INICIO</a></li>
             <li><a href="MCardionica.jsp">CARDIONICA</a></li>
@@ -61,10 +58,11 @@
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-          
+
+                    
            
             </ul>
-                            <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="../../index.jsp">Log out</a>
             </li>
         </div>
@@ -75,66 +73,39 @@
 
 
     </nav>
+         <% Quejas editado = (Quejas) request.getSession().getAttribute("que1");  %>
+         
+         
+        <h1> EDITAR Queja No: <%= editado.getNumQueja() %> </h1>
+        
+            <form action="${pageContext.request.contextPath}/svEditarQuejas" method="POST">
+                
+                <label>Numero de Queja:</label>
+                <input type="text" name="numQueja" value="<%= editado.getNumQueja()%>" required readonly><br>
+                
+                
+                <label>Fecha:</label>
+                <input type="text" name="fecha" value="<%= editado.getFecha()%>" required><br>
+                
+                <label>Detalle:</label>
+                <input type="text" name="detalle" value="<%= editado.getDetalle()%>" required><br>
 
-        <h1>LISTA DE QUEJAS</h1>
+                <label>Solicitud:</label>
+                <input type="text" name="solicitud" value="<%= editado.getSolicitud()%>" required ><br>
+                
+                <label>NIT Consumidor:</label>
+                <input type="text" name="nitConsumidor" value="<%= editado.getNitConsumidor()%>" required ><br>
+                
+                <label>NIT Proveedor:</label>
+                <input type="text" name="nitProveedor" value="<%= editado.getNitProveedor()%>" required ><br>
+                
+                <label>Num. Documento:</label>
+                <input type="text" name="numDoc" value="<%= editado.getNumDoc()%>" required ><br>
 
-        <table class="table">
-            <thead>
-                <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Fecha</th>
-                    <th scope="col">NITProveedor</th>
-                    <th scope="col">NITConsumidor</th>
-                    <th scope="col">Numero de documento</th>
-                    <th scope="col">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% 
-                    List<Quejas> lista = (List<Quejas>) request.getSession().getAttribute("listaQuejas");
-                    int cont=0 ;
-                    if (lista != null && !lista.isEmpty()) {
-                        for (Quejas que : lista) {
-                        cont++;
-                %>
-                    <tr>
-                        <td> <%= que.getNumQueja() %> </td>
-                        <td><%= que.getFecha() %></td>
-                        <td><%= que.getNitProveedor() %></td>
-                        <td><%= que.getNitConsumidor() %></td>
-                        <td><%= que.getNumDoc()%></td>
-                        
-                        <td> 
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <form action="${pageContext.request.contextPath}/svEditarQueja" method="POST" > 
-                                <input type="hidden" name="QuejasId" value="<%= que.getNumQueja() %>">
-                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> </button>
-                            </form>  
-                            <form action="${pageContext.request.contextPath}/SvEliminarQueja" method="GET"> 
-                                <input type="hidden" name="QuejasId" value="<%= que.getNumQueja() %>">
-                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-trash"></i> </button>
-                            </form>
-                            <form action="${pageContext.request.contextPath}/SvMostrarQueja" method="GET"> 
-                                <input type="hidden" name="QuejasId" value="<%= que.getNumQueja() %>">
-                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-eye"></i> </button>
-                            </form>
-                            </div>
-                        </td>
-                    </tr>
-                <% 
-                        }
-                    } else { 
-                %>
-                    <tr>
-                        <td colspan="4">No hay quejas ingresadas.</td>
-                    </tr>
-                <% 
-                    }
-                %>
-            </tbody>
-        </table>
+                
+                <button type="submit">Guardar Cambios</button>
+            </form>
     </body>
-    <script src="https://kit.fontawesome.com/efd3b94f53.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </html>

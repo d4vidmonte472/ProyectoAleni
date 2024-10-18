@@ -30,7 +30,7 @@
         </ul>
     </nav>
     <h1>FORMULARIO DE QUEJAS DIACO</h1>
-    <form id="formularioQueja" method="POST" action="${pageContext.request.contextPath}/svGuardarConsumidor">
+    <form id="formularioQueja" method="POST" action="${pageContext.request.contextPath}/svGuardarConsumidor" enctype="multipart/form-data">
 
     <div class="dformC" id="seccion1">
         

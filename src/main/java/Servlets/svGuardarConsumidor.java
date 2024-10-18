@@ -23,8 +23,11 @@ import Clases.Quejas;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import jakarta.servlet.*;
+import jakarta.servlet.annotation.MultipartConfig;
+import jakarta.servlet.http.Part;
 import java.nio.file.*;
 import java.io.*;
+import javax.servlet.http.Part;
 
 
 
@@ -34,6 +37,11 @@ import java.io.*;
  *
  * @author david
  */
+@MultipartConfig(
+    fileSizeThreshold = 1024 * 1024 * 2, // 2MB
+    maxFileSize = 1024 * 1024 * 10,      // 10MB
+    maxRequestSize = 1024 * 1024 * 50    // 50MB
+)
 public class svGuardarConsumidor extends HttpServlet {
 
     
@@ -218,11 +226,29 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
       System.out.println("An error occurred.");
       e.printStackTrace();
     }
+         
+        //Guardar Archivos 
+        Part filePart = request.getPart("archivo"); // "archivo" es el nombre del input
+        String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
+         
+          String nuevoNombre = System.currentTimeMillis() + quejas.getNumQueja() + fileName;
+          String savePath = context.getRealPath("/ArchivosQueas"); // Cambia la ruta según tu proyecto
+        File directorio = new File(savePath);
+         if (!directorio.exists()) {
+            directorio.mkdirs(); // Crear directorio si no existe
+        }
         // Respuesta de éxito
+        
+         filePart.write(savePath + File.separator + nuevoNombre);
+
         response.getWriter().println("Datos guardados correctamente. Su numero de queja es: " + quejas.getNumQueja());
         
     
     }
+    
+    
+    
+    
     @Override
     public String getServletInfo() {
         return "Short description";

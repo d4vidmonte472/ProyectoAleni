@@ -6,13 +6,14 @@ package Servlets;
 
 import Clases.Usuario;
 import jakarta.servlet.ServletContext;
-import java.io.IOException;
-import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -24,82 +25,58 @@ import java.util.List;
  */
 public class svEditarUsuarios extends HttpServlet {
 
-    
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-       
-    }
-
-   
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-       
-    }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
         
-        
-         ServletContext context = getServletContext();
+        // Obtiene la ruta del archivo de usuarios
+        ServletContext context = getServletContext();
         String rutaArchivoUsuarios = context.getRealPath("/TXT/Usuarios.txt");
+        
+        // Lee las líneas del archivo y convierte a lista de objetos Usuario
         List<String> lineas = Files.readAllLines(Paths.get(rutaArchivoUsuarios));
+        List<Usuario> listaUsuarios = new ArrayList<>();
         
-       List<Usuario> listaUsuarios = new ArrayList<>();
-       
-         for (String linea : lineas) {
+        for (String linea : lineas) {
             String[] partes = linea.split(",");
-            if (partes.length == 2) {
-                String usuarioTxt = partes[0].trim();
-                String contrasenaTxt = partes[1].trim();
-                String masterTxt = partes[2].trim();
-                
-                listaUsuarios.add(new Usuario(usuarioTxt, contrasenaTxt, masterTxt));
-    
-        
-        
-        
-    }
-         }
-         
-         for(Usuario us : listaUsuarios){
-             
-             
-             if(us.getMaster() == null ? request.getParameter("usuarioId") == null : us.getMaster().equals(request.getParameter("usuarioId"))){
-                 us.setUsuario(request.getParameter("usuario"));
-                 us.setPassword(request.getParameter("password"));
-                 
-                  try {
-  
-            try (FileWriter myWriter = new FileWriter(rutaArchivoUsuarios, false)) {
-                for(Usuario usuario : listaUsuarios){
-                    
-               myWriter.write("\n" + usuario.getUsuario() + usuario.getPassword() + usuario.getMaster());
-           
-                }
-                 myWriter.close();
+            if (partes.length == 3) {
+                listaUsuarios.add(new Usuario(partes[0].trim(), partes[1].trim(), partes[2].trim()));
             }
-      
-     
-     
-      System.out.println("Successfully wrote to the file.");
-    } catch (IOException e) {
-      System.out.println("An error occurred.");
-      e.printStackTrace();
-    }
-                 break;
-                 
-             }
-         }
-         
+        }
+
+        // Busca al usuario que coincida con el parámetro usuarioId
+        for (Usuario us : listaUsuarios) {
+            if (us.getMaster() != null && us.getMaster().equals(request.getParameter("usuarioId"))) {
+                us.setUsuario(request.getParameter("usuario"));
+                us.setPassword(request.getParameter("password"));
+                break;
+            }
+        }
+
+        // Escribe los cambios en el archivo de usuarios
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(rutaArchivoUsuarios))) {
+            for (Usuario usuario : listaUsuarios) {
+                writer.write(usuario.getUsuario() + "," +
+                             usuario.getPassword() + "," +
+                             usuario.getMaster() + "\n");
+            }
+            System.out.println("Archivo actualizado correctamente.");
+        } catch (IOException e) {
+            System.out.println("Ocurrió un error al escribir en el archivo.");
+            e.printStackTrace();
+        }
+
+        // Redirecciona al menú o a otra página según el resultado
+        
+
+                  HttpSession misesion = request.getSession();
+        misesion.setAttribute("listaUsuarios", listaUsuarios);
+        
+         response.sendRedirect("JSP/Master/M.mUsuarios.jsp");
     }
 
-  
     @Override
     public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
+        return "Servlet para editar usuarios.";
+    }
 }

@@ -38,7 +38,7 @@
         <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">USUARIOS</a>
+                <a class="nav-link active" aria-current="page" href="M.Usuarios.jsp">USUARIOS</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">CONSUMIDORES</a>
@@ -78,7 +78,7 @@
          
         <h1> EDITAR <%= editado.getUsuario() %> </h1>
         
-            <form action="svActualizarUsuario" method="POST">
+            <form action="${pageContext.request.contextPath}/svEditarUsuarios" method="POST">
                 <label>Usuario:</label>
                 <input type="text" name="usuario" value="<%= editado.getUsuario() %>" required><br>
 
@@ -89,9 +89,11 @@
                 <input type="password" name="Cpassword" value="" required><br>
 
                 <label>Rol:</label>
-                <input type="text" name="usuarioId" value="<%= editado.getMaster() %>" required disabled><br>
+                <input type="text" name="usuarioId" value="<%= editado.getMaster() %>" required readonly><br>
 
                 <button type="submit">Guardar Cambios</button>
             </form>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </html>

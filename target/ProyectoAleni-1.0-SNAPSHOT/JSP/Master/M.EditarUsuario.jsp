@@ -86,10 +86,10 @@
                 <input type="password" name="password" value="<%= editado.getPassword() %>" required><br>
                 
                 <label>Nueva Contraseña:</label>
-                <input type="password" name="password" value="" required><br>
+                <input type="password" name="Cpassword" value="" required><br>
 
                 <label>Rol:</label>
-                <input type="text" name="master" value="<%= editado.getMaster() %>" required disabled><br>
+                <input type="text" name="usuarioId" value="<%= editado.getMaster() %>" required disabled><br>
 
                 <button type="submit">Guardar Cambios</button>
             </form>

@@ -43,7 +43,7 @@ public class svEditarProveedores extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         ServletContext context = getServletContext();
-        String rutaArchivoUsuarios = context.getRealPath("/TXT/proveedores.txt");
+        String rutaArchivoProveedores = context.getRealPath("/TXT/proveedores.txt");
         List<String> lineas = Files.readAllLines(Paths.get(rutaArchivoProveedores));
         
        List<Proveedor> listaProveedores = new ArrayList<>();
@@ -64,25 +64,28 @@ public class svEditarProveedores extends HttpServlet {
                 
                 listaProveedores.add(new Proveedor(nombreEmpresaTxt,razonSocialTxt,nitTxt,direccionTxt,zonaTxt,departamentoTxt,municipioTxt,telefonoTxt,correoTxt));
     
-        
-        
-        
+       
     }
          }
+         int proveedorId = Integer.parseInt(request.getParameter("proveedorId"));
          
-         for(Proveedor prov : listaProveedores){
-             
-             
-             if(prov.getNit()==Integer.parseInt(request.getParameter("proveedorNit"))){
-                 us.setUsuario(request.getParameter("usuario"));
-                 us.setPassword(request.getParameter("password"));
-                 
+                 listaProveedores.get(proveedorId).setNombreEmpresa(request.getParameter("nombreEmpresa"));
+                 listaProveedores.get(proveedorId).setRazonSocial(request.getParameter("razonSocial"));
+                 listaProveedores.get(proveedorId).setNit(Integer.parseInt(request.getParameter("nit")));
+                 listaProveedores.get(proveedorId).setDireccion(request.getParameter("direccion"));
+                 listaProveedores.get(proveedorId).setZona(request.getParameter("zona"));
+                 listaProveedores.get(proveedorId).setDepartamento(request.getParameter("departamento"));
+                 listaProveedores.get(proveedorId).setMunicipio(request.getParameter("municipio"));
+                 listaProveedores.get(proveedorId).setTelefono(Integer.parseInt(request.getParameter("telefono")));
+                 listaProveedores.get(proveedorId).setCorreo(request.getParameter("correo"));
+
                   try {
   
-            try (FileWriter myWriter = new FileWriter(rutaArchivoUsuarios, false)) {
-                for(Usuario usuario : listaUsuarios){
+            try (FileWriter myWriter = new FileWriter(rutaArchivoProveedores, false)) {
+                for(Proveedor proveedor : listaProveedores){
                     
-               myWriter.write("\n" + usuario.getUsuario() + usuario.getPassword() + usuario.getMaster());
+               myWriter.write("\n" + "\n"+proveedor.getNombreEmpresa()+","+proveedor.getRazonSocial()+","+proveedor.getNit()+","+proveedor.getDireccion()+","+proveedor.getZona()
+               +","+ proveedor.getDepartamento()+","+proveedor.getMunicipio()+","+proveedor.getTelefono()+","+proveedor.getCorreo());
            
                 }
                  myWriter.close();
@@ -94,11 +97,8 @@ public class svEditarProveedores extends HttpServlet {
     } catch (IOException e) {
       System.out.println("An error occurred.");
       e.printStackTrace();
-    }
-                 break;
-                 
-             }
-         }
+        }
+
     }
 
    

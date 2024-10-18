@@ -1,13 +1,15 @@
 <%-- 
-    Document   : M.EditarUsuario
-    Created on : 17/10/2024, 5:36:51 p. m.
+    Document   : M.mQuejas
+    Created on : 17/10/2024, 9:49:45 p. m.
     Author     : fboan
 --%>
 
-<%@page import="Clases.Usuario"%>
+<%@page import="Clases.Quejas"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +18,7 @@
         <link rel="stylesheet" href="../../CSS/styles.css">
     </head>
     <body>
-         <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-dark bg-dark">
         <ul>
             <li><a href="Mcmenu.jsp">INICIO</a></li>
             <li><a href="MCardionica.jsp">CARDIONICA</a></li>
@@ -59,11 +61,10 @@
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-
-                    
+          
            
             </ul>
-            <li class="nav-item">
+                            <li class="nav-item">
                 <a class="nav-link" href="../../index.jsp">Log out</a>
             </li>
         </div>
@@ -74,27 +75,59 @@
 
 
     </nav>
-         <% Usuario editado = (Usuario) request.getSession().getAttribute("usr");  %>
-         
-         
-        <h1> EDITAR <%= editado.getUsuario() %> </h1>
-        
-            <form action="${pageContext.request.contextPath}/svEditarUsuarios" method="POST">
-                <label>Usuario:</label>
-                <input type="text" name="usuario" value="<%= editado.getUsuario() %>" required><br>
 
-                <label>Contraseña:</label>
-                <input type="password" name="password" value="<%= editado.getPassword() %>" required><br>
-                
-                <label>Nueva Contraseña:</label>
-                <input type="password" name="Cpassword" value="" required><br>
+        <h1>LISTA DE USUARIOS</h1>
 
-                <label>Rol:</label>
-                <input type="text" name="usuarioId" value="<%= editado.getMaster() %>" required readonly><br>
+        <table class="table">
+            <thead>
+                <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Fecha</th>
+                    <th scope="col">NITProveedor</th>
+                    <th scope="col">NITConsumidor</th>
+                    <th scope="col">Numero de documento</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% 
+                    List<Quejas> lista = (List<Quejas>) request.getSession().getAttribute("listaQuejas");
+                    int cont=0 ;
+                    if (lista != null && !lista.isEmpty()) {
+                        for (Quejas que : lista) {
+                        cont++;
+                %>
+                    <tr>
+                        <td> <%= que.getNumQueja() %> </td>
+                        <td><%= que.getFecha() %></td>
+                        <td><%= que.getNitProveedor() %></td>
+                        <td><%= que.getNitConsumidor() %></td>
+                        <td><%= que.getNumDoc()%></td>
+                        
+                        <td> 
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <form action="${pageContext.request.contextPath}/svEditarUsuario" method="POST" > 
+                                <input type="hidden" name="usuarioId" value="<%= cont-1 %>">
+                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> </button>
+                            </form>  
 
-                <button type="submit">Guardar Cambios</button>
-            </form>
+                            </div>
+                        </td>
+                    </tr>
+                <% 
+                        }
+                    } else { 
+                %>
+                    <tr>
+                        <td colspan="4">No hay quejas ingresadas.</td>
+                    </tr>
+                <% 
+                    }
+                %>
+            </tbody>
+        </table>
     </body>
+    <script src="https://kit.fontawesome.com/efd3b94f53.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </html>

@@ -1,13 +1,11 @@
 <%-- 
-    Document   : M.EditarUsuario
-    Created on : 17/10/2024, 5:36:51 p. m.
+    Document   : M.MostrarConsumidores
+    Created on : 17/10/2024, 9:27:07 p. m.
     Author     : fboan
 --%>
 
-<%@page import="Clases.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,27 +72,7 @@
 
 
     </nav>
-         <% Usuario editado = (Usuario) request.getSession().getAttribute("usr");  %>
-         
-         
-        <h1> EDITAR <%= editado.getUsuario() %> </h1>
-        
-            <form action="${pageContext.request.contextPath}/svEditarUsuarios" method="POST">
-                <label>Usuario:</label>
-                <input type="text" name="usuario" value="<%= editado.getUsuario() %>" required><br>
-
-                <label>Contraseña:</label>
-                <input type="password" name="password" value="<%= editado.getPassword() %>" required><br>
-                
-                <label>Nueva Contraseña:</label>
-                <input type="password" name="Cpassword" value="" required><br>
-
-                <label>Rol:</label>
-                <input type="text" name="usuarioId" value="<%= editado.getMaster() %>" required readonly><br>
-
-                <button type="submit">Guardar Cambios</button>
-            </form>
+        <h1>Hello World!</h1>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
 </html>

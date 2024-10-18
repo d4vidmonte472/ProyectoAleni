@@ -58,16 +58,17 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark">
                 <li><a class="dropdown-item" href="#">VENTAS</a></li>
-                <li><a class="dropdown-item" href="#">QUEJAS</a></li>
+                <li><a class="dropdown-item" href="M.quejas.jsp">QUEJAS</a></li>
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../../index.jsp">Log out</a>
-            </li>
+ 
                 
            
             </ul>
+                            <li class="nav-item">
+                <a class="nav-link" href="../../index.jsp">Log out</a>
+            </li>
         </div>
         </div>
     </div>

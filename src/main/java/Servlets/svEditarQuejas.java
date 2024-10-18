@@ -18,6 +18,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import Clases.Quejas;
+import jakarta.servlet.http.HttpSession;
 
 
 /**
@@ -103,6 +104,12 @@ public class svEditarQuejas extends HttpServlet {
                  
              }
          }
+         HttpSession misesion = request.getSession();
+        misesion.setAttribute("listaQuejas", listaQuejas);
+        
+         response.sendRedirect("JSP/Master/M.mQuejas.jsp");
+         
+         
     }
 
    

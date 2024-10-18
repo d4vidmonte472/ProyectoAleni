@@ -32,6 +32,10 @@
         <servlet-name>svEditarProveedores</servlet-name>
         <servlet-class>Servlets.svEditarProveedores</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>svEditarQuejas</servlet-name>
+        <servlet-class>Servlets.svEditarQuejas</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
         <url-pattern>/svGuardarConsumidor</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>svEditarProveedores</servlet-name>
         <url-pattern>/svEditarProveedores</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>svEditarQuejas</servlet-name>
+        <url-pattern>/svEditarQuejas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

@@ -81,28 +81,28 @@ public class svEditarConsumidores extends HttpServlet {
                 correoTxt,autorizacionTxt,sexoTxt));
     }
          }
-         for(Consumidor con : listaConsumidores){
+         
+             int consumidorId = Integer.parseInt(request.getParameter("consumidorId"));
              
              
-             if(con.getDpi()==Integer.parseInt(request.getParameter("consumidorDpi"))){
-                 con.setNacionalidad(request.getParameter("nacionalidad"));
-                 con.setTipoConsumidor(request.getParameter("tipoConsumidor"));
-                 con.setNit(Integer.parseInt(request.getParameter("nit")));
+                 listaConsumidores.get(consumidorId).setNacionalidad(request.getParameter("nacionalidad"));
+                 listaConsumidores.get(consumidorId).setTipoConsumidor(request.getParameter("tipoConsumidor"));
+                 listaConsumidores.get(consumidorId).setNit(Integer.parseInt(request.getParameter("nit")));
 
-                 con.setNombre1(request.getParameter("nombre1"));
-                 con.setNombre2(request.getParameter("nombre2"));
-                 con.setApellido1(request.getParameter("apellido1"));
-                 con.setApellido2(request.getParameter("apellido2"));
-                 con.setApellidoCasada(request.getParameter("apellidoCasada"));
-                 con.setDireccion(request.getParameter("direccion"));
-                 con.setZona(request.getParameter("zona"));
-                 con.setDepartamento(request.getParameter("deparetamento"));
-                 con.setMunicipio(request.getParameter("municipio"));
-                 con.setSedeDiaco(request.getParameter("sede"));
-                 con.setTelDom(Integer.parseInt(request.getParameter("telDom")));
-                 con.setTel(Integer.parseInt(request.getParameter("tel")));
-                 con.setTelRef(Integer.parseInt(request.getParameter("telRef")));
-                 con.setSexo(request.getParameter("sexo"));
+                 listaConsumidores.get(consumidorId).setNombre1(request.getParameter("nombre1"));
+                 listaConsumidores.get(consumidorId).setNombre2(request.getParameter("nombre2"));
+                 listaConsumidores.get(consumidorId).setApellido1(request.getParameter("apellido1"));
+                 listaConsumidores.get(consumidorId).setApellido2(request.getParameter("apellido2"));
+                 listaConsumidores.get(consumidorId).setApellidoCasada(request.getParameter("apellidoCasada"));
+                 listaConsumidores.get(consumidorId).setDireccion(request.getParameter("direccion"));
+                 listaConsumidores.get(consumidorId).setZona(request.getParameter("zona"));
+                 listaConsumidores.get(consumidorId).setDepartamento(request.getParameter("deparetamento"));
+                 listaConsumidores.get(consumidorId).setMunicipio(request.getParameter("municipio"));
+                 listaConsumidores.get(consumidorId).setSedeDiaco(request.getParameter("sede"));
+                 listaConsumidores.get(consumidorId).setTelDom(Integer.parseInt(request.getParameter("telDom")));
+                 listaConsumidores.get(consumidorId).setTel(Integer.parseInt(request.getParameter("tel")));
+                 listaConsumidores.get(consumidorId).setTelRef(Integer.parseInt(request.getParameter("telRef")));
+                 listaConsumidores.get(consumidorId).setSexo(request.getParameter("sexo"));
                  
                   try{
                      
@@ -125,11 +125,11 @@ public class svEditarConsumidores extends HttpServlet {
       System.out.println("An error occurred.");
       e.printStackTrace();
     }
-                 break;
+              
                  
-             }
-         }
-    }
+             
+         
+}
 
    
     @Override

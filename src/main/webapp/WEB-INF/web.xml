@@ -24,6 +24,10 @@
         <servlet-name>SvMostrarqueja</servlet-name>
         <servlet-class>Servlets.SvMostrarqueja</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>svEditarQueja</servlet-name>
+        <servlet-class>Servlets.svEditarQueja</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
         <url-pattern>/svGuardarConsumidor</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>SvMostrarqueja</servlet-name>
         <url-pattern>/SvMostrarqueja</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>svEditarQueja</servlet-name>
+        <url-pattern>/svEditarQueja</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

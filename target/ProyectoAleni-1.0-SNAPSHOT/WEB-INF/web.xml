@@ -20,6 +20,10 @@
         <servlet-name>svEditarUsuario</servlet-name>
         <servlet-class>Servlets.svEditarUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>svEditarUsuarios</servlet-name>
+        <servlet-class>Servlets.svEditarUsuarios</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
         <url-pattern>/svGuardarConsumidor</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>svEditarUsuario</servlet-name>
         <url-pattern>/svEditarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>svEditarUsuarios</servlet-name>
+        <url-pattern>/svEditarUsuarios</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

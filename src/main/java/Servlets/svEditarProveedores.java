@@ -4,6 +4,7 @@
  */
 package Servlets;
 
+import Clases.Proveedor;
 import Clases.Usuario;
 import jakarta.servlet.ServletContext;
 import java.io.IOException;
@@ -22,41 +23,46 @@ import java.util.List;
  *
  * @author David
  */
-public class svEditarUsuarios extends HttpServlet {
+public class svEditarProveedores extends HttpServlet {
 
-    
+  
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+      
     }
 
-   
+ 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+        
     }
 
+  
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+        ServletContext context = getServletContext();
+        String rutaArchivoUsuarios = context.getRealPath("/TXT/proveedores.txt");
+        List<String> lineas = Files.readAllLines(Paths.get(rutaArchivoProveedores));
         
-        
-         ServletContext context = getServletContext();
-        String rutaArchivoUsuarios = context.getRealPath("/TXT/Usuarios.txt");
-        List<String> lineas = Files.readAllLines(Paths.get(rutaArchivoUsuarios));
-        
-       List<Usuario> listaUsuarios = new ArrayList<>();
+       List<Proveedor> listaProveedores = new ArrayList<>();
        
          for (String linea : lineas) {
             String[] partes = linea.split(",");
-            if (partes.length == 2) {
-                String usuarioTxt = partes[0].trim();
-                String contrasenaTxt = partes[1].trim();
-                String masterTxt = partes[2].trim();
+            if (partes.length == 9) {
+                String nombreEmpresaTxt = partes[0].trim();
+                String razonSocialTxt = partes[1].trim();
+                int nitTxt = Integer.parseInt(partes[2].trim());
+                String direccionTxt = partes[3].trim();
+                String zonaTxt = partes[4].trim();
+                String departamentoTxt = partes[5].trim();
+                String municipioTxt = partes[6].trim();
+                int telefonoTxt = Integer.parseInt(partes[7].trim());
+                String correoTxt = partes[8].trim();
                 
-                listaUsuarios.add(new Usuario(usuarioTxt, contrasenaTxt, masterTxt));
+                
+                listaProveedores.add(new Proveedor(nombreEmpresaTxt,razonSocialTxt,nitTxt,direccionTxt,zonaTxt,departamentoTxt,municipioTxt,telefonoTxt,correoTxt));
     
         
         
@@ -64,10 +70,10 @@ public class svEditarUsuarios extends HttpServlet {
     }
          }
          
-         for(Usuario us : listaUsuarios){
+         for(Proveedor prov : listaProveedores){
              
              
-             if(us.getMaster() == null ? request.getParameter("usuarioId") == null : us.getMaster().equals(request.getParameter("usuarioId"))){
+             if(prov.getNit()==Integer.parseInt(request.getParameter("proveedorNit"))){
                  us.setUsuario(request.getParameter("usuario"));
                  us.setPassword(request.getParameter("password"));
                  
@@ -93,10 +99,9 @@ public class svEditarUsuarios extends HttpServlet {
                  
              }
          }
-         
     }
 
-  
+   
     @Override
     public String getServletInfo() {
         return "Short description";

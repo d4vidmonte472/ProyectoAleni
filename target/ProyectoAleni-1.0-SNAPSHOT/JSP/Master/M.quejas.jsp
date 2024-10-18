@@ -1,22 +1,31 @@
 <%-- 
-    Document   : M.EditarUsuario
-    Created on : 17/10/2024, 5:36:51 p. m.
+    Document   : M.quejas
+    Created on : 17/10/2024, 9:49:57 p. m.
     Author     : fboan
 --%>
 
-<%@page import="Clases.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>USUARIOS</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="../../CSS/styles.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
     </head>
     <body>
-         <nav class="navbar navbar-dark bg-dark">
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="../../CSS/styles.css">
+
+
+</head>
+<body>
+
+    <!-- Menú de navegación original -->
+    <nav class="navbar navbar-dark bg-dark">
         <ul>
             <li><a href="Mcmenu.jsp">INICIO</a></li>
             <li><a href="MCardionica.jsp">CARDIONICA</a></li>
@@ -59,11 +68,11 @@
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-
+            
                     
            
             </ul>
-            <li class="nav-item">
+                            <li class="nav-item">
                 <a class="nav-link" href="../../index.jsp">Log out</a>
             </li>
         </div>
@@ -74,26 +83,10 @@
 
 
     </nav>
-         <% Usuario editado = (Usuario) request.getSession().getAttribute("usr");  %>
-         
-         
-        <h1> EDITAR <%= editado.getUsuario() %> </h1>
-        
-            <form action="${pageContext.request.contextPath}/svEditarUsuarios" method="POST">
-                <label>Usuario:</label>
-                <input type="text" name="usuario" value="<%= editado.getUsuario() %>" required><br>
-
-                <label>Contraseña:</label>
-                <input type="password" name="password" value="<%= editado.getPassword() %>" required><br>
-                
-                <label>Nueva Contraseña:</label>
-                <input type="password" name="Cpassword" value="" required><br>
-
-                <label>Rol:</label>
-                <input type="text" name="usuarioId" value="<%= editado.getMaster() %>" required readonly><br>
-
-                <button type="submit">Guardar Cambios</button>
-            </form>
+        <h1>LISTA DE QUEJAS</h1>
+        <form id="Usuarios" method="GET" action="${pageContext.request.contextPath}/SvMostrarqueja"> 
+            <button type="submit" class="btn btn-primary">Cargar Quejas</button>
+        </form>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

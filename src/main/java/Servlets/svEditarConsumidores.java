@@ -104,7 +104,7 @@ public class svEditarConsumidores extends HttpServlet {
                  listaConsumidores.get(consumidorId).setTelRef(Integer.parseInt(request.getParameter("telRef")));
                  listaConsumidores.get(consumidorId).setSexo(request.getParameter("sexo"));
                  
-                  try{
+                
                      
             try (FileWriter myWriter = new FileWriter(rutaArchivoConsumidores, false)) {
                 for(Consumidor consumidor : listaConsumidores){
@@ -116,7 +116,7 @@ public class svEditarConsumidores extends HttpServlet {
            
                 }
                  myWriter.close();
-            }
+           
       
      
      

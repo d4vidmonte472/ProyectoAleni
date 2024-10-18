@@ -56,7 +56,7 @@
                 <a class="nav-link" href="#">PROVEDORES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">QUEJAS</a>
+                <a class="nav-link" href="M.quejas.jsp">QUEJAS</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -68,12 +68,13 @@
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../../index.jsp">Log out</a>
-            </li>
+            
                     
            
             </ul>
+                            <li class="nav-item">
+                <a class="nav-link" href="../../index.jsp">Log out</a>
+            </li>
         </div>
         </div>
     </div>
@@ -84,7 +85,7 @@
     </nav>
         <h1>LISTA DE USUARIOS</h1>
         <form id="Usuarios" method="GET" action="${pageContext.request.contextPath}/svMostrarUsuarios"> 
-            <button type="submit" class="btn btn-primary">Cargas Usuarios</button>
+            <button type="submit" class="btn btn-primary">Cargar Usuarios</button>
         </form>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

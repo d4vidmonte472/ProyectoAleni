@@ -21,20 +21,8 @@
         <servlet-class>Servlets.svEditarUsuario</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>svEditarUsuarios</servlet-name>
-        <servlet-class>Servlets.svEditarUsuarios</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>svEditarConsumidores</servlet-name>
-        <servlet-class>Servlets.svEditarConsumidores</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>svEditarProveedores</servlet-name>
-        <servlet-class>Servlets.svEditarProveedores</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>svEditarQuejas</servlet-name>
-        <servlet-class>Servlets.svEditarQuejas</servlet-class>
+        <servlet-name>SvMostrarqueja</servlet-name>
+        <servlet-class>Servlets.SvMostrarqueja</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
@@ -57,20 +45,8 @@
         <url-pattern>/svEditarUsuario</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>svEditarUsuarios</servlet-name>
-        <url-pattern>/svEditarUsuarios</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>svEditarConsumidores</servlet-name>
-        <url-pattern>/svEditarConsumidores</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>svEditarProveedores</servlet-name>
-        <url-pattern>/svEditarProveedores</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>svEditarQuejas</servlet-name>
-        <url-pattern>/svEditarQuejas</url-pattern>
+        <servlet-name>SvMostrarqueja</servlet-name>
+        <url-pattern>/SvMostrarqueja</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

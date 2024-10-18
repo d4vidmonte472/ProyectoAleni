@@ -90,6 +90,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
                     nitProveedorTxt, nitConsumidorTxt, numQuejaTxt));
         }
     }
+<<<<<<< HEAD
 
     // Buscar la queja que coincide con el ID proporcionado.
     int idQuejaBuscada = Integer.parseInt(request.getParameter("QuejasId"));
@@ -98,6 +99,13 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
             que1 = que; // Asignamos la queja encontrada a que1.
             break;
         }
+=======
+         }
+         
+         for (Quejas que : listaQuejas ){
+             
+         }
+>>>>>>> 01cc6c034f14e46bc2a0bc8e0ac62c270440f6a5
     }
 
     // Validar si se encontró la queja.

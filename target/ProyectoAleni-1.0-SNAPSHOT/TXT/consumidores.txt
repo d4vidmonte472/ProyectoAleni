@@ -10,7 +10,17 @@ guatemalteco,individual,12345678,12345678,Prueba,Prueba,Prueba,PRueba1,asda,asds
 guatemalteco,individual,1381,813183,831,3813813,1381,83138,1381,12 calle 21-85 Z 11,sin-zona,9,910,Baja Verapaz,4113,13813131,411,3611813131318@gmail.com,true,h
 guatemalteco,individual,1381,813183,831,3813813,1381,83138,1381,12 calle 21-85 Z 11,sin-zona,9,910,Baja Verapaz,4113,13813131,411,3611813131318@gmail.com,true,h
 guatemalteco,individual,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,villa nueva,zona-9,18,1801,Central,4113,13813131,411,Mcospin2018ig@gmail.com,false,m
+<<<<<<< HEAD
+guatemalteco,individual,12435678,12345678,Jorge,Jose,ASLkbndaiojsbda,PRueba1,asda,asdsdsdfs,zona-16,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,h
+=======
 guatemalteco,juridico,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,villa nueva,sin-zona,2,201,Escuintla,4113,13813131,411,Mcospin2018ig@gmail.com,true,h
 guatemalteco,juridico,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,villa nueva,zona-2,12,1211,Cobán,4113,13813131,411,Mcospin2018ig@gmail.com,false,h
 guatemalteco,juridico,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,villa nueva,zona-2,11,1105,Cobán,4113,13813131,411,Mcospin2018ig@gmail.com,false,h
+<<<<<<< HEAD
 guatemalteco,individual,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,villa nueva,zona-16,15,1504,Suchitepéquez,4113,13813131,411,Mcospin2018ig@gmail.com,true,h
+=======
+>>>>>>> 02de09a4b39c037661bcd2f9184c585e7019dee0
+
+guatemalteco,individual,12345687,12347568,Jorge,Jose,ASLkbndaiojsbda,PRueba1,asda,asdsdsdfs,zona-2,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,m
+guatemalteco,individual,12345678,12345678,Jorge,Jose,ASLkbndaiojsbda,PRueba1,asda,asdsdsdfs,zona-17,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,h
+>>>>>>> 01cc6c034f14e46bc2a0bc8e0ac62c270440f6a5

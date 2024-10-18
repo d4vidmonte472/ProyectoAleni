@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\Servlets\svEditarUsuarios.java
 C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\Servlets\SvLogin.java
 C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\Clases\Consumidor.java
@@ -16,3 +17,21 @@ C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\
 C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\Servlets\svEditarQuejas.java
 C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\com\aleni\proyectoaleni\JakartaRestConfiguration.java
 C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\Servlets\SvEliminarQueja.java
+=======
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svEditarUsuario.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svEditarQuejas.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\com\aleni\proyectoaleni\resources\JakartaEE10Resource.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Clases\Consumidor.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Clases\Usuario.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svMostrarConsumidores.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svMostrarUsuarios.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svEditarConsumidores.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\SvLogin.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Clases\Proveedor.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Clases\Quejas.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svGuardarConsumidor.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\SvMostrarqueja.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svEditarUsuarios.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svEditarProveedores.java
+C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\com\aleni\proyectoaleni\JakartaRestConfiguration.java
+>>>>>>> 01cc6c034f14e46bc2a0bc8e0ac62c270440f6a5

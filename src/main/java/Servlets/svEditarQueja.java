@@ -85,7 +85,7 @@ public class svEditarQueja extends HttpServlet {
          }
          
          for (Quejas que : listaQuejas ){
-             if (que.getNumQueja().equals(requestparameter("adgvgasv")))
+             
          }
     }
 

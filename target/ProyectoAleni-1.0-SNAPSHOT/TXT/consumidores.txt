@@ -17,3 +17,6 @@ guatemalteco,juridico,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,vi
 guatemalteco,juridico,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,villa nueva,zona-2,12,1211,Cobán,4113,13813131,411,Mcospin2018ig@gmail.com,false,h
 guatemalteco,juridico,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,villa nueva,zona-2,11,1105,Cobán,4113,13813131,411,Mcospin2018ig@gmail.com,false,h
 >>>>>>> 02de09a4b39c037661bcd2f9184c585e7019dee0
+
+guatemalteco,individual,12345687,12347568,Jorge,Jose,ASLkbndaiojsbda,PRueba1,asda,asdsdsdfs,zona-2,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,m
+guatemalteco,individual,12345678,12345678,Jorge,Jose,ASLkbndaiojsbda,PRueba1,asda,asdsdsdfs,zona-17,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,h

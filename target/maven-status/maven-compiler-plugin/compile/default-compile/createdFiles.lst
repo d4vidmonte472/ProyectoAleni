@@ -1,5 +1,6 @@
 Servlets\svEditarUsuarios.class
 Servlets\svEditarProveedores.class
+Servlets\svEditarQueja.class
 Clases\Proveedor.class
 Clases\Quejas.class
 Servlets\svMostrarConsumidores.class

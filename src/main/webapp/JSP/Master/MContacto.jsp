@@ -50,7 +50,7 @@
                 <a class="nav-link" href="#">PROVEDORES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">QUEJAS</a>
+                <a class="nav-link" href="M.quejas.jsp">QUEJAS</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

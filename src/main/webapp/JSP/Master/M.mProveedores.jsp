@@ -1,16 +1,22 @@
 <%-- 
-    Document   : MContacto
-    Created on : 17/10/2024, 8:23:02 a. m.
+    Document   : M.mProveedores
+    Created on : 22/10/2024, 8:44:07 a. m.
     Author     : fboan
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Usuarios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="../../CSS/styles.css">
 
@@ -58,12 +64,12 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark">
                 <li><a class="dropdown-item" href="#">VENTAS</a></li>
-                <li><a class="dropdown-item" href="M.quejas.jsp">QUEJAS</a></li>
+                <li><a class="dropdown-item" href="#">QUEJAS</a></li>
                 <li>
                     <hr class="dropdown-divider">
                 </li>
- 
-                
+            
+                    
            
             </ul>
                             <li class="nav-item">
@@ -77,19 +83,11 @@
 
 
     </nav>
-
-    
-    <div class="container">
-        <h1>Contacto</h1>
-        <p>Calzada San Juan 21-14, C.C. Centro 21 Zona 7, Guatemala.</p>
-        <p>Email: <a href="mailto:info@grupocomercialaleni.com">info@grupocomercialaleni.com</a></p>
-        <p>Teléfono: <a href="tel:+50224952435">(502) 2495-2435</a></p>
-    </div>
-    <footer>
-        <p> © 2024 Grupo Comercial Aleni. Todos los derechos reservados.</p>
-    </footer>
+        <h1>LISTA DE PROVEEDORES</h1>
+        <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvMostrarProveedores"> 
+            <button type="submit" class="btn btn-primary">Cargar Quejas</button>
+        </form>
+    </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-
-</body>
 </html>

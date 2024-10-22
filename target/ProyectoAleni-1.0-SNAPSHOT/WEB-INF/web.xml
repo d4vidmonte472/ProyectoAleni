@@ -20,6 +20,10 @@
         <servlet-name>svEditarUsuario</servlet-name>
         <servlet-class>Servlets.svEditarUsuario</servlet-class>
     </servlet>
+        <servlet>
+        <servlet-name>svEditarUsuarios</servlet-name>
+        <servlet-class>Servlets.svEditarUsuarios</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>SvMostrarqueja</servlet-name>
         <servlet-class>Servlets.SvMostrarqueja</servlet-class>
@@ -59,6 +63,10 @@
     <servlet-mapping>
         <servlet-name>svEditarUsuario</servlet-name>
         <url-pattern>/svEditarUsuario</url-pattern>
+    </servlet-mapping>
+        <servlet-mapping>
+        <servlet-name>svEditarUsuarios</servlet-name>
+        <url-pattern>/svEditarUsuarios</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvMostrarqueja</servlet-name>

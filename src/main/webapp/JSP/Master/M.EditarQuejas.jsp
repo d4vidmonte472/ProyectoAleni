@@ -43,13 +43,25 @@
                 <a class="nav-link" href="#">CONSUMIDORES</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">PROVEDORES</a>
+                    
+        
+            <a class="nav-link" href="M.quejas.jsp">
+             <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvMostrarqueja"> 
+             <button type="submit" class="btn btn-secondary btn-lg">PROVEEDORES</button>
+        </form></a>         
+             
+     
+             
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="M.quejas.jsp">QUEJAS</a>
+                
+                <a class="nav-link" href="M.quejas.jsp">        <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvMostrarqueja"> 
+             <button type="submit" class="btn btn-secondary btn-lg">QUEJAS</button>
+        </form></a>
+            
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" type="">
                 REPORTES 
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark">

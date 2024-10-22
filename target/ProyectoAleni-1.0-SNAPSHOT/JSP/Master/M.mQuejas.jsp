@@ -114,7 +114,7 @@
                                 <input type="hidden" name="QuejasId" value="<%= que.getNumQueja() %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-trash"></i> </button>
                             </form>
-                            <form action="${pageContext.request.contextPath}/SvMostrarQueja" method="GET"> 
+                            <form action="${pageContext.request.contextPath}/SvMosQueja" method="POST"> 
                                 <input type="hidden" name="QuejasId" value="<%= que.getNumQueja() %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-eye"></i> </button>
                             </form>

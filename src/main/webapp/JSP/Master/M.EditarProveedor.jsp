@@ -1,9 +1,10 @@
 <%-- 
-    Document   : M.EditarQuejas
-    Created on : 17/10/2024, 11:06:56 p. m.
+    Document   : M.EditarProveedor
+    Created on : 22/10/2024, 6:47:33 p. m.
     Author     : fboan
 --%>
-<%@page import="Clases.Quejas"%>
+
+<%@page import="Clases.Proveedor"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -116,34 +117,40 @@
 
 
     </nav>
-         <% Quejas editado = (Quejas) request.getSession().getAttribute("que1");  %>
+         <% Proveedor editado = (Proveedor) request.getSession().getAttribute("que");  %>
          
          
-        <h1> EDITAR Queja No: <%= editado.getNumQueja() %> </h1>
+        <h1> EDITAR proveedor: <%= editado.getRazonSocial() %> </h1>
         
             <form action="${pageContext.request.contextPath}/svEditarQuejas" method="POST">
                 
-                <label>Numero de Queja:</label>
-                <input type="text" name="numQueja" value="<%= editado.getNumQueja()%>" required readonly><br>
+                <label>NIT:</label>
+                <input type="text" name="numQueja" value="<%= editado.getNit() %>" required readonly><br>
                 
                 
-                <label>Fecha:</label>
-                <input type="text" name="fecha" value="<%= editado.getFecha()%>" required><br>
+                <label>RAZÓN SOCIAL:</label>
+                <input type="text" name="fecha" value="<%= editado.getRazonSocial() %>" required><br>
                 
-                <label>Detalle:</label>
-                <input type="text" name="detalle" value="<%= editado.getDetalle()%>" required><br>
+                <label>NOMBRE DE EMPRESA:</label>
+                <input type="text" name="detalle" value="<%= editado.getNombreEmpresa() %>" required><br>
 
-                <label>Solicitud:</label>
-                <input type="text" name="solicitud" value="<%= editado.getSolicitud()%>" required ><br>
+                <label>TELEFONO:</label>
+                <input type="text" name="solicitud" value="<%= editado.getTelefono() %>" required ><br>
                 
-                <label>NIT Consumidor:</label>
-                <input type="text" name="nitConsumidor" value="<%= editado.getNitConsumidor()%>" required ><br>
+                <label>DEPARTAMENTO:</label>
+                <input type="text" name="nitConsumidor" value="<%= editado.getDepartamento() %>" required ><br>
                 
-                <label>NIT Proveedor:</label>
-                <input type="text" name="nitProveedor" value="<%= editado.getNitProveedor()%>" required ><br>
+                <label>MUNICIPIO:</label>
+                <input type="text" name="nitProveedor" value="<%= editado.getMunicipio() %>" required ><br>
                 
-                <label>Num. Documento:</label>
-                <input type="text" name="numDoc" value="<%= editado.getNumDoc()%>" required ><br>
+                <label>ZONA:</label>
+                <input type="text" name="numDoc" value="<%= editado.getZona() %>" required ><br>
+                
+                <label>DIRECCÍON:</label>
+                <input type="text" name="numDoc" value="<%= editado.getDireccion() %>" required ><br>
+                
+                
+                
 
                 
                 <button type="submit">Guardar Cambios</button>

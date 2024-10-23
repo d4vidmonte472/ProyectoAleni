@@ -14,3 +14,4 @@ guatemalteco,juridico,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,vi
 guatemalteco,juridico,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,villa nueva,zona-12,2,203,Zacapa,4113,13813131,411,Mcospin2018ig@gmail.com,true,m
 guatemalteco,juridico,12345678,12345678,Juan,Pepito ,Lopez,Obrador,De cindy,villa nueva,zona-12,14,1412,Quiché,41135468,13813131,12345678,Mcospin2018ig@gmail.com,true,h
 guatemalteco,individual,181184,12345678,Tucci,Marco,Lopez,Obrador,De cindy,villa nueva,sin-zona,2,202,Retalhuleu,41135468,13813131,12345678,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,135846,3813,Tucci,318131,18318,8318318,18181,villa nueva,sin-zona,10,1012,Baja Verapaz,411354,138131,123456,Mcospin2018ig@gmail.com,false,h

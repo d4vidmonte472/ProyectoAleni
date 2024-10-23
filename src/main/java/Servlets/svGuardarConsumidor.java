@@ -219,6 +219,10 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
             myWriter.close();
             }
       
+            
+            
+            
+            
      
      
       System.out.println("Successfully wrote to the file.");
@@ -226,6 +230,36 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
       System.out.println("An error occurred.");
       e.printStackTrace();
     }
+         
+                     
+            String nombreArchivo = quejas.getNumQueja() + ".txt";
+            File archivoReporte = new File(nombreArchivo);
+       String rutaArchivoReportes = context.getRealPath("/Reportes/"+nombreArchivo);
+         
+        Path archivoReportes = Paths.get(rutaArchivoReportes);
+       System.out.println("Ruta del archivo consumidor: " + rutaArchivoReportes);
+            
+       try(BufferedWriter writer = new BufferedWriter(new FileWriter(rutaArchivoReportes))){
+           writer.write("Numero de Queja: " + quejas.getNumQueja()+"\n");
+           writer.write("Fecha de la queja: "+ quejas.getFecha()+"\n");
+           writer.write("Nombre del Consumidor: "+ consumidor.getApellido1()+consumidor.getNombre1()+"\n");
+           writer.write("Nombre de la Empresa: "+ proveedor.getNombreEmpresa()+"\n");
+           writer.write("Solicitud: "+ quejas.getSolicitud()+"\n");
+           writer.write("Detalle: "+ quejas.getDetalle()+"\n");
+           
+           
+       }catch (IOException e) {
+            e.printStackTrace();
+            // Manejo de errores
+        }
+     
+      System.out.println("Successfully wrote to the file.");
+   
+
+       
+         
+         
+         
          
         //Guardar Archivos 
         Part filePart = request.getPart("pruebas"); // "archivo" es el nombre del input
@@ -238,6 +272,9 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
             directorio.mkdirs(); // Crear directorio si no existe
         }
         // Respuesta de éxito
+        
+        
+        
         
          filePart.write(savePath + File.separator + nuevoNombre);
 

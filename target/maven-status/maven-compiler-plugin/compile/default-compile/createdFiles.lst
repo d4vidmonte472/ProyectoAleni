@@ -14,6 +14,12 @@ Servlets\SvEditarProveedor.class
 Servlets\svEditarQuejas.class
 Servlets\svGuardarConsumidor.class
 Servlets\SvEliminarQueja.class
+<<<<<<< HEAD
+=======
+Servlets\svEditarConsumidores.class
+Servlets\svMostrarUsuarios.class
+Clases\Reportes.class
+>>>>>>> 6222bfd0cc21f29c8d43d9fb3ea6a8b8d805a1f0
 Servlets\SvMosQueja.class
 Servlets\svEditarUsuario.class
 Clases\Usuario.class

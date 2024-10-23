@@ -14,13 +14,7 @@
     <body>
 <nav class="navbar navbar-dark bg-dark">
                 <ul>
-                    <li><a href="Mcmenu.jsp">INICIO</a></li>
-                    <li><a href="MCardionica.jsp">CARDIONICA</a></li>
-                    <li><a href="Mservicios.jsp">PLANES</a></li>
-                    <li><a href="MContacto.jsp">CONTACTO</a></li>
-                    <li><a href="MQuejas.jsp">QUEJAS DIACO</a></li>
-
-        <li>
+                     <li>
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">MASTER MENU</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -109,14 +103,23 @@
                 </div>
             </div>
         </li>
+                    <li><a href="Mcmenu.jsp">INICIO</a></li>
+                    <li><a href="MCardionica.jsp">CARDIONICA</a></li>
+                    <li><a href="Mservicios.jsp">PLANES</a></li>
+                    <li><a href="MContacto.jsp">CONTACTO</a></li>
+                    <li><a href="MQuejas.jsp">QUEJAS DIACO</a></li>
+
+       
                 </ul>
 
 
 </nav>
 
         <h1>LISTA DE USUARIOS</h1>
-
-        <table class="table">
+        
+<div class=" table-bordered" > 
+    
+        <table class="table table-bordered">
             <thead>
                 <tr>
                       <th scope="col">#</th>
@@ -136,8 +139,16 @@
                 %>
                     <tr>
                         <td> <%= cont %> </td>
+                           
                         <td><%= us.getUsuario() %></td>
-                        <td><%= us.getPassword() %></td>
+                        
+                          <td> <form action="${pageContext.request.contextPath}/svEditarUsuario" method="POST" > 
+                                  <input type="password" name="usuarioId" value="<%= us.getPassword() %>" readonly="">
+                               
+                            </form>  
+                     </td>
+                        
+                        
                         <td><%= us.getMaster() %></td>
                         <td> 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -161,6 +172,7 @@
                 %>
             </tbody>
         </table>
+</div>
     </body>
     <script src="https://kit.fontawesome.com/efd3b94f53.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

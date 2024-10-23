@@ -1,2 +1,2 @@
-ferxo30,1234,Master
+ferxo,1234,Master
 Colochcontremendachocha,123,Admin

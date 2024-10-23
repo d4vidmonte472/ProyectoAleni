@@ -138,9 +138,21 @@
                 <input type="text" name="solicitud" value="<%= editado.getTelefono() %>" required ><br>
                 
                 <label>DEPARTAMENTO:</label>
+                        <label for="departamento">Elija su departamento:</label>
+            <select id="departamento" name="departamento" required>
+            <option value=""></option>  
+            </select>
+
+            <label for="municipio">Elija su municipio:</label>
+          
+
+          
                 <input type="text" name="nitConsumidor" value="<%= editado.getDepartamento() %>" required ><br>
                 
                 <label>MUNICIPIO:</label>
+                  <select id="municipio" required name="municipio" value="<%= editado.getMunicipio() %>">
+                      <option value=""></option> 
+                  </select>
                 <input type="text" name="nitProveedor" value="<%= editado.getMunicipio() %>" required ><br>
                 
                 <label>ZONA:</label>
@@ -157,5 +169,6 @@
             </form>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <script src="../JS/municipios.js"></script>
+    <script src="../JS/municipiosP.js"></script>
 </html>

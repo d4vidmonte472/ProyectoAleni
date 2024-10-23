@@ -128,7 +128,7 @@
 
 
 </nav>
-<h1>LISTA DE QUEJAS</h1>
+<h1>LISTA DE PROVEEDORES</h1>
 
         <table class="table">
             <thead>

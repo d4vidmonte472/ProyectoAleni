@@ -16,3 +16,4 @@ guatemalteco,juridico,12345678,12345678,Juan,Pepito ,Lopez,Obrador,De cindy,vill
 guatemalteco,individual,181184,12345678,Tucci,Marco,Lopez,Obrador,De cindy,villa nueva,sin-zona,2,202,Retalhuleu,41135468,13813131,12345678,Mcospin2018ig@gmail.com,true,h
 guatemalteco,individual,12345678,12345678,PRUEBA,ARCHIVOS,NIO,Garcia4,assg,askdakjs,zona-4,22,2217,Baja Verapaz,12345678,12345678,12345678,gadiel.monterroso@gmail.com,true,m
 guatemalteco,individual,12345678,12345678,PRUEBA,ARCHIVOS,NIO,Garcia4,assg,askdakjs,zona-2,22,2217,Chiquimula,12345678,12345678,12345678,gadiel.monterroso@gmail.com,true,h
+guatemalteco,individual,12345768,13245678,Jorge,Jose,ASLkbndaiojsbda,PRueba1,asda,asdsdsdfs,zona-16,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,h

@@ -11,6 +11,7 @@ Servlets\svGuardarConsumidor.class
 Servlets\SvEliminarQueja.class
 Servlets\svEditarConsumidores.class
 Servlets\svMostrarUsuarios.class
+Clases\Reportes.class
 Servlets\SvMosQueja.class
 Servlets\svEditarUsuario.class
 Servlets\SvMostrarqueja.class

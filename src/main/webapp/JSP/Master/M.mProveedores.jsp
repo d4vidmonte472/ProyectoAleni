@@ -164,7 +164,7 @@
                               <input type="hidden" name="ProveedorId" value="<%= cont-1 %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> </button>
                             </form>  
-                            <form action="${pageContext.request.contextPath}/SvEliminarQueja" method="GET"> 
+                            <form action="${pageContext.request.contextPath}/SvEliminarProv" method="GET"> 
                                <input type="hidden" name="ProveedorId" value="<%= cont -1 %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-trash"></i> </button>
                             </form>

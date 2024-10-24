@@ -13,6 +13,7 @@ Servlets\svEditarProveedores.class
 Servlets\svEditarQueja.class
 Clases\Proveedor.class
 Servlets\svMostrarConsumidores.class
+Servlets\SvEliminarProv.class
 Servlets\SvEditarProveedor.class
 Servlets\svEditarQuejas.class
 Servlets\svGuardarConsumidor.class

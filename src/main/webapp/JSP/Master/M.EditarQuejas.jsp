@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="../../CSS/styles.css">
     </head>
     <body>
-         <nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-dark">
         <ul>
             <li><a href="Mcmenu.jsp">INICIO</a></li>
             <li><a href="MCardionica.jsp">CARDIONICA</a></li>
@@ -37,36 +37,64 @@
         <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="M.Usuarios.jsp">USUARIOS</a>
+                
+               
+                <a class="nav-link active" aria-current="page" href="M.Usuarios.jsp">
+               
+        <form id="Usuarios" method="GET" action="${pageContext.request.contextPath}/svMostrarUsuarios"> 
+            <button type="submit" class="btn btn-sucess btn-lg"  style="color:#bcbebf">USUARIOS</button>
+        </form>
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">CONSUMIDORES</a>
+                <a class="nav-link" href="#">          
+             <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvMosCons"> 
+             <button type="submit" class="btn btn-sucess btn-lg"  style="color:#bcbebf">CONSUMIDORES</button>
+             </form>
+             </a>
             </li>
             <li class="nav-item">
                     
         
             <a class="nav-link" href="M.quejas.jsp">
-             <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvMostrarqueja"> 
-             <button type="submit" class="btn btn-secondary btn-lg">PROVEEDORES</button>
-        </form></a>         
+             <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvMosproveedor"> 
+             <button type="submit" class="btn btn-sucess btn-lg" style="color:#bcbebf">PROVEEDORES</button>
+            </form>
+            </a>         
              
      
              
             </li>
             <li class="nav-item">
                 
-                <a class="nav-link" href="M.quejas.jsp">        <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvMostrarqueja"> 
-             <button type="submit" class="btn btn-secondary btn-lg">QUEJAS</button>
-        </form></a>
+                <a class="nav-link" href="M.quejas.jsp">      
+             <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvMostrarqueja"> 
+             <button type="submit" class="btn btn-sucess btn-lg"  style="color:#bcbebf">QUEJAS</button>
+             </form>
+                </a>
             
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" type="">
-                REPORTES 
+             <form id="Reports"  > 
+             <button type="submit" class="btn btn-sucess btn-lg"  style="color:#bcbebf">REPORTES</button>
+             </form>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#">VENTAS</a></li>
-                <li><a class="dropdown-item" href="#">QUEJAS</a></li>
+                <li>
+                    <a class="dropdown-item" href="#">
+             <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvMosRepven" > 
+             <button type="submit" class="btn btn-sucess btn-lg"  style="color:#bcbebf">VENTAS</button>
+             </form>
+                    </a>
+                </li>
+                        <li>
+                             <a class="dropdown-item" href="#">
+                                 <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvMosRepQue" > 
+                                 <button type="submit" class="btn btn-sucess btn-lg"  style="color:#bcbebf">QUEJAS</button>
+                                 </form>
+                             </a>
+                        </li>
                 <li>
                     <hr class="dropdown-divider">
                 </li>
@@ -75,7 +103,10 @@
            
             </ul>
             <li class="nav-item">
-                <a class="nav-link" href="../../index.jsp">Log out</a>
+                <a class="nav-link" href="../../index.jsp">
+             <button type="button"  class="btn btn-sucess btn-lg"  style="color:#bcbebf">LOG OUT</button>
+             
+                </a>
             </li>
         </div>
         </div>

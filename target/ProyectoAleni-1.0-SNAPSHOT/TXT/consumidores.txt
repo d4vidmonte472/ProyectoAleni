@@ -14,6 +14,10 @@ guatemalteco,juridico,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,vi
 guatemalteco,juridico,1813684,84131381,Maria ,Isabel,Cospin,Hernandez,de Soto,villa nueva,zona-12,2,203,Zacapa,4113,13813131,411,Mcospin2018ig@gmail.com,true,m
 guatemalteco,juridico,12345678,12345678,Juan,Pepito ,Lopez,Obrador,De cindy,villa nueva,zona-12,14,1412,Quiché,41135468,13813131,12345678,Mcospin2018ig@gmail.com,true,h
 guatemalteco,individual,181184,12345678,Tucci,Marco,Lopez,Obrador,De cindy,villa nueva,sin-zona,2,202,Retalhuleu,41135468,13813131,12345678,Mcospin2018ig@gmail.com,true,h
+<<<<<<< HEAD
+guatemalteco,individual,135846,3813,Tucci,318131,18318,8318318,18181,villa nueva,sin-zona,10,1012,Baja Verapaz,411354,138131,123456,Mcospin2018ig@gmail.com,false,h
+=======
 guatemalteco,individual,12345678,12345678,PRUEBA,ARCHIVOS,NIO,Garcia4,assg,askdakjs,zona-4,22,2217,Baja Verapaz,12345678,12345678,12345678,gadiel.monterroso@gmail.com,true,m
 guatemalteco,individual,12345678,12345678,PRUEBA,ARCHIVOS,NIO,Garcia4,assg,askdakjs,zona-2,22,2217,Chiquimula,12345678,12345678,12345678,gadiel.monterroso@gmail.com,true,h
 guatemalteco,individual,12345768,13245678,Jorge,Jose,ASLkbndaiojsbda,PRueba1,asda,asdsdsdfs,zona-16,22,2217,Baja Verapaz,12121212,23415678,12564578,david.monterrosod.g@gmail.com,true,h
+>>>>>>> 6222bfd0cc21f29c8d43d9fb3ea6a8b8d805a1f0

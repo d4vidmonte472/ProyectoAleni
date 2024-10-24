@@ -4,50 +4,50 @@
  */
 package Servlets;
 
-import java.io.*;
-import java.nio.file.*;
-import java.util.*;
+import Clases.Consumidor;
+import jakarta.servlet.ServletContext;
+import java.io.IOException;
+import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.*;
-import Clases.Consumidor;
-import Clases.Quejas;
-import Clases.Usuario;
-import Clases.Proveedor;
 import jakarta.servlet.http.HttpSession;
-
-
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author david
  */
-public class svMostrarConsumidores extends HttpServlet {
+public class SvMosCons extends HttpServlet {
 
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-      
+       
     }
 
-   
+  
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+         ServletContext context = getServletContext();
+        String rutaArchivoConsumidores = context.getRealPath("/TXT/consumidores.txt");
+        List<String> lineas = Files.readAllLines(Paths.get(rutaArchivoConsumidores));
+        
+        List<Consumidor> listaConsumidores = new ArrayList<>();
        
-        Consumidor con1 = null;
-        //Ingresar el elemento del formulario que va a jalar la informacion para buscar en la lista
-        ServletContext context = getServletContext();
-        String rutaArchivoConsumidor = context.getRealPath("/TXT/consumidores.txt");
-        List<String> lineas = Files.readAllLines(Paths.get(rutaArchivoConsumidor));
+        Path archivoCon = Paths.get(rutaArchivoConsumidores);
         
-        List<Consumidor> listaConsumidor = new ArrayList<>();
-        
-        for (String linea : lineas) {
+         for (String linea : lineas) {
             String[] partes = linea.split(",");
             if (partes.length == 20) {
-               String nacionalidadTxt = partes[0].trim();
+                String nacionalidadTxt = partes[0].trim();
                 String tipoConsumidorTxt = partes[1].trim();
                 int nitTxt = Integer.parseInt(partes[2].trim());
                 int dpiTxt = Integer.parseInt(partes[3].trim());
@@ -67,43 +67,29 @@ public class svMostrarConsumidores extends HttpServlet {
                 String correoTxt = partes[17].trim();
                 Boolean autorizacionTxt = Boolean.valueOf(partes[18].trim());
                 String sexoTxt = partes[19].trim();
-                
-                
-                
-                listaConsumidor.add(new Consumidor(nacionalidadTxt, tipoConsumidorTxt, nitTxt, dpiTxt, nombre1Txt, nombre2Txt, apellido1Txt, 
-                apellido2Txt, apellidoCasadaTxt, direccionTxt, zonaTxt, departamentoTxt, municipioTxt, sedeTxt, telDomTxt,telTxt, 
-                telRefTxt, correoTxt, autorizacionTxt, sexoTxt));
-                
-                
-                
-            }
-             int consumidorId = Integer.parseInt(request.getParameter("consumidorId"));
-
-    // Validar si el ID está dentro del rango de la lista
-    if (consumidorId >= 1 && consumidorId <= listaConsumidor.size()) {
-        // Restar 1 al consumidorId para obtener el índice (ya que las listas son 0-indexadas)
-        con1 = listaConsumidor.get(consumidorId - 1);
+                 
+                listaConsumidores.add(new Consumidor(nacionalidadTxt,tipoConsumidorTxt,nitTxt,dpiTxt,nombre1Txt,nombre2Txt,apellido1Txt,apellido2Txt,
+                apellidoCasadaTxt,direccionTxt,zonaTxt,departamentoTxt,municipioTxt,sedeTxt,telDomTxt,telTxt,telRefTxt,
+                correoTxt,autorizacionTxt,sexoTxt));
+    }
+         }
+         
+           HttpSession misesion = request.getSession();
+        misesion.setAttribute("listaConsumidores", listaConsumidores);
         
-        HttpSession misesion = request.getSession();
-        misesion.setAttribute("con1", con1); // Guardar el consumidor en la sesión
-        response.sendRedirect("JSP/Master/M.mConsumidores.jsp");
-    } else {
-        // Si el ID no es válido, enviar error 404
-        response.sendError(HttpServletResponse.SC_NOT_FOUND, "Consumidor no encontrado.");
-    }
-        }
+         response.sendRedirect("JSP/Master/M.mConsumidores.jsp");
     }
 
-  
+    
+
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-      
-        
-        
+        processRequest(request, response);
     }
 
-   
+  
     @Override
     public String getServletInfo() {
         return "Short description";

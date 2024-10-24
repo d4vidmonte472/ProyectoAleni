@@ -4,7 +4,8 @@
  */
 package Servlets;
 
-import Clases.Usuario;
+import Clases.Consumidor;
+import Clases.Quejas;
 import jakarta.servlet.ServletContext;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,39 +13,40 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import java.io.FileWriter;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import Clases.*;
-import java.io.FileWriter;
-import java.nio.file.Path;
 
 /**
  *
- * @author David
+ * @author david
  */
-public class svEditarConsumidores extends HttpServlet {
+public class SvEliminarConsumidores extends HttpServlet {
 
-  
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
     }
 
-    
+   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-    }
-   
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-               
-        
-         ServletContext context = getServletContext();
+        // Obtener el contexto del archivo y la ruta del archivo de quejas.
+        ServletContext context = getServletContext();
         String rutaArchivoConsumidores = context.getRealPath("/TXT/consumidores.txt");
         List<String> lineas = Files.readAllLines(Paths.get(rutaArchivoConsumidores));
         
@@ -81,34 +83,15 @@ public class svEditarConsumidores extends HttpServlet {
                 correoTxt,autorizacionTxt,sexoTxt));
     }
          }
-         
-             int consumidorId = Integer.parseInt(request.getParameter("consumidorId"));
-             
-             
-                 listaConsumidores.get(consumidorId).setNacionalidad(request.getParameter("nacionalidad"));
-                 listaConsumidores.get(consumidorId).setTipoConsumidor(request.getParameter("tipoConsumidor"));
-                 listaConsumidores.get(consumidorId).setNit(Integer.parseInt(request.getParameter("nit")));
 
-                 listaConsumidores.get(consumidorId).setNombre1(request.getParameter("nombre1"));
-                 listaConsumidores.get(consumidorId).setNombre2(request.getParameter("nombre2"));
-                 listaConsumidores.get(consumidorId).setApellido1(request.getParameter("apellido1"));
-                 listaConsumidores.get(consumidorId).setApellido2(request.getParameter("apellido2"));
-                 listaConsumidores.get(consumidorId).setApellidoCasada(request.getParameter("apellidoCasada"));
-                 listaConsumidores.get(consumidorId).setDireccion(request.getParameter("direccion"));
-                 listaConsumidores.get(consumidorId).setZona(request.getParameter("zona"));
-                 listaConsumidores.get(consumidorId).setDepartamento(request.getParameter("deparetamento"));
-                 listaConsumidores.get(consumidorId).setMunicipio(request.getParameter("municipio"));
-                 listaConsumidores.get(consumidorId).setSedeDiaco(request.getParameter("sede"));
-                 listaConsumidores.get(consumidorId).setTelDom(Integer.parseInt(request.getParameter("telDom")));
-                 listaConsumidores.get(consumidorId).setTel(Integer.parseInt(request.getParameter("tel")));
-                 listaConsumidores.get(consumidorId).setTelRef(Integer.parseInt(request.getParameter("telRef")));
-                 listaConsumidores.get(consumidorId).setCorreo(request.getParameter("correo"));
-                 listaConsumidores.get(consumidorId).setAutorizacion(Boolean.parseBoolean(request.getParameter("autorizacion")));
-                 listaConsumidores.get(consumidorId).setSexo(request.getParameter("sexo"));
-                 
-                
-                     
-            try (FileWriter myWriter = new FileWriter(rutaArchivoConsumidores, false)) {
+        // Obtener el ID de la queja a eliminar.
+        int idConsumidorEliminar = Integer.parseInt(request.getParameter("ConsumidoresId"));
+
+        // Filtrar la lista para eliminar la queja con el ID proporcionado.
+        listaConsumidores.removeIf(c -> c.getDpi() == idConsumidorEliminar);
+
+        // Sobrescribir el archivo con la lista actualizada.
+        try (FileWriter myWriter = new FileWriter(rutaArchivoConsumidores, false)) {
                 for(Consumidor consumidor : listaConsumidores){
                     
                myWriter.write("\n" +consumidor.nacionalidad+","+consumidor.tipoConsumidor+","+consumidor.nit+","+consumidor.dpi+","
@@ -118,20 +101,21 @@ public class svEditarConsumidores extends HttpServlet {
            
                 }
                  myWriter.close();
-           
-      
-     
-     
-      System.out.println("Successfully wrote to the file.");
-    } catch (IOException e) {
-      System.out.println("An error occurred.");
-      e.printStackTrace();
+
+        // Actualizar la sesión con la lista de quejas.
+        HttpSession misesion = request.getSession();
+        misesion.setAttribute("listaConsumidores", listaConsumidores);
+
+        // Redirigir a la página de quejas.
+        response.sendRedirect("JSP/Master/M.mConsumidores.jsp");
     }
-              
-                 
-             
-         
-}
+    }
+  
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
 
    
     @Override

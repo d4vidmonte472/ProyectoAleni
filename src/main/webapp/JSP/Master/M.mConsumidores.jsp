@@ -4,6 +4,8 @@
     Author     : fboan
 --%>
 
+<%@page import="Clases.Consumidor"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -120,11 +122,75 @@
 
 
 </nav>
+                                         <h1>LISTA DE CONSUMIDORES</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">DPI</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">NitConsumidor</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Acciones</th>
+                 
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <% 
+                    List<Consumidor> lista = (List<Consumidor>) request.getSession().getAttribute("listaConsumidores");
+                    int cont=0 ;
+                    if (lista != null && !lista.isEmpty()) {
+                        for (Consumidor con : lista) {
+                        cont++;
+                %>
+                    <tr>
+                        <td> <%= cont %> </td>
+                        <td> <%= con.getDpi() %> </td>
+                        <td><%= con.getNombre1() %></td>
+                        <td><%= con.getApellido1() %></td>
+                        <td><%= con.getNit() %></td>
+                        <td><%= con.getSexo()%></td>
+                        
+                     
+                        
+                        <td> 
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <form action="${pageContext.request.contextPath}/svEditarConsumidores" method="POST" > 
+                                <input type="hidden" name="ConsumidorId" value="<%= cont-1 %>">
+                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> </button>
+                            </form>  
+                            <form action="${pageContext.request.contextPath}/SvEliminarConsumidores" method="GET"> 
+                                <input type="hidden" name="ConsumidorId" value="<%= cont-1 %>">
+                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-trash"></i> </button>
+                            </form>
+                            <form action="${pageContext.request.contextPath}/SvMosConsumidores" method="POST"> 
+                                <input type="hidden" name="ConsumidorId" value="<%= cont-1 %>">
+                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-eye"></i> </button>
+                            </form>
+                            </div>
+                        </td>
+                    </tr>
+                <% 
+                        }
+                    } else { 
+                %>
+                    <tr>
+                        <td colspan="4">No hay Consumidores ingresadas.</td>
+                    </tr>
+                <% 
+                    }
+                %>
+            </tbody>
+        </table>
+                                         
                                          
     <body>
         <h1>Hello World!</h1>
     </body>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+    <script src="https://kit.fontawesome.com/efd3b94f53.js" crossorigin="anonymous"></script>
 </html>

@@ -53,8 +53,21 @@
         <servlet-class>Servlets.SvEditarProveedor</servlet-class>
     </servlet>
     <servlet>
+<<<<<<< HEAD
+        <servlet-name>SvMosCons</servlet-name>
+        <servlet-class>Servlets.SvMosCons</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvEliminarConsumidores</servlet-name>
+        <servlet-class>Servlets.SvEliminarConsumidores</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>svEditarConsumidores</servlet-name>
+        <servlet-class>Servlets.svEditarConsumidores</servlet-class>
+=======
         <servlet-name>SvEliminarProv</servlet-name>
         <servlet-class>Servlets.SvEliminarProv</servlet-class>
+>>>>>>> b962ce49356d1618885824d23d72fde86d868957
     </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
@@ -109,8 +122,21 @@
         <url-pattern>/SvEditarProveedor</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+<<<<<<< HEAD
+        <servlet-name>SvMosCons</servlet-name>
+        <url-pattern>/SvMosCons</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>svEditarConsumidores</servlet-name>
+        <url-pattern>/svEditarConsumidores</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvEliminarConsumidores</servlet-name>
+        <url-pattern>/SvEliminarConsumidores</url-pattern>
+=======
         <servlet-name>SvEliminarProv</servlet-name>
         <url-pattern>/SvEliminarProv</url-pattern>
+>>>>>>> b962ce49356d1618885824d23d72fde86d868957
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

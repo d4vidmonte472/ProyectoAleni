@@ -133,6 +133,7 @@
                     <th scope="col">Apellidos</th>
                     <th scope="col">NitConsumidor</th>
                     <th scope="col">Sexo</th>
+                    <th scope="col">Acciones</th>
                  
                     
                 </tr>
@@ -146,11 +147,13 @@
                         cont++;
                 %>
                     <tr>
+                        <td> <%= cont %> </td>
                         <td> <%= con.getDpi() %> </td>
                         <td><%= con.getNombre1() %></td>
                         <td><%= con.getApellido1() %></td>
                         <td><%= con.getNit() %></td>
                         <td><%= con.getSexo()%></td>
+                        
                      
                         
                         <td> 
@@ -189,5 +192,5 @@
     </body>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+    <script src="https://kit.fontawesome.com/efd3b94f53.js" crossorigin="anonymous"></script>
 </html>

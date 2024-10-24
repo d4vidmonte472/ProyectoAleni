@@ -66,17 +66,17 @@ public class SvEliminarConsumidores extends HttpServlet {
                 String apellido1Txt = partes[6].trim();
                 String apellido2Txt = partes[7].trim();
                 String apellidoCasadaTxt = partes[8].trim();
-                String sexoTxt = partes[9].trim();
-                String direccionTxt = partes[10].trim();
-                String zonaTxt = partes[11].trim();
-                String departamentoTxt = partes[12].trim();
-                String municipioTxt = partes[13].trim();
-                String sedeTxt = partes[14].trim();
-                int telDomTxt = Integer.parseInt(partes[15].trim());
-                int telTxt = Integer.parseInt(partes[16].trim());
-                int telRefTxt = Integer.parseInt(partes[17].trim());
-                String correoTxt = partes[18].trim();
-                Boolean autorizacionTxt = Boolean.parseBoolean(partes[19].trim());
+                String direccionTxt = partes[9].trim();
+                String zonaTxt = partes[10].trim();
+                String departamentoTxt = partes[11].trim();
+                String municipioTxt = partes[12].trim();
+                String sedeTxt = partes[13].trim();
+                int telDomTxt = Integer.parseInt(partes[14].trim());
+                int telTxt = Integer.parseInt(partes[15].trim());
+                int telRefTxt = Integer.parseInt(partes[16].trim());
+                String correoTxt = partes[17].trim();
+                Boolean autorizacionTxt = Boolean.valueOf(partes[18].trim());
+                String sexoTxt = partes[19].trim();
                 
                 listaConsumidores.add(new Consumidor(nacionalidadTxt,tipoConsumidorTxt,nitTxt,dpiTxt,nombre1Txt,nombre2Txt,apellido1Txt,apellido2Txt,
                 apellidoCasadaTxt,direccionTxt,zonaTxt,departamentoTxt,municipioTxt,sedeTxt,telDomTxt,telTxt,telRefTxt,

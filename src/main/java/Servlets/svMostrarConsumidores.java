@@ -36,6 +36,7 @@ public class svMostrarConsumidores extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
+        Consumidor con1 = null;
         //Ingresar el elemento del formulario que va a jalar la informacion para buscar en la lista
         ServletContext context = getServletContext();
         String rutaArchivoConsumidor = context.getRealPath("/TXT/consumidores.txt");
@@ -46,7 +47,7 @@ public class svMostrarConsumidores extends HttpServlet {
         for (String linea : lineas) {
             String[] partes = linea.split(",");
             if (partes.length == 20) {
-                String nacionalidadTxt = partes[0].trim();
+               String nacionalidadTxt = partes[0].trim();
                 String tipoConsumidorTxt = partes[1].trim();
                 int nitTxt = Integer.parseInt(partes[2].trim());
                 int dpiTxt = Integer.parseInt(partes[3].trim());
@@ -64,7 +65,7 @@ public class svMostrarConsumidores extends HttpServlet {
                 int telTxt = Integer.parseInt(partes[15].trim());
                 int telRefTxt = Integer.parseInt(partes[16].trim());
                 String correoTxt = partes[17].trim();
-                boolean autorizacionTxt = Boolean.parseBoolean(partes[18].trim());
+                Boolean autorizacionTxt = Boolean.valueOf(partes[18].trim());
                 String sexoTxt = partes[19].trim();
                 
                 
@@ -76,18 +77,21 @@ public class svMostrarConsumidores extends HttpServlet {
                 
                 
             }
-            
-            
-        }
+             int consumidorId = Integer.parseInt(request.getParameter("consumidorId"));
+
+    // Validar si el ID está dentro del rango de la lista
+    if (consumidorId >= 1 && consumidorId <= listaConsumidor.size()) {
+        // Restar 1 al consumidorId para obtener el índice (ya que las listas son 0-indexadas)
+        con1 = listaConsumidor.get(consumidorId - 1);
         
         HttpSession misesion = request.getSession();
-        misesion.setAttribute("listaConsumidor", listaConsumidor);
-        
-        response.sendRedirect("mostrarConsumidores.jsp");
-        
-        
-        
-        
+        misesion.setAttribute("con1", con1); // Guardar el consumidor en la sesión
+        response.sendRedirect("JSP/Master/M.mConsumidores.jsp");
+    } else {
+        // Si el ID no es válido, enviar error 404
+        response.sendError(HttpServletResponse.SC_NOT_FOUND, "Consumidor no encontrado.");
+    }
+        }
     }
 
   

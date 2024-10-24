@@ -60,6 +60,10 @@
         <servlet-name>SvEliminarConsumidores</servlet-name>
         <servlet-class>Servlets.SvEliminarConsumidores</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>svEditarConsumidores</servlet-name>
+        <servlet-class>Servlets.svEditarConsumidores</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
         <url-pattern>/svGuardarConsumidor</url-pattern>
@@ -115,6 +119,10 @@
     <servlet-mapping>
         <servlet-name>SvMosCons</servlet-name>
         <url-pattern>/SvMosCons</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>svEditarConsumidores</servlet-name>
+        <url-pattern>/svEditarConsumidores</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvEliminarConsumidores</servlet-name>

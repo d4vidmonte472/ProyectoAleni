@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <script src="../JS/bootstrap.bundle.min.js"></script>
-    <script src="../JS/bootstrap.min.js"></script>
-    <script src="../JS/popper.min.js"></script>
     <script src="../JS/validacion.js" defer></script>
 </head>
 <body>

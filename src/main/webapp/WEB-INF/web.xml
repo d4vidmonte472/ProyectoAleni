@@ -52,6 +52,14 @@
         <servlet-name>SvEditarProveedor</servlet-name>
         <servlet-class>Servlets.SvEditarProveedor</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SvMosCons</servlet-name>
+        <servlet-class>Servlets.SvMosCons</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvEliminarConsumidores</servlet-name>
+        <servlet-class>Servlets.SvEliminarConsumidores</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
         <url-pattern>/svGuardarConsumidor</url-pattern>
@@ -103,6 +111,14 @@
     <servlet-mapping>
         <servlet-name>SvEditarProveedor</servlet-name>
         <url-pattern>/SvEditarProveedor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvMosCons</servlet-name>
+        <url-pattern>/SvMosCons</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvEliminarConsumidores</servlet-name>
+        <url-pattern>/SvEliminarConsumidores</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

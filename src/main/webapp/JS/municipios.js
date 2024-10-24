@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
+       // Cargar y manejar los CSVs
+    Promise.all([loadCSV('../CSV/departamentos.csv'), loadCSV('../CSV/municipios.csv')])
+        .then(([departamentosCSV, municipiosCSV]) => {
+            const departamentos = parseCSV(departamentosCSV);
+            const municipios = parseCSV(municipiosCSV, true);
+
+            console.log('Departamentos:', departamentos);  // Depuración
+            console.log('Municipios:', municipios);  // Depuración
+
+            // Poblar el selector de departamentos
+            populateDepartamentos(departamentos, departamentoSelect);
+
+            // Evento para el selector de departamento
+            departamentoSelect.addEventListener('change', () => {
+                const selectedDepartamento = departamentoSelect.value;
+                
+                if (selectedDepartamento) {
+                    const filteredMunicipios = municipios.filter(m => m.idDepartamento === selectedDepartamento);
+                    console.log('Municipios filtrados (departamento):', filteredMunicipios);  // Depuración
+                    populateMunicipios(filteredMunicipios, municipioSelect);
+                } else {
+                    municipioSelect.innerHTML = '<option value="">Selecciona un municipio</option>'; // Limpia municipios si no hay departamento
+                }
+            });
+        })
+        .catch(error => console.error('Error al cargar los archivos CSV:', error));
+
     const departamentoSelect = document.getElementById('departamento');
     const municipioSelect = document.getElementById('municipio');
 
@@ -16,10 +43,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const values = lines[i].split(',');
             if (isMunicipio) {
                 const [idMunicipio, municipio, idDepartamento] = values;
-                result.push({ idMunicipio, municipio: municipio.replace(/\"/g, ''), idDepartamento });
+                result.push({ 
+                    idMunicipio, 
+                    municipio: municipio.replace(/\"/g, '').trim(),  // Elimina comillas y espacios
+                    idDepartamento: idDepartamento.trim()  // Asegura que no haya espacios extra
+                });
             } else {
                 const [id, departamento] = values;
-                result.push({ id, departamento: departamento.replace(/\"/g, '') });
+                result.push({ 
+                    id: id.trim(), 
+                    departamento: departamento.replace(/\"/g, '').trim()  // Elimina comillas y espacios
+                });
             }
         }
         return result;
@@ -45,25 +79,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Cargar y manejar los CSVs
-    Promise.all([loadCSV('../CSV/departamentos.csv'), loadCSV('../CSV/municipios.csv')])
-        .then(([departamentosCSV, municipiosCSV]) => {
-            const departamentos = parseCSV(departamentosCSV);
-            const municipios = parseCSV(municipiosCSV, true);
 
-            console.log('Departamentos:', departamentos);  // Depuración
-            console.log('Municipios:', municipios);  // Depuración
-
-            // Poblar el selector de departamentos
-            populateDepartamentos(departamentos, departamentoSelect);
-
-            // Evento para el selector de departamento
-            departamentoSelect.addEventListener('change', () => {
-                const selectedDepartamento = departamentoSelect.value;
-                const filteredMunicipios = municipios.filter(m => m.idDepartamento === selectedDepartamento);
-                console.log('Municipios filtrados (departamento):', filteredMunicipios);  // Depuración
-                populateMunicipios(filteredMunicipios, municipioSelect);
-            });
-        })
-        .catch(error => console.error('Error al cargar los archivos CSV:', error));
 });

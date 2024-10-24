@@ -24,7 +24,7 @@
                     <li><a href="MCardionica.jsp">CARDIONICA</a></li>
                     <li><a href="Mservicios.jsp">PLANES</a></li>
                     <li><a href="MContacto.jsp">CONTACTO</a></li>
-                    <li><a href="MQuejas.jsp">QUEJAS DIACO</a></li>
+                    <li><a href="JSP/Master/MQuejas.jsp">QUEJAS DIACO</a></li>
 
         <li>
             <div class="container-fluid">
@@ -70,7 +70,7 @@
                     </li>
                     <li class="nav-item">
 
-                        <a class="nav-link" href="M.quejas.jsp">      
+                        <a class="nav-link" href="JSP/Master/M.quejas.jsp">      
                      <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvMostrarqueja"> 
                      <button type="submit" class="btn btn-sucess btn-lg"  style="color:#bcbebf">QUEJAS</button>
                      </form>

@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-       // Cargar y manejar los CSVs
-    Promise.all([loadCSV('../CSV/departamentos.csv'), loadCSV('../CSV/municipios.csv')])
+    const baseURL = window.location.origin; // Obtiene la URL base del proyecto
+
+    // Cargar y manejar los CSVs
+    Promise.all([loadCSV(`${baseURL}/ProyectoAleni/CSV/departamentos.csv`), loadCSV(`${baseURL}/ProyectoAleni/CSV/municipios.csv`)])
         .then(([departamentosCSV, municipiosCSV]) => {
             const departamentos = parseCSV(departamentosCSV);
             const municipios = parseCSV(municipiosCSV, true);
@@ -8,19 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Departamentos:', departamentos);  // Depuración
             console.log('Municipios:', municipios);  // Depuración
 
-            // Poblar el selector de departamentos
             populateDepartamentos(departamentos, departamentoSelect);
 
-            // Evento para el selector de departamento
             departamentoSelect.addEventListener('change', () => {
                 const selectedDepartamento = departamentoSelect.value;
-                
+
                 if (selectedDepartamento) {
                     const filteredMunicipios = municipios.filter(m => m.idDepartamento === selectedDepartamento);
                     console.log('Municipios filtrados (departamento):', filteredMunicipios);  // Depuración
                     populateMunicipios(filteredMunicipios, municipioSelect);
                 } else {
-                    municipioSelect.innerHTML = '<option value="">Selecciona un municipio</option>'; // Limpia municipios si no hay departamento
+                    municipioSelect.innerHTML = '<option value="">Selecciona un municipio</option>';
                 }
             });
         })
@@ -45,14 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const [idMunicipio, municipio, idDepartamento] = values;
                 result.push({ 
                     idMunicipio, 
-                    municipio: municipio.replace(/\"/g, '').trim(),  // Elimina comillas y espacios
-                    idDepartamento: idDepartamento.trim()  // Asegura que no haya espacios extra
+                    municipio: municipio.replace(/\"/g, '').trim(),
+                    idDepartamento: idDepartamento.trim() 
                 });
             } else {
                 const [id, departamento] = values;
                 result.push({ 
                     id: id.trim(), 
-                    departamento: departamento.replace(/\"/g, '').trim()  // Elimina comillas y espacios
+                    departamento: departamento.replace(/\"/g, '').trim()
                 });
             }
         }
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function populateDepartamentos(departamentos, selectElement) {
-        selectElement.innerHTML = '<option value="">Selecciona un departamento</option>'; // Limpiar opciones
+        selectElement.innerHTML = '<option value="">Selecciona un departamento</option>';
         departamentos.forEach(dep => {
             const option = document.createElement('option');
             option.value = dep.id;
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function populateMunicipios(municipios, selectElement) {
-        selectElement.innerHTML = '<option value="">Selecciona un municipio</option>'; // Limpiar municipios actuales
+        selectElement.innerHTML = '<option value="">Selecciona un municipio</option>';
         municipios.forEach(mun => {
             const option = document.createElement('option');
             option.value = mun.idMunicipio;
@@ -78,6 +78,4 @@ document.addEventListener('DOMContentLoaded', () => {
             selectElement.appendChild(option);
         });
     }
-
-
 });

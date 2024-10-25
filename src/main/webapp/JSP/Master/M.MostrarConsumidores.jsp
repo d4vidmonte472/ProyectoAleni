@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Clases.Consumidor"%>
 <!DOCTYPE html>
     <head>
         <meta charset="UTF-8">
@@ -115,8 +116,75 @@
 
 
 </nav>
-        <h1>Hello World!</h1>
+         <%  Consumidor editado = (Consumidor) request.getSession().getAttribute("con");  %>
+         
+         
+        <h1> Mostrar Consumidor: <%=  %> </h1>
+        
+            <form action="${pageContext.request.contextPath}/svEditarQuejas" method="POST">
+                
+                <label>Nacionalidad:</label>
+                <input type="text" name="nacionalidad" value="<%= editado.getNacionalidad()%>" required readonly><br>
+                <label>Tipo de Consumidor:</label>
+                <input type="text" name="tipoConsumidor" value="<%= editado.getTipoConsumidor()%>" required readonly><br>
+                
+                <label>NIT:</label>
+                <input type="text" name="nit" value="<%= editado.getNit()%>" required readonly><br>
+                
+                
+                <label>Primer Nombre :</label>
+                <input type="text" name="nombre1" value="<%= editado.getNombre1()%>" required readonly><br>
+                <label>Segundo Nombre:</label>
+                <input type="text" name="nombre2" value="<%= editado.getNombre2()%>" required readonly><br>
+                
+                
+                <label>Primer Apellido:</label>
+                <input type="text" name="apellido1" value="<%= editado.getApellido1()%>" required readonly><br>
+                
+                <label>Segundo Apellido:</label>
+                <input type="text" name="apellido2" value="<%= editado.getApellido2()%>" required readonly><br>
+
+                <label>Apellido Casada:</label>
+                <input type="text" name="apellidoCasada" value="<%= editado.getApellidoCasada()%>" required readonly><br>
+                
+                <label>Direccion:</label>
+                <input type="text" name="direccion" value="<%= editado.getDireccion()%>" required readonly><br>
+                
+                <label>Zona:</label>
+                <input type="text" name="zona" value="<%= editado.getZona()%>" required readonly><br>
+                
+                <label>Departamento:</label>
+                <input type="text" name="departamento" value="<%= editado.getDepartamento()%>" required readonly><br>
+
+                <label>Municipio:</label>
+                <input type="text" name="municipio" value="<%= editado.getDepartamento()%>" required readonly><br>
+
+                <label>Sede:</label>
+                <input type="text" name="sede" value="<%= editado.getDepartamento()%>" required readonly><br>
+
+                <label>Telefono de Referencia:</label>
+                <input type="text" name="telRef" value="<%= editado.getDepartamento()%>" required readonly><br>
+
+                <label>Telefono:</label>
+                <input type="text" name="tel" value="<%= editado.getDepartamento()%>" required readonly><br>
+
+                <label>Teledono Domicilio:</label>
+                <input type="text" name="telDom" value="<%= editado.getDepartamento()%>" required readonly><br>
+
+                <label>Correo:</label>
+                <input type="text" name="correo" value="<%= editado.getDepartamento()%>" required readonly><br>
+
+                <label>Autorizacion:</label>
+                <input type="text" name="autorizacion" value="<%= editado.getDepartamento()%>" required readonly><br>
+
+                <label>Sexo:</label>
+                <input type="text" name="sexo" value="<%= editado.getDepartamento()%>" required readonly><br>
+
+                
+                
+                <button type="submit">Aceptar</button>
+            </form>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/efd3b94f53.js" crossorigin="anonymous"></script>
+
 </html>

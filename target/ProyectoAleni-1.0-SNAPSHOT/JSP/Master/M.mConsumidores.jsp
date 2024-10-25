@@ -166,7 +166,7 @@
                                 <input type="hidden" name="ConsumidorId" value="<%= cont-1 %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-trash"></i> </button>
                             </form>
-                            <form action="${pageContext.request.contextPath}/SvMosConsumidores" method="POST"> 
+                            <form action="${pageContext.request.contextPath}/svMostrarConsumidores" method="POST"> 
                                 <input type="hidden" name="ConsumidorId" value="<%= cont-1 %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-eye"></i> </button>
                             </form>

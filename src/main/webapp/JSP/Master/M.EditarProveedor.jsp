@@ -139,8 +139,8 @@
                 
                 <label>DEPARTAMENTO:</label>
                         <label for="departamento">Elija su departamento:</label>
-            <select id="departamento" name="departamento" required>
-            <option value=""></option>  
+            <select id="departamento" name="departamento" required >
+            <option value="<%= editado.getDepartamento() %>"></option>  
             </select>
 
             <label for="municipio">Elija su municipio:</label>
@@ -151,7 +151,7 @@
                 
                 <label>MUNICIPIO:</label>
                   <select id="municipio" required name="municipio" value="<%= editado.getMunicipio() %>">
-                      <option value=""></option> 
+                      <option value="<%= editado.getMunicipio() %>"></option> 
                   </select>
                 <input type="text" name="nitProveedor" value="<%= editado.getMunicipio() %>" required ><br>
                 

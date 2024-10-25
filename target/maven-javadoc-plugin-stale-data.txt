@@ -1,0 +1,78 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-classpath
+'C:/Users/fboan/.m2/repository/jakarta/platform/jakarta.jakartaee-api/10.0.0/jakarta.jakartaee-api-10.0.0.jar;C:/Users/fboan/.m2/repository/jakarta/platform/jakarta.jakartaee-web-api/10.0.0/jakarta.jakartaee-web-api-10.0.0.jar;C:/Users/fboan/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.0.0/jakarta.servlet-api-6.0.0.jar;C:/Users/fboan/.m2/repository/jakarta/servlet/jsp/jakarta.servlet.jsp-api/3.1.0/jakarta.servlet.jsp-api-3.1.0.jar;C:/Users/fboan/.m2/repository/jakarta/el/jakarta.el-api/5.0.1/jakarta.el-api-5.0.1.jar;C:/Users/fboan/.m2/repository/jakarta/servlet/jsp/jstl/jakarta.servlet.jsp.jstl-api/3.0.0/jakarta.servlet.jsp.jstl-api-3.0.0.jar;C:/Users/fboan/.m2/repository/jakarta/faces/jakarta.faces-api/4.0.1/jakarta.faces-api-4.0.1.jar;C:/Users/fboan/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar;C:/Users/fboan/.m2/repository/jakarta/websocket/jakarta.websocket-api/2.1.0/jakarta.websocket-api-2.1.0.jar;C:/Users/fboan/.m2/repository/jakarta/websocket/jakarta.websocket-client-api/2.1.0/jakarta.websocket-client-api-2.1.0.jar;C:/Users/fboan/.m2/repository/jakarta/json/jakarta.json-api/2.1.0/jakarta.json-api-2.1.0.jar;C:/Users/fboan/.m2/repository/jakarta/json/bind/jakarta.json.bind-api/3.0.0/jakarta.json.bind-api-3.0.0.jar;C:/Users/fboan/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar;C:/Users/fboan/.m2/repository/jakarta/ejb/jakarta.ejb-api/4.0.1/jakarta.ejb-api-4.0.1.jar;C:/Users/fboan/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar;C:/Users/fboan/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar;C:/Users/fboan/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar;C:/Users/fboan/.m2/repository/jakarta/interceptor/jakarta.interceptor-api/2.1.0/jakarta.interceptor-api-2.1.0.jar;C:/Users/fboan/.m2/repository/jakarta/enterprise/jakarta.enterprise.cdi-api/4.0.1/jakarta.enterprise.cdi-api-4.0.1.jar;C:/Users/fboan/.m2/repository/jakarta/enterprise/jakarta.enterprise.lang-model/4.0.1/jakarta.enterprise.lang-model-4.0.1.jar;C:/Users/fboan/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar;C:/Users/fboan/.m2/repository/jakarta/authentication/jakarta.authentication-api/3.0.0/jakarta.authentication-api-3.0.0.jar;C:/Users/fboan/.m2/repository/jakarta/security/enterprise/jakarta.security.enterprise-api/3.0.0/jakarta.security.enterprise-api-3.0.0.jar;C:/Users/fboan/.m2/repository/jakarta/jms/jakarta.jms-api/3.1.0/jakarta.jms-api-3.1.0.jar;C:/Users/fboan/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.0/jakarta.activation-api-2.1.0.jar;C:/Users/fboan/.m2/repository/jakarta/mail/jakarta.mail-api/2.1.0/jakarta.mail-api-2.1.0.jar;C:/Users/fboan/.m2/repository/jakarta/resource/jakarta.resource-api/2.1.0/jakarta.resource-api-2.1.0.jar;C:/Users/fboan/.m2/repository/jakarta/authorization/jakarta.authorization-api/2.1.0/jakarta.authorization-api-2.1.0.jar;C:/Users/fboan/.m2/repository/jakarta/batch/jakarta.batch-api/2.1.1/jakarta.batch-api-2.1.1.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/fboan/OneDrive/Documentos/NetBeansProjects/ProyectoAleni/src/main/java;C:/Users/fboan/OneDrive/Documentos/NetBeansProjects/ProyectoAleni/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/fboan/OneDrive/Documentos/NetBeansProjects/ProyectoAleni/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'ProyectoAleni-1.0-SNAPSHOT 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'C:/Users/fboan/OneDrive/Documentos/NetBeansProjects/ProyectoAleni/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'ProyectoAleni-1.0-SNAPSHOT 1.0-SNAPSHOT API'
+Clases
+com.aleni.proyectoaleni
+com.aleni.proyectoaleni.resources
+Servlets
+C:\Users\fboan\.m2\repository\jakarta\platform\jakarta.jakartaee-api\10.0.0\jakarta.jakartaee-api-10.0.0.jar = 1726457439977
+C:\Users\fboan\.m2\repository\jakarta\platform\jakarta.jakartaee-web-api\10.0.0\jakarta.jakartaee-web-api-10.0.0.jar = 1726457440574
+C:\Users\fboan\.m2\repository\jakarta\servlet\jakarta.servlet-api\6.0.0\jakarta.servlet-api-6.0.0.jar = 1726457440199
+C:\Users\fboan\.m2\repository\jakarta\servlet\jsp\jakarta.servlet.jsp-api\3.1.0\jakarta.servlet.jsp-api-3.1.0.jar = 1726457440341
+C:\Users\fboan\.m2\repository\jakarta\el\jakarta.el-api\5.0.1\jakarta.el-api-5.0.1.jar = 1726457440355
+C:\Users\fboan\.m2\repository\jakarta\servlet\jsp\jstl\jakarta.servlet.jsp.jstl-api\3.0.0\jakarta.servlet.jsp.jstl-api-3.0.0.jar = 1726457441514
+C:\Users\fboan\.m2\repository\jakarta\faces\jakarta.faces-api\4.0.1\jakarta.faces-api-4.0.1.jar = 1726457440608
+C:\Users\fboan\.m2\repository\jakarta\ws\rs\jakarta.ws.rs-api\3.1.0\jakarta.ws.rs-api-3.1.0.jar = 1726457440659
+C:\Users\fboan\.m2\repository\jakarta\websocket\jakarta.websocket-api\2.1.0\jakarta.websocket-api-2.1.0.jar = 1726457441279
+C:\Users\fboan\.m2\repository\jakarta\websocket\jakarta.websocket-client-api\2.1.0\jakarta.websocket-client-api-2.1.0.jar = 1726457442326
+C:\Users\fboan\.m2\repository\jakarta\json\jakarta.json-api\2.1.0\jakarta.json-api-2.1.0.jar = 1726457443045
+C:\Users\fboan\.m2\repository\jakarta\json\bind\jakarta.json.bind-api\3.0.0\jakarta.json.bind-api-3.0.0.jar = 1726457442083
+C:\Users\fboan\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar = 1726457442697
+C:\Users\fboan\.m2\repository\jakarta\ejb\jakarta.ejb-api\4.0.1\jakarta.ejb-api-4.0.1.jar = 1726457442271
+C:\Users\fboan\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar = 1726457443625
+C:\Users\fboan\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar = 1726457442728
+C:\Users\fboan\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar = 1726457442973
+C:\Users\fboan\.m2\repository\jakarta\interceptor\jakarta.interceptor-api\2.1.0\jakarta.interceptor-api-2.1.0.jar = 1726457443670
+C:\Users\fboan\.m2\repository\jakarta\enterprise\jakarta.enterprise.cdi-api\4.0.1\jakarta.enterprise.cdi-api-4.0.1.jar = 1726457443189
+C:\Users\fboan\.m2\repository\jakarta\enterprise\jakarta.enterprise.lang-model\4.0.1\jakarta.enterprise.lang-model-4.0.1.jar = 1726457444181
+C:\Users\fboan\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar = 1726457443863
+C:\Users\fboan\.m2\repository\jakarta\authentication\jakarta.authentication-api\3.0.0\jakarta.authentication-api-3.0.0.jar = 1726457445504
+C:\Users\fboan\.m2\repository\jakarta\security\enterprise\jakarta.security.enterprise-api\3.0.0\jakarta.security.enterprise-api-3.0.0.jar = 1726457443842
+C:\Users\fboan\.m2\repository\jakarta\jms\jakarta.jms-api\3.1.0\jakarta.jms-api-3.1.0.jar = 1726457444026
+C:\Users\fboan\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.0\jakarta.activation-api-2.1.0.jar = 1726457444130
+C:\Users\fboan\.m2\repository\jakarta\mail\jakarta.mail-api\2.1.0\jakarta.mail-api-2.1.0.jar = 1726457444057
+C:\Users\fboan\.m2\repository\jakarta\resource\jakarta.resource-api\2.1.0\jakarta.resource-api-2.1.0.jar = 1726457444208
+C:\Users\fboan\.m2\repository\jakarta\authorization\jakarta.authorization-api\2.1.0\jakarta.authorization-api-2.1.0.jar = 1726457445691
+C:\Users\fboan\.m2\repository\jakarta\batch\jakarta.batch-api\2.1.1\jakarta.batch-api-2.1.1.jar = 1726457446193
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java = 1729226783131
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\generated-sources\annotations = 1727230974782
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\allclasses-index.html = 1729792068222
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\allpackages-index.html = 1729792068227
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\element-list = 1729792067893
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\help-doc.html = 1729792068333
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\index-all.html = 1729792068309
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\index.html = 1729792068174
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\member-search-index.js = 1729792068242
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\module-search-index.js = 1729792068230
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\overview-summary.html = 1729792068318
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\overview-tree.html = 1729792068150
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\package-search-index.js = 1729792068233
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\search.html = 1729792068314
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\serialized-form.html = 1729792067981
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\tag-search-index.js = 1729792068245
+C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\target\reports\apidocs\type-search-index.js = 1729792068236

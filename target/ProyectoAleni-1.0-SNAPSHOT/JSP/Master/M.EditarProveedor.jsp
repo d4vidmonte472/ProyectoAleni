@@ -66,19 +66,13 @@
                         </form>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">REPORTES</a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                            <li>
-                                <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvMosRepven">
-                                    <button type="submit" class="dropdown-item">VENTAS</button>
-                                </form>
-                            </li>
-                            <li>
+                       
+                            
                                 <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvMosRepQue">
-                                    <button type="submit" class="dropdown-item">QUEJAS</button>
+                                    <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
                                 </form>
-                            </li>
-                        </ul>
+                           
+                       
                     </li>
                     <li class="nav-item">
                         <form id="Logout" method="GET" action="../../index.jsp">

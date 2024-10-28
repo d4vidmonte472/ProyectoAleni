@@ -111,8 +111,8 @@ public class SvLogin extends HttpServlet {
         if (loginExitoso) {
             // Redirigir a una página JSP si el login es exitoso
             if ("Master".equals(tipo.getMaster())) {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Master/Menu_master.jsp");
-                dispatcher.forward(request, response);
+                response.sendRedirect("JSP/Master/Mcmenu.jsp");
+               
             } 
             else {
                 RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Admin/Menu_admin.jsp");

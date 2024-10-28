@@ -126,14 +126,49 @@
                 <label>Direccion:</label>
                 <input type="text" name="direccion" value="<%= editado.getDireccion()%>" required readonly><br>
                 
-                <label>Zona:</label>
-                <input type="text" name="zona" value="<%= editado.getZona()%>" required readonly><br>
+                 <label for="zona">Zona:</label>
+                    <select id="zona" name="zona" required data-selected="<%= editado.getZona() %>" disabled="">
+                             <option value="sin-zona">Sin Zona</option>
+                             <option value="zona-1">Zona 1</option>
+                             <option value="zona-2">Zona 2</option>
+                             <option value="zona-3">Zona 3</option>
+                             <option value="zona-4">Zona 4</option>
+                             <option value="zona-5">Zona 5</option>
+                             <option value="zona-6">Zona 6</option>
+                             <option value="zona-7">Zona 7</option>
+                             <option value="zona-8">Zona 8</option>
+                             <option value="zona-9">Zona 9</option>
+                             <option value="zona-10">Zona 10</option>
+                             <option value="zona-11">Zona 11</option>
+                             <option value="zona-12">Zona 12</option>
+                             <option value="zona-13">Zona 13</option>
+                             <option value="zona-14">Zona 14</option>
+                             <option value="zona-15">Zona 15</option>
+                             <option value="zona-16">Zona 16</option>
+                             <option value="zona-17">Zona 17</option>
+                             <option value="zona-18">Zona 18</option>
+                             <option value="zona-19">Zona 19</option>
+                             <option value="zona-20">Zona 20</option>
+                             <option value="zona-21">Zona 21</option>
+                             <option value="zona-22">Zona 22</option>
+                             <option value="zona-23">Zona 23</option>
+                             <option value="zona-24">Zona 24</option>
+                             <option value="zona-25">Zona 25</option>
+                         </select>
                 
-                <label>Departamento:</label>
-                <input type="text" name="departamento" value="<%= editado.getDepartamento()%>" required readonly><br>
+               <!-- Campo de Departamento -->
+                <label for="departamento">Departamento:</label>
+                <select id="departamento" name="departamento" data-selected="<%= editado.getDepartamento() %>" required disabled>
+                    <option value="">Selecciona un departamento</option>
+                </select>
 
-                <label>Municipio:</label>
-                <input type="text" name="municipio" value="<%= editado.getMunicipio()%>" required readonly><br>
+                <!-- Campo de Municipio -->
+                <label for="municipio">Municipio:</label>
+                <select id="municipio" name="municipio" data-selected="<%= editado.getMunicipio() %>" required disabled> 
+                    <option value="">Selecciona un municipio</option>
+                </select>
+
+                  
 
                 <label>Sede:</label>
                 <input type="text" name="sede" value="<%= editado.getSedeDiaco() %>" required readonly><br>
@@ -162,5 +197,5 @@
             </form>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <script src="../../JS/preseleccionarDep.js"></script>
 </html>

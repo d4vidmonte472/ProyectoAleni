@@ -99,10 +99,19 @@
         
             <form action="${pageContext.request.contextPath}/SvMosCons" method="GET">
                 
-                <label>Nacionalidad:</label>
-                <input type="text" name="nacionalidad" value="<%= editado.getNacionalidad()%>" required readonly><br>
-                <label>Tipo de Consumidor:</label>  
-                <input type="text" name="tipoConsumidor" value="<%= editado.getTipoConsumidor()%>" required readonly><br>
+                  <label for="nacionalidad">Nacionalidad:</label>
+                <select id="nacionalidad" name="nacionalidad" required data-selected="<%= editado.getNacionalidad() %>" disabled>
+                    <option value="guatemalteco">Guatemalteco</option>
+                    <option value="otro">Otro</option>
+                </select><br>
+
+                <!-- Tipo de Consumidor (Select) -->
+                <label for="tipoConsumidor">Tipo de Consumidor:</label>
+                <select id="tipoConsumidor" name="tipoConsumidor" required data-selected="<%= editado.getTipoConsumidor() %>" disabled>
+                    <option value="juridico">Jurídico</option>
+                    <option value="individual">Individual</option>
+                </select><br>
+
                 
                 <label>NIT:</label>
                 <input type="text" name="nit" value="<%= editado.getNit()%>" required readonly><br>
@@ -170,8 +179,35 @@
 
                   
 
-                <label>Sede:</label>
-                <input type="text" name="sede" value="<%= editado.getSedeDiaco() %>" required readonly><br>
+                <label for="SedeD">Sede de DIACO más cercana:</label>
+                <select id="SedeD" name="SedeD" required data-selected="<%= editado.getSedeDiaco() %>" disabled="">
+        <option value="Baja Verapaz">-DIACO- BAJA VERAPAZ</option>
+        <option value="Central">CENTRAL</option>
+        <option value="Chimaltenango">CHIMALTENANGO - DIACO</option>
+            <option value="Baja Verapaz">-DIACO- BAJA VERAPAZ</option>
+            <option value="Central">CENTRAL</option>
+            <option value="Chimaltenango">CHIMALTENANGO - DIACO</option>
+            <option value="Cobán">COBÁN - DIACO</option>
+            <option value="Chiquimula">CHIQUIMULA - DIACO</option>
+            <option value="Escuintla">ESCUINTLA - DIACO</option>
+            <option value="Huehuetenango">HUEHUETENANGO - DIACO</option>
+            <option value="Izabal">IZABAL - DIACO</option>
+            <option value="Jutiapa">JUTIAPA - DIACO</option>
+            <option value="Petén">PETÉN - DIACO</option>
+            <option value="Quetzaltenango">QUETZALTENANGO - DIACO</option>
+            <option value="Quiché">QUICHÉ - DIACO</option>
+            <option value="Suchitepéquez">SUCHITEPÉQUEZ - DIACO</option>
+            <option value="Totonicapán">TOTONICAPÁN - DIACO</option>
+            <option value="Retalhuleu">RETALHULEU - DIACO</option>
+            <option value="Zacapa">ZACAPA - DIACO</option>
+            <option value="Sacatepéquez">SACATEPÉQUEZ - DIACO</option>
+            <option value="San Marcos">SAN MARCOS - DIACO</option>
+            <option value="Mixco">MIXCO - DIACO</option>
+            <option value="Villa Nueva">VILLA NUEVA - DIACO</option>
+            <option value="Jalapa">JALAPA - DIACO</option>
+            <option value="El Progreso">EL PROGRESO - DIACO</option>
+            <option value="Santa Rosa">SANTA ROSA - DIACO</option>
+    </select><br>
 
                 <label>Telefono de Referencia:</label>
                 <input type="text" name="telRef" value="<%= editado.getTelRef()%>" required readonly><br>
@@ -204,4 +240,5 @@
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="../../JS/preseleccionarDep.js"></script>
+     <script src="../../JS/precargarotros.js"></script>
 </html>

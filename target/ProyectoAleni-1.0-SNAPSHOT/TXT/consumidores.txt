@@ -1,13 +1,8 @@
-guatemalteco,individual,12345678,12345678,Cindyyy,Cindy4,Garcia3,Garcia3,assg,askdakjs,zona-2,null,2217,Baja Verapaz,12345678,12345678,12345678,gadiel.monterroso@gmail.com,true,M
-guatemalteco,juridico,15416,3813,Tucci,318131,18318,18318,18181,villa nueva,zona-17,null,1610,Cobán,411354,138131,123456,Mcospin2018ig@gmail.com,true,F
-guatemalteco,juridico,15416,3813,Tucci,318131,18318,18318,18181,villa nueva,zona-17,null,1213,Cobán,411354,138131,123456,Mcospin2018ig@gmail.com,true,M
-otro,juridico,131836,3813,Tucci,318131,18318,18318,18181,villa nueva,zona-11,null,1103,Quetzaltenango,411354,138131,123456,Mcospin2018ig@gmail.com,true,M
-guatemalteco,individual,12345678,12345678,Jose,Maarco,Bigote,Camionetero,de Soto,asdasdasd,zona-18,17,1708,Baja Verapaz,56897845,23457889,12568945,lamamadelamama@gmail.com,true,h
-guatemalteco,individual,12345678,12345678,Jose,Maarco,Bigote,Camionetero,de Soto,asdasdasd,zona-3,18,1801,Baja Verapaz,56897845,23457889,12568945,lamamadelamama@gmail.com,true,h
+
+
 guatemalteco,juridico,15416,3813,Tucci,318131,18318,8318318,18181,villa nueva,zona-17,16,1610,Cobán,411354,138131,123456,Mcospin2018ig@gmail.com,false,h
 guatemalteco,juridico,15416,3813,Tucci,318131,18318,8318318,18181,villa nueva,zona-17,12,1213,Cobán,411354,138131,123456,Mcospin2018ig@gmail.com,false,h
 otro,juridico,131836,3813,Tucci,318131,18318,8318318,18181,villa nueva,zona-11,11,1103,Quetzaltenango,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
 guatemalteco,juridico,131836,3813,Tucci,318131,18318,8318318,18181,villa nueva,zona-5,4,412,Totonicapán,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
 guatemalteco,juridico,131836,3813,Tucci,318131,18318,8318318,18181,villa nueva,zona-5,4,412,Totonicapán,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
 otro,individual,12345678,87654321,Gadiel ,David,Monterroso ,Saber ,Diaz,villa nueva,zona-14,11,1108,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-

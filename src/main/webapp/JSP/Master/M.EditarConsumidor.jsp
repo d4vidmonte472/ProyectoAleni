@@ -96,7 +96,7 @@
 
        <%  Consumidor editado = (Consumidor) request.getSession().getAttribute("con");  %>
 
-<h1> Mostrar Consumidor: <%= editado.getNombre1() %> </h1>
+<h1> Editar Consumidor: <%= editado.getNombre1() %> </h1>
 
 <form action="${pageContext.request.contextPath}/svEditarConsumidores" method="POST">
     <% int id = (int) request.getSession().getAttribute("consumidorId"); %>
@@ -105,15 +105,15 @@
     <!-- Nacionalidad (Select) -->
     <label for="nacionalidad">Nacionalidad:</label>
     <select id="nacionalidad" name="nacionalidad" required data-selected="<%= editado.getNacionalidad() %>">
-        <option value="Guatemalteco">Guatemalteco</option>
-        <option value="Otro">Otro</option>
+        <option value="guatemalteco">Guatemalteco</option>
+        <option value="otro">Otro</option>
     </select><br>
 
     <!-- Tipo de Consumidor (Select) -->
     <label for="tipoConsumidor">Tipo de Consumidor:</label>
     <select id="tipoConsumidor" name="tipoConsumidor" required data-selected="<%= editado.getTipoConsumidor() %>">
-        <option value="Juridico">Jurídico</option>
-        <option value="Individual">Individual</option>
+        <option value="juridico">Jurídico</option>
+        <option value="individual">Individual</option>
     </select><br>
 
     <!-- NIT -->
@@ -133,7 +133,7 @@
     <label for="apellido2">Segundo Apellido:</label>
     <input type="text" name="apellido2" value="<%= editado.getApellido2() %>" required><br>
 
-<<<<<<< HEAD
+
     <label for="apellidoCasada">Apellido de Casada:</label>
     <input type="text" name="apellidoCasada" value="<%= editado.getApellidoCasada() %>" required><br>
 
@@ -229,29 +229,28 @@
     <input type="email" name="correo" value="<%= editado.getCorreo() %>" required><br>
 
     <!-- Autorización -->
-    <label for="autorizacion">Autorización:</label>
-    <input type="text" name="autorizacion" value="<%= editado.getAutorizacion() %>" required><br>
+    <label>Autorizacion:</label>
+                <input type="checkbox" name="autorizacion" <%= editado.getAutorizacion() ? "checked" : "" %>><br>
 
     <!-- Sexo -->
-    <label for="sexo">Sexo:</label>
-    <input type="text" name="sexo" value="<%= editado.getSexo() %>" required><br>
-
+     <label>Sexo:</label>
+     
+        <div class="radio-group">
+             <label>
+            Masculino<input type="radio" name="sexo" value="M" <%= "h".equals(editado.getSexo()) ? "checked" : "" %> > 
+            </label>
+            <label>
+            Femenino<input type="radio" name="sexo" value="F" <%= "m".equals(editado.getSexo()) ? "checked" : "" %> > <br>  
+            </label>
+                
+                
+        </div>
     <!-- Submit -->
     <button type="submit">Aceptar</button>
 </form>
 
-
-                <label>Autorizacion:</label>
-                <input type="checkbox" name="autorizacion" <%= editado.getAutorizacion() ? "checked" : "" %>><br>
-
-                <label>Sexo:</label>
-                <input type="radio" name="sexo" value="M" <%= "M".equals(editado.getSexo()) ? "checked" : "" %> > Masculino
-                <input type="radio" name="sexo" value="F" <%= "F".equals(editado.getSexo()) ? "checked" : "" %> > Femenino<br>
-
-                <button type="submit">Aceptar</button>
-            </form>
-
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <script src="../../JS/preseleccionarDep.js"></script>
+      <script src="../../JS/precargarotros.js"></script>
 </html>

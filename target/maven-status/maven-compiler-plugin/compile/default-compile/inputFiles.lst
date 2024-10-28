@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\SvEditarConsumidor.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\SvEliminarQueja.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Clases\Consumidor.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Clases\Reportes.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Clases\Usuario.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\SvMosproveedor.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svMostrarConsumidores.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svEditarConsumidores.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Clases\Quejas.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\SvEditarProveedor.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\SvMostrarqueja.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svEditarUsuarios.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\SvEliminarProv.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svEditarQueja.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svEditarUsuario.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svEditarQuejas.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\com\aleni\proyectoaleni\resources\JakartaEE10Resource.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svMostrarUsuarios.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\SvLogin.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Clases\Proveedor.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svGuardarConsumidor.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\SvMosQueja.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\SvEliminarConsumidores.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\SvMosCons.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\SvMosconsumidor.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\Servlets\svEditarProveedores.java
-C:\Users\David\Documents\GitHub\ProyectoAleni\src\main\java\com\aleni\proyectoaleni\JakartaRestConfiguration.java
-=======
 C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\Servlets\SvEditarConsumidor.java
 C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\Servlets\svEditarUsuarios.java
 C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\Servlets\SvLogin.java
@@ -54,4 +25,3 @@ C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\
 C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\Servlets\SvMosCons.java
 C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\Servlets\svEditarQuejas.java
 C:\Users\fboan\OneDrive\Documentos\NetBeansProjects\ProyectoAleni\src\main\java\Servlets\SvEliminarQueja.java
->>>>>>> d2d870972c15404589f113dcae32e6bfd1f5b47d

@@ -20,64 +20,83 @@
 
 <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
+            <ul class="navbar-nav d-flex flex-row flex-grow-1 justify-content-around">
+            <li class="nav-item">
+                <a class="nav-link" href="Mcmenu.jsp">INICIO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="MCardionica.jsp">CARDIONICA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Mservicios.jsp">PLANES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="MContacto.jsp">CONTACTO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="MQuejas.jsp">QUEJAS DIACO</a>
+            </li>
+        </ul>
         <a class="navbar-brand" href="#">MASTER MENU</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MASTER</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <ul class="navbar-nav d-flex flex-grow-1 justify-content-between">
-                    <!-- Opciones en el Offcanvas -->
-                    <li class="nav-item flex-grow-1 text-center">
-                        <a class="nav-link" href="M.Usuarios.jsp">USUARIOS</a>
+                <ul class="navbar-nav flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <form id="Usuarios" method="GET" action="${pageContext.request.contextPath}/svMostrarUsuarios">
+                            <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">USUARIOS</button>
+                        </form>
                     </li>
-                    <li class="nav-item flex-grow-1 text-center">
-                        <a class="nav-link" href="#">CON+SUMIDORES</a>
+                    <li class="nav-item">
+                        <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvMosCons">
+                            <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">CONSUMIDORES</button>
+                        </form>
                     </li>
-                    <li class="nav-item flex-grow-1 text-center">
-                        <a class="nav-link" href="M.quejas.jsp">PROVEEDORES</a>
+                    <li class="nav-item">
+                        <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvMosproveedor">
+                            <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">PROVEEDORES</button>
+                        </form>
                     </li>
-                    <li class="nav-item flex-grow-1 text-center">
-                        <a class="nav-link" href="M.quejas.jsp">QUEJAS</a>
+                    <li class="nav-item">
+                        <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvMostrarqueja">
+                            <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">QUEJAS</button>
+                        </form>
                     </li>
-                    <li class="nav-item dropdown flex-grow-1 text-center">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">REPORTES</a>
                         <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="#">VENTAS</a></li>
-                            <li><a class="dropdown-item" href="#">QUEJAS</a></li>
+                            <li>
+                                <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvMosRepven">
+                                    <button type="submit" class="dropdown-item">VENTAS</button>
+                                </form>
+                            </li>
+                            <li>
+                                <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvMosRepQue">
+                                    <button type="submit" class="dropdown-item">QUEJAS</button>
+                                </form>
+                            </li>
                         </ul>
                     </li>
-                    <li class="nav-item flex-grow-1 text-center">
-                        <a class="nav-link" href="../../index.jsp">LOG OUT</a>
+                    <li class="nav-item">
+                        <form id="Logout" method="GET" action="../../index.jsp">
+                            <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">LOG OUT</button>
+                        </form>
                     </li>
                 </ul>
             </div>
         </div>
-        
-        <!-- Opciones adicionales en la Navbar fuera del offcanvas -->
-        <ul class="navbar-nav d-flex flex-row flex-grow-1 justify-content-around">
-            <li class="nav-item text-center">
-                <a class="nav-link" href="Mcmenu.jsp">INICIO</a>
-            </li>
-            <li class="nav-item text-center">
-                <a class="nav-link" href="MCardionica.jsp">CARDIONICA</a>
-            </li>
-            <li class="nav-item text-center">
-                <a class="nav-link" href="Mservicios.jsp">PLANES</a>
-            </li>
-            <li class="nav-item text-center">
-                <a class="nav-link" href="MContacto.jsp">CONTACTO</a>
-            </li>
-            <li class="nav-item text-center">
-                <a class="nav-link" href="MQuejas.jsp">QUEJAS DIACO</a>
-            </li>
-        </ul>
+
+    
     </div>
 </nav>
+
 
 
 

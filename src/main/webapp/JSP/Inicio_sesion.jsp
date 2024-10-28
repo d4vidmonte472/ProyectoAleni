@@ -22,7 +22,7 @@
             <li><a href="planes.jsp">PLANES</a></li>
             <li><a href="Contacto.jsp">CONTACTO</a></li>
             <li><a href="Quejas.jsp">QUEJAS DIACO</a></li>
-            <li><a href="inicio_sesion.jsp">INICIO SESION</a></li>
+            <li><a href="Inicio_sesion.jsp">INICIO SESION</a></li>
         </ul>
     </nav>
 

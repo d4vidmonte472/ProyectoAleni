@@ -77,13 +77,13 @@
         <servlet-class>Servlets.SvEliminarProv</servlet-class>
     </servlet>
     <servlet>
-<<<<<<< HEAD
+
         <servlet-name>SvMosProv</servlet-name>
         <servlet-class>Servlets.SvMosProv</servlet-class>
-=======
+
         <servlet-name>SvEditarConsumidor</servlet-name>
         <servlet-class>Servlets.SvEditarConsumidor</servlet-class>
->>>>>>> f1b5e22c30794838ea0d5e790f4a8b1a1ccc0d51
+
     </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
@@ -162,13 +162,13 @@
         <url-pattern>/SvEliminarProv</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-<<<<<<< HEAD
+
         <servlet-name>SvMosProv</servlet-name>
         <url-pattern>/SvMosProv</url-pattern>
-=======
+
         <servlet-name>SvEditarConsumidor</servlet-name>
         <url-pattern>/SvEditarConsumidor</url-pattern>
->>>>>>> f1b5e22c30794838ea0d5e790f4a8b1a1ccc0d51
+
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

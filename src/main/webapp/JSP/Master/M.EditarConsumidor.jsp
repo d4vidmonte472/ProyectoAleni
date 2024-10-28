@@ -237,10 +237,10 @@
      
         <div class="radio-group">
              <label>
-            Masculino<input type="radio" name="sexo" value="M" <%= "h".equals(editado.getSexo()) ? "checked" : "" %> > 
+            Masculino<input type="radio" name="sexo" value="h" <%= "h".equals(editado.getSexo()) ? "checked" : "" %> > 
             </label>
             <label>
-            Femenino<input type="radio" name="sexo" value="F" <%= "m".equals(editado.getSexo()) ? "checked" : "" %> > <br>  
+            Femenino<input type="radio" name="sexo" value="f" <%= "m".equals(editado.getSexo()) ? "checked" : "" %> > <br>  
             </label>
                 
                 

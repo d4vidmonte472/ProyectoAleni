@@ -1,7 +1,7 @@
 <%-- 
-    Document   : M.MostrarConsumidores
-    Created on : 17/10/2024, 9:27:07 p. m.
-    Author     : fboan
+    Document   : M.EditarConsumidor
+    Created on : Oct 25, 2024, 11:02:30 AM
+    Author     : david
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -121,64 +121,64 @@
          
         <h1> Mostrar Consumidor: <%= editado.getNombre1() %> </h1>
         
-            <form action="${pageContext.request.contextPath}/svMostrarConsumidores" method="POST">
+            <form action="${pageContext.request.contextPath}/svEditarConsumidores" method="POST">
                 
                 <label>Nacionalidad:</label>
-                <input type="text" name="nacionalidad" value="<%= editado.getNacionalidad()%>" required readonly><br>
-                <label>Tipo de Consumidor:</label>  
-                <input type="text" name="tipoConsumidor" value="<%= editado.getTipoConsumidor()%>" required readonly><br>
+                <input type="text" name="nacionalidad" value="<%= editado.getNacionalidad()%>" required><br>
+                <label>Tipo de Consumidor:</label>
+                <input type="text" name="tipoConsumidor" value="<%= editado.getTipoConsumidor()%>" required><br>
                 
                 <label>NIT:</label>
-                <input type="text" name="nit" value="<%= editado.getNit()%>" required readonly><br>
+                <input type="text" name="nit" value="<%= editado.getNit()%>" required><br>
                 
                 
                 <label>Primer Nombre :</label>
-                <input type="text" name="nombre1" value="<%= editado.getNombre1()%>" required readonly><br>
+                <input type="text" name="nombre1" value="<%= editado.getNombre1()%>" required><br>
                 <label>Segundo Nombre:</label>
-                <input type="text" name="nombre2" value="<%= editado.getNombre2()%>" required readonly><br>
+                <input type="text" name="nombre2" value="<%= editado.getNombre2()%>" required><br>
                 
                 
                 <label>Primer Apellido:</label>
-                <input type="text" name="apellido1" value="<%= editado.getApellido1()%>" required readonly><br>
+                <input type="text" name="apellido1" value="<%= editado.getApellido1()%>" required><br>
                 
                 <label>Segundo Apellido:</label>
-                <input type="text" name="apellido2" value="<%= editado.getApellido2()%>" required readonly><br>
+                <input type="text" name="apellido2" value="<%= editado.getApellido2()%>" required><br>
 
                 <label>Apellido Casada:</label>
-                <input type="text" name="apellidoCasada" value="<%= editado.getApellidoCasada()%>" required readonly><br>
+                <input type="text" name="apellidoCasada" value="<%= editado.getApellidoCasada()%>" required><br>
                 
                 <label>Direccion:</label>
-                <input type="text" name="direccion" value="<%= editado.getDireccion()%>" required readonly><br>
+                <input type="text" name="direccion" value="<%= editado.getDireccion()%>" required><br>
                 
                 <label>Zona:</label>
-                <input type="text" name="zona" value="<%= editado.getZona()%>" required readonly><br>
+                <input type="text" name="zona" value="<%= editado.getZona()%>" required><br>
                 
                 <label>Departamento:</label>
-                <input type="text" name="departamento" value="<%= editado.getDepartamento()%>" required readonly><br>
+                <input type="text" name="departamento" value="<%= editado.getDepartamento()%>" required><br>
 
                 <label>Municipio:</label>
-                <input type="text" name="municipio" value="<%= editado.getMunicipio()%>" required readonly><br>
+                <input type="text" name="municipio" value="<%= editado.getMunicipio()%>" required><br>
 
                 <label>Sede:</label>
-                <input type="text" name="sede" value="<%= editado.getSedeDiaco() %>" required readonly><br>
+                <input type="text" name="sede" value="<%= editado.getSedeDiaco() %>" required><br>
 
                 <label>Telefono de Referencia:</label>
-                <input type="text" name="telRef" value="<%= editado.getTelRef()%>" required readonly><br>
+                <input type="text" name="telRef" value="<%= editado.getTelRef()%>" required><br>
 
                 <label>Telefono:</label>
-                <input type="text" name="tel" value="<%= editado.getTel()%>" required readonly><br>
+                <input type="text" name="tel" value="<%= editado.getTel()%>" required><br>
 
                 <label>Teledono Domicilio:</label>
-                <input type="text" name="telDom" value="<%= editado.getTelDom()%>" required readonly><br>
+                <input type="text" name="telDom" value="<%= editado.getTelDom()%>" required><br>
 
                 <label>Correo:</label>
-                <input type="text" name="correo" value="<%= editado.getCorreo()%>" required readonly><br>
+                <input type="text" name="correo" value="<%= editado.getCorreo()%>" required><br>
 
                 <label>Autorizacion:</label>
-                <input type="text" name="autorizacion" value="<%= editado.getAutorizacion() %>" required readonly><br>
+                <input type="text" name="autorizacion" value="<%= editado.getAutorizacion() %>" required><br>
 
                 <label>Sexo:</label>
-                <input type="text" name="sexo" value="<%= editado.getSexo() %>" required readonly><br>
+                <input type="text" name="sexo" value="<%= editado.getSexo() %>" required><br>
 
                 
                 

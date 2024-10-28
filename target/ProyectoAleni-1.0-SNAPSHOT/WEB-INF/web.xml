@@ -67,10 +67,14 @@
     <servlet>
         <servlet-name>svEditarConsumidores</servlet-name>
         <servlet-class>Servlets.svEditarConsumidores</servlet-class>
-    </servlet>  
+    </servlet>
     <servlet>
         <servlet-name>SvEliminarProv</servlet-name>
         <servlet-class>Servlets.SvEliminarProv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvEditarConsumidor</servlet-name>
+        <servlet-class>Servlets.SvEditarConsumidor</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
@@ -139,10 +143,14 @@
     <servlet-mapping>
         <servlet-name>SvEliminarConsumidores</servlet-name>
         <url-pattern>/SvEliminarConsumidores</url-pattern>
-        </servlet-mapping>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvEliminarProv</servlet-name>
         <url-pattern>/SvEliminarProv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvEditarConsumidor</servlet-name>
+        <url-pattern>/SvEditarConsumidor</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

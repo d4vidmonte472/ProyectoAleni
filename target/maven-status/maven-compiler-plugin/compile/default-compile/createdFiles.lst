@@ -1,5 +1,6 @@
 Clases\Quejas.class
 Servlets\SvEliminarConsumidores.class
+Servlets\SvEditarConsumidor.class
 Clases\Consumidor.class
 Servlets\SvMosCons.class
 Servlets\SvLogin.class

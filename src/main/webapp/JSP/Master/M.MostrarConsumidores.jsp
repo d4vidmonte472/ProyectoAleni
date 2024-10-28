@@ -119,13 +119,13 @@
          <%  Consumidor editado = (Consumidor) request.getSession().getAttribute("con");  %>
          
          
-        <h1> Mostrar Consumidor: <%=  %> </h1>
+        <h1> Mostrar Consumidor: <%= editado.getNombre1() %> </h1>
         
-            <form action="${pageContext.request.contextPath}/svEditarQuejas" method="POST">
+            <form action="${pageContext.request.contextPath}/svMostrarConsumidores" method="POST">
                 
                 <label>Nacionalidad:</label>
                 <input type="text" name="nacionalidad" value="<%= editado.getNacionalidad()%>" required readonly><br>
-                <label>Tipo de Consumidor:</label>
+                <label>Tipo de Consumidor:</label>  
                 <input type="text" name="tipoConsumidor" value="<%= editado.getTipoConsumidor()%>" required readonly><br>
                 
                 <label>NIT:</label>
@@ -157,28 +157,28 @@
                 <input type="text" name="departamento" value="<%= editado.getDepartamento()%>" required readonly><br>
 
                 <label>Municipio:</label>
-                <input type="text" name="municipio" value="<%= editado.getDepartamento()%>" required readonly><br>
+                <input type="text" name="municipio" value="<%= editado.getMunicipio()%>" required readonly><br>
 
                 <label>Sede:</label>
-                <input type="text" name="sede" value="<%= editado.getDepartamento()%>" required readonly><br>
+                <input type="text" name="sede" value="<%= editado.getSedeDiaco() %>" required readonly><br>
 
                 <label>Telefono de Referencia:</label>
-                <input type="text" name="telRef" value="<%= editado.getDepartamento()%>" required readonly><br>
+                <input type="text" name="telRef" value="<%= editado.getTelRef()%>" required readonly><br>
 
                 <label>Telefono:</label>
-                <input type="text" name="tel" value="<%= editado.getDepartamento()%>" required readonly><br>
+                <input type="text" name="tel" value="<%= editado.getTel()%>" required readonly><br>
 
                 <label>Teledono Domicilio:</label>
-                <input type="text" name="telDom" value="<%= editado.getDepartamento()%>" required readonly><br>
+                <input type="text" name="telDom" value="<%= editado.getTelDom()%>" required readonly><br>
 
                 <label>Correo:</label>
-                <input type="text" name="correo" value="<%= editado.getDepartamento()%>" required readonly><br>
+                <input type="text" name="correo" value="<%= editado.getCorreo()%>" required readonly><br>
 
                 <label>Autorizacion:</label>
-                <input type="text" name="autorizacion" value="<%= editado.getDepartamento()%>" required readonly><br>
+                <input type="text" name="autorizacion" value="<%= editado.getAutorizacion() %>" required readonly><br>
 
                 <label>Sexo:</label>
-                <input type="text" name="sexo" value="<%= editado.getDepartamento()%>" required readonly><br>
+                <input type="text" name="sexo" value="<%= editado.getSexo() %>" required readonly><br>
 
                 
                 

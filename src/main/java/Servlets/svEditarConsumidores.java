@@ -17,6 +17,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import Clases.*;
+import jakarta.servlet.http.HttpSession;
 import java.io.FileWriter;
 import java.nio.file.Path;
 
@@ -82,13 +83,12 @@ public class svEditarConsumidores extends HttpServlet {
     }
          }
          
-             int consumidorId = Integer.parseInt(request.getParameter("consumidorId"));
+             int consumidorId = Integer.parseInt(request.getParameter("ConsumidorId"));
              
              
                  listaConsumidores.get(consumidorId).setNacionalidad(request.getParameter("nacionalidad"));
                  listaConsumidores.get(consumidorId).setTipoConsumidor(request.getParameter("tipoConsumidor"));
                  listaConsumidores.get(consumidorId).setNit(Integer.parseInt(request.getParameter("nit")));
-
                  listaConsumidores.get(consumidorId).setNombre1(request.getParameter("nombre1"));
                  listaConsumidores.get(consumidorId).setNombre2(request.getParameter("nombre2"));
                  listaConsumidores.get(consumidorId).setApellido1(request.getParameter("apellido1"));
@@ -128,6 +128,11 @@ public class svEditarConsumidores extends HttpServlet {
       e.printStackTrace();
     }
               
+             Consumidor con = listaConsumidores.get(consumidorId);
+        HttpSession misesion = request.getSession();
+        misesion.setAttribute("con", con); // Guardar el consumidor en la sesión
+        response.sendRedirect("JSP/Master/M.EditarConsumidor.jsp");
+    
                  
              
          

@@ -2,7 +2,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/JavaScript.js to edit this template
  */
-
 document.addEventListener('DOMContentLoaded', () => {
     const baseURL = window.location.origin;
     const departamentoSelect = document.getElementById('departamento');
@@ -74,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             selectElement.appendChild(option);
         });
     }
+
     const zonaSelect = document.getElementById('zona');
     const zonaPredeterminada = zonaSelect.getAttribute('data-selected');
 
@@ -84,6 +84,52 @@ document.addEventListener('DOMContentLoaded', () => {
             optionToSelect.selected = true;
         }
     }
+
+    // Precargar Nacionalidad
+    const nacionalidadSelect = document.getElementById('nacionalidad');
+    const nacionalidadPredeterminada = nacionalidadSelect.getAttribute('data-selected');
+    if (nacionalidadPredeterminada) {
+        const optionToSelect = Array.from(nacionalidadSelect.options).find(option => option.value === nacionalidadPredeterminada);
+        if (optionToSelect) {
+            optionToSelect.selected = true;
+        }
+    }
+
+    // Precargar Tipo de Consumidor
+    const tipoConsumidorSelect = document.getElementById('tipoConsumidor');
+    const tipoConsumidorPredeterminado = tipoConsumidorSelect.getAttribute('data-selected');
+    if (tipoConsumidorPredeterminado) {
+        const optionToSelect = Array.from(tipoConsumidorSelect.options).find(option => option.value === tipoConsumidorPredeterminado);
+        if (optionToSelect) {
+            optionToSelect.selected = true;
+        }
+    }
+
+    // Precargar Sede de DIACO
+    const sedeDSelect = document.getElementById('SedeD');
+    const sedeDPredeterminada = sedeDSelect.getAttribute('data-selected');
+    if (sedeDPredeterminada) {
+        const optionToSelect = Array.from(sedeDSelect.options).find(option => option.value === sedeDPredeterminada);
+        if (optionToSelect) {
+            optionToSelect.selected = true;
+        }
+    }
+     function preselectOption(selectId) {
+        const select = document.getElementById(selectId);
+        const selectedValue = select.getAttribute("data-selected");
+        if (selectedValue) {
+            for (let option of select.options) {
+                if (option.value === selectedValue) {
+                    option.selected = true;
+                    break;
+                }
+            }
+        }
+    }
+
+    // Llama a la función para cada select que necesita preselección
+    preselectOption("nacionalidad");
+    preselectOption("tipoConsumidor");
+    preselectOption("SedeD");
+
 });
-
-

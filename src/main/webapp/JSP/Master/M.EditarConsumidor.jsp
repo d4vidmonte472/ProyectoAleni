@@ -122,7 +122,8 @@
         <h1> Mostrar Consumidor: <%= editado.getNombre1() %> </h1>
         
             <form action="${pageContext.request.contextPath}/svEditarConsumidores" method="POST">
-                
+                <% int id= (int) request.getSession().getAttribute("consumidorId");%>
+                <input type="hidden" name="ConsumidorId" value="<%= id %>">
                 <label>Nacionalidad:</label>
                 <input type="text" name="nacionalidad" value="<%= editado.getNacionalidad()%>" required><br>
                 <label>Tipo de Consumidor:</label>

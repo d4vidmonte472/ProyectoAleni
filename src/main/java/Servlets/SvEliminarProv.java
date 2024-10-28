@@ -79,7 +79,7 @@ public class SvEliminarProv extends HttpServlet {
        
     }
          }
-        int proveedorId = Integer.parseInt(request.getParameter("proveedorId"));
+        int proveedorId = Integer.parseInt(request.getParameter("ProveedorId"));
         
         listaProveedores.remove(proveedorId);
         

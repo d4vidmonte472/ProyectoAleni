@@ -9,6 +9,7 @@ Clases\Reportes.class
 Servlets\SvMostrarqueja.class
 Servlets\svEditarUsuarios.class
 Servlets\SvMosproveedor.class
+Servlets\SvMosProv.class
 Servlets\svEditarProveedores.class
 Servlets\svEditarQueja.class
 Clases\Proveedor.class

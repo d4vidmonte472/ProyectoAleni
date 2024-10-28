@@ -56,6 +56,10 @@
         <servlet-name>SvEditarProveedores</servlet-name>
         <servlet-class>Servlets.SvEditarProveedores</servlet-class>
     </servlet>
+        <servlet>
+        <servlet-name>svEditarProveedores</servlet-name>
+        <servlet-class>Servlets.svEditarProveedores</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>SvMosCons</servlet-name>
         <servlet-class>Servlets.SvMosCons</servlet-class>
@@ -67,10 +71,14 @@
     <servlet>
         <servlet-name>svEditarConsumidores</servlet-name>
         <servlet-class>Servlets.svEditarConsumidores</servlet-class>
-    </servlet>  
+    </servlet>
     <servlet>
         <servlet-name>SvEliminarProv</servlet-name>
         <servlet-class>Servlets.SvEliminarProv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvMosProv</servlet-name>
+        <servlet-class>Servlets.SvMosProv</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
@@ -128,6 +136,10 @@
         <servlet-name>SvEditarProveedores</servlet-name>
         <url-pattern>/SvEditarProveedores</url-pattern>
     </servlet-mapping>
+        <servlet-mapping>
+        <servlet-name>svEditarProveedores</servlet-name>
+        <url-pattern>/svEditarProveedores</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvMosCons</servlet-name>
         <url-pattern>/SvMosCons</url-pattern>
@@ -139,10 +151,14 @@
     <servlet-mapping>
         <servlet-name>SvEliminarConsumidores</servlet-name>
         <url-pattern>/SvEliminarConsumidores</url-pattern>
-        </servlet-mapping>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvEliminarProv</servlet-name>
         <url-pattern>/SvEliminarProv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvMosProv</servlet-name>
+        <url-pattern>/SvMosProv</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

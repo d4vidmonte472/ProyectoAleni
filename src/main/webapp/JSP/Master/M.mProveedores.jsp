@@ -168,7 +168,7 @@
                                <input type="hidden" name="ProveedorId" value="<%= cont -1 %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-trash"></i> </button>
                             </form>
-                            <form action="${pageContext.request.contextPath}/SvMosQueja" method="POST"> 
+                            <form action="${pageContext.request.contextPath}/SvMosProv" method="POST"> 
                                <input type="hidden" name="ProveedorId" value="<%= cont -1 %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-eye"></i> </button>
                             </form>

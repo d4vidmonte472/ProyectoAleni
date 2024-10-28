@@ -5,7 +5,6 @@
 package Servlets;
 
 import Clases.Proveedor;
-import Clases.Usuario;
 import jakarta.servlet.ServletContext;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,7 +13,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import java.io.FileWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -22,28 +20,54 @@ import java.util.List;
 
 /**
  *
- * @author David
+ * @author fboan
  */
-public class svEditarProveedores extends HttpServlet {
+public class SvMosProv extends HttpServlet {
 
-  
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-      
+        
+
     }
 
- 
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        processRequest(request, response);
     }
 
-  
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ServletContext context = getServletContext();
+        processRequest(request, response);
+        processRequest(request, response);
+         ServletContext context = getServletContext();
         String rutaArchivoProveedores = context.getRealPath("/TXT/proveedores.txt");
         List<String> lineas = Files.readAllLines(Paths.get(rutaArchivoProveedores));
         
@@ -65,47 +89,22 @@ public class svEditarProveedores extends HttpServlet {
                 
                 listaProveedores.add(new Proveedor(nombreEmpresaTxt,razonSocialTxt,nitTxt,direccionTxt,zonaTxt,departamentoTxt,municipioTxt,telefonoTxt,correoTxt));
     
-       
-    }
-         }
-         int proveedorId = Integer.parseInt(request.getParameter("proveedorId"));
-         
-                 listaProveedores.get(proveedorId).setNombreEmpresa(request.getParameter("nombreEmpresa"));
-                 listaProveedores.get(proveedorId).setRazonSocial(request.getParameter("razonSocial"));
-                 listaProveedores.get(proveedorId).setNit(Integer.parseInt(request.getParameter("nit")));
-                 listaProveedores.get(proveedorId).setDireccion(request.getParameter("direccion"));
-                 listaProveedores.get(proveedorId).setZona(request.getParameter("zona"));
-                 listaProveedores.get(proveedorId).setDepartamento(request.getParameter("departamento"));
-                 listaProveedores.get(proveedorId).setMunicipio(request.getParameter("municipio"));
-                 listaProveedores.get(proveedorId).setTelefono(Integer.parseInt(request.getParameter("telefono")));
-                 listaProveedores.get(proveedorId).setCorreo(request.getParameter("correo"));
 
-                  try {
-  
-            try (FileWriter myWriter = new FileWriter(rutaArchivoProveedores, false)) {
-                for(Proveedor proveedor : listaProveedores){
-                    
-               myWriter.write("\n" + "\n"+proveedor.getNombreEmpresa()+","+proveedor.getRazonSocial()+","+proveedor.getNit()+","+proveedor.getDireccion()+","+proveedor.getZona()
-               +","+ proveedor.getDepartamento()+","+proveedor.getMunicipio()+","+proveedor.getTelefono()+","+proveedor.getCorreo());
-           
-                }
-                 myWriter.close();
-            }
-      
-     
-     
-      System.out.println("Successfully wrote to the file.");
-    } catch (IOException e) {
-      System.out.println("An error occurred.");
-      e.printStackTrace();
-        }
-        HttpSession misesion = request.getSession();
-        misesion.setAttribute("listaProveedores", listaProveedores);
-        
-         response.sendRedirect("JSP/Master/M.mProveedores.jsp");
+    }
+         }    
+            int idQuejaBuscada = Integer.parseInt(request.getParameter("ProveedorId"));
+            Proveedor que = listaProveedores.get(idQuejaBuscada);
+            HttpSession misesion = request.getSession();
+             misesion.setAttribute("idQuejaBuscada", idQuejaBuscada);
+            misesion.setAttribute("que", que);
+            response.sendRedirect("JSP/Master/M.MosProveedor.jsp");
     }
 
-   
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
     @Override
     public String getServletInfo() {
         return "Short description";

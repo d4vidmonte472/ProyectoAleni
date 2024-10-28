@@ -56,6 +56,10 @@
         <servlet-name>SvEditarProveedores</servlet-name>
         <servlet-class>Servlets.SvEditarProveedores</servlet-class>
     </servlet>
+        <servlet>
+        <servlet-name>svEditarProveedores</servlet-name>
+        <servlet-class>Servlets.svEditarProveedores</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>SvMosCons</servlet-name>
         <servlet-class>Servlets.SvMosCons</servlet-class>
@@ -73,8 +77,13 @@
         <servlet-class>Servlets.SvEliminarProv</servlet-class>
     </servlet>
     <servlet>
+
+        <servlet-name>SvMosProv</servlet-name>
+        <servlet-class>Servlets.SvMosProv</servlet-class>
+
         <servlet-name>SvEditarConsumidor</servlet-name>
         <servlet-class>Servlets.SvEditarConsumidor</servlet-class>
+
     </servlet>
     <servlet>
         <servlet-name>SvMosconsumidor</servlet-name>
@@ -136,6 +145,10 @@
         <servlet-name>SvEditarProveedores</servlet-name>
         <url-pattern>/SvEditarProveedores</url-pattern>
     </servlet-mapping>
+        <servlet-mapping>
+        <servlet-name>svEditarProveedores</servlet-name>
+        <url-pattern>/svEditarProveedores</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvMosCons</servlet-name>
         <url-pattern>/SvMosCons</url-pattern>
@@ -153,8 +166,13 @@
         <url-pattern>/SvEliminarProv</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+
+        <servlet-name>SvMosProv</servlet-name>
+        <url-pattern>/SvMosProv</url-pattern>
+
         <servlet-name>SvEditarConsumidor</servlet-name>
         <url-pattern>/SvEditarConsumidor</url-pattern>
+
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvMosconsumidor</servlet-name>

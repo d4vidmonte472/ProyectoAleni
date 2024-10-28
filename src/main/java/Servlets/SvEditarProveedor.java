@@ -95,8 +95,10 @@ public class SvEditarProveedor extends HttpServlet {
          }    
             int idQuejaBuscada = Integer.parseInt(request.getParameter("ProveedorId"));
             Proveedor que = listaProveedores.get(idQuejaBuscada);
+            
             HttpSession misesion = request.getSession();
             misesion.setAttribute("que", que);
+            misesion.setAttribute("idQuejaBuscada", idQuejaBuscada);
             response.sendRedirect("JSP/Master/M.EditarProveedor.jsp");
                 
     }

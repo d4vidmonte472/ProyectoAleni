@@ -1,2 +1,5 @@
 
 guatemalteco,individual,12345678,12345678,Cindyyy,Cindy4,Garcia3,Garcia3,assg,askdakjs,zona-2,null,2217,Baja Verapaz,12345678,12345678,12345678,gadiel.monterroso@gmail.com,true,m
+guatemalteco,juridico,15416,3813,Tucci,318131,18318,8318318,18181,villa nueva,zona-17,16,1610,Cobán,411354,138131,123456,Mcospin2018ig@gmail.com,false,h
+guatemalteco,juridico,15416,3813,Tucci,318131,18318,8318318,18181,villa nueva,zona-17,12,1213,Cobán,411354,138131,123456,Mcospin2018ig@gmail.com,false,h
+otro,juridico,131836,3813,Tucci,318131,18318,8318318,18181,villa nueva,zona-11,11,1103,Quetzaltenango,411354,138131,123456,Mcospin2018ig@gmail.com,true,h

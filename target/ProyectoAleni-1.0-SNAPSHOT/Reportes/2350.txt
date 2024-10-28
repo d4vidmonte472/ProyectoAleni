@@ -1,14 +1,6 @@
 Numero de Queja: 2350
-<<<<<<< HEAD
 Fecha de la queja: 2024-10-17
 Nombre del Consumidor: ASLkbndaiojsbdaJorge
 Nombre de la Empresa: Prueba
 Solicitud: dasdasd
 Detalle: asdas
-=======
-Fecha de la queja: 2024-10-02
-Nombre del Consumidor: 18318Tucci
-Nombre de la Empresa: 1135
-Solicitud: asddawaad
-Detalle: adwadasc
->>>>>>> d2d870972c15404589f113dcae32e6bfd1f5b47d

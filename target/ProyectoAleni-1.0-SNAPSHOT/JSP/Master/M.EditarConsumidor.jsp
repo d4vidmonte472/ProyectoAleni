@@ -240,7 +240,7 @@
     <button type="submit">Aceptar</button>
 </form>
 
-=======
+
                 <label>Autorizacion:</label>
                 <input type="checkbox" name="autorizacion" <%= editado.getAutorizacion() ? "checked" : "" %>><br>
 
@@ -250,7 +250,7 @@
 
                 <button type="submit">Aceptar</button>
             </form>
->>>>>>> 8aad80f922820f44e4a2eac1789becdfda3a971a
+
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <script src="../../JS/preseleccionarDep.js"></script>

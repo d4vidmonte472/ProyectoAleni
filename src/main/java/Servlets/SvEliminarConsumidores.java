@@ -85,10 +85,10 @@ public class SvEliminarConsumidores extends HttpServlet {
          }
 
         // Obtener el ID de la queja a eliminar.
-        int idConsumidorEliminar = Integer.parseInt(request.getParameter("ConsumidoresId"));
+        int idConsumidorEliminar = Integer.parseInt(request.getParameter("ConsumidorId"));
 
         // Filtrar la lista para eliminar la queja con el ID proporcionado.
-        listaConsumidores.removeIf(c -> c.getDpi() == idConsumidorEliminar);
+        listaConsumidores.remove(idConsumidorEliminar);
 
         // Sobrescribir el archivo con la lista actualizada.
         try (FileWriter myWriter = new FileWriter(rutaArchivoConsumidores, false)) {

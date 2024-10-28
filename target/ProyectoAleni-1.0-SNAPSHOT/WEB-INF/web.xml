@@ -76,6 +76,10 @@
         <servlet-name>SvEditarConsumidor</servlet-name>
         <servlet-class>Servlets.SvEditarConsumidor</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SvMosconsumidor</servlet-name>
+        <servlet-class>Servlets.SvMosconsumidor</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
         <url-pattern>/svGuardarConsumidor</url-pattern>
@@ -151,6 +155,10 @@
     <servlet-mapping>
         <servlet-name>SvEditarConsumidor</servlet-name>
         <url-pattern>/SvEditarConsumidor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvMosconsumidor</servlet-name>
+        <url-pattern>/SvMosconsumidor</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

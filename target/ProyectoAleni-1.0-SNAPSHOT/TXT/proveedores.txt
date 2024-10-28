@@ -22,3 +22,5 @@ Prueba,Prueba,12467564,fhgfg,zona-5,22,2217,12456789,david.monterrosod.g@gmail.c
 asdasdasdasda,12345678,12345678,asdfgd,zona-2,22,2217,12345678,gadiel.monterroso@gmail.com
 asdasdasdasda,12345678,12345678,asdfgd,zona-1,22,2217,12345678,gadiel.monterroso@gmail.com
 Prueba,Prueba,12467564,fhgfg,zona-18,22,2217,12456789,david.monterrosod.g@gmail.com
+
+Prueba,Prueba,12467564,fhgfg,zona-2,3,315,12456789,david.monterrosod.g@gmail.com

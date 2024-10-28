@@ -121,7 +121,7 @@
          
         <h1> Mostrar Consumidor: <%= editado.getNombre1() %> </h1>
         
-            <form action="${pageContext.request.contextPath}/svMostrarConsumidores" method="POST">
+            <form action="${pageContext.request.contextPath}/SvMosCons" method="GET">
                 
                 <label>Nacionalidad:</label>
                 <input type="text" name="nacionalidad" value="<%= editado.getNacionalidad()%>" required readonly><br>

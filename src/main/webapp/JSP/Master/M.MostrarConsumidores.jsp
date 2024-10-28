@@ -151,11 +151,17 @@
                 <input type="text" name="correo" value="<%= editado.getCorreo()%>" required readonly><br>
 
                 <label>Autorizacion:</label>
-                <input type="text" name="autorizacion" value="<%= editado.getAutorizacion() %>" required readonly><br>
+                <input type="checkbox" name="autorizacion" <%= editado.getAutorizacion() ? "checked" : "" %> disabled><br>
 
                 <label>Sexo:</label>
-                <input type="text" name="sexo" value="<%= editado.getSexo() %>" required readonly><br>
-
+                <label>
+                    Masculino <input type="radio" name="sexo" value="M" <%= "M".equals(editado.getSexo()) ? "checked" : "" %>  disabled> <br>
+                </label>
+                <label>
+                    Femenino   <input type="radio" name="sexo" value="F" <%= "F".equals(editado.getSexo()) ? "checked" : "" %>   disabled>  <br>
+                </label>
+                
+                
                 
                 
                 <button type="submit">Aceptar</button>

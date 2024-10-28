@@ -27,9 +27,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="/JSP/Master/MCardionica.jsp">CARDIONICA</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/JSP/Master/Mservicios.jsp">PLANES</a>
-            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="/JSP/Master/MContacto.jsp">CONTACTO</a>
             </li>

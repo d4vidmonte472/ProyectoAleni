@@ -12,7 +12,7 @@
         <ul>
             <li><a href="../index.jsp">INICIO</a></li>
             <li><a href="Cardionica.jsp">CARDIONICA</a></li>
-            <li><a href="servicios.jsp">PLANES</a></li>
+            
             <li><a href="Contacto.jsp">CONTACTO</a></li>
             <li><a href="Quejas.jsp">QUEJAS DIACO</a></li>
             <li><a href="Inicio_sesion.jsp">INICIO SESION</a></li>

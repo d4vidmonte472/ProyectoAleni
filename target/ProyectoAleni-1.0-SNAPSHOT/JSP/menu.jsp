@@ -14,7 +14,7 @@
         <ul>
             <li><a href="Inicio.jsp">INICIO</a></li>
             <li><a href="Cardionica.jsp">CARDIONICA</a></li>
-            <li><a href="servicios.jsp">PLANES</a></li>
+            
             <li><a href="contacto.jsp">CONTACTO</a></li>
             <li><a href="quejas.jsp">QUEJAS DIACO</a></li>
             <li><a href="servicios.jsp">INICIO SESION</a></li>

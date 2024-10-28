@@ -1,6 +1,14 @@
 Numero de Queja: 2353
+<<<<<<< HEAD
+Fecha de la queja: 2024-10-11
+Nombre del Consumidor: BigoteJose
+Nombre de la Empresa: Prueba
+Solicitud: asd
+Detalle: asd
+=======
 Fecha de la queja: 2024-10-17
 Nombre del Consumidor: 18318Tucci
 Nombre de la Empresa: 1135
 Solicitud: 68136813
 Detalle: 841111811
+>>>>>>> 6ff42e52bb9ba7e6c6f683504df01dff5b73c05f

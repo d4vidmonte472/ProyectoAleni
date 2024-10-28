@@ -103,7 +103,7 @@ public class svEditarConsumidores extends HttpServlet {
                  listaConsumidores.get(consumidorId).setTel(Integer.parseInt(request.getParameter("tel")));
                  listaConsumidores.get(consumidorId).setTelRef(Integer.parseInt(request.getParameter("telRef")));
                  listaConsumidores.get(consumidorId).setCorreo(request.getParameter("correo"));
-                 listaConsumidores.get(consumidorId).setAutorizacion(Boolean.parseBoolean(request.getParameter("autorizacion")));
+                 listaConsumidores.get(consumidorId).setAutorizacion(request.getParameter("autorizacion")!= null);
                  listaConsumidores.get(consumidorId).setSexo(request.getParameter("sexo"));
                  
                 

@@ -133,6 +133,7 @@
     <label for="apellido2">Segundo Apellido:</label>
     <input type="text" name="apellido2" value="<%= editado.getApellido2() %>" required><br>
 
+<<<<<<< HEAD
     <label for="apellidoCasada">Apellido de Casada:</label>
     <input type="text" name="apellidoCasada" value="<%= editado.getApellidoCasada() %>" required><br>
 
@@ -239,6 +240,17 @@
     <button type="submit">Aceptar</button>
 </form>
 
+=======
+                <label>Autorizacion:</label>
+                <input type="checkbox" name="autorizacion" <%= editado.getAutorizacion() ? "checked" : "" %>><br>
+
+                <label>Sexo:</label>
+                <input type="radio" name="sexo" value="M" <%= "M".equals(editado.getSexo()) ? "checked" : "" %> > Masculino
+                <input type="radio" name="sexo" value="F" <%= "F".equals(editado.getSexo()) ? "checked" : "" %> > Femenino<br>
+
+                <button type="submit">Aceptar</button>
+            </form>
+>>>>>>> 8aad80f922820f44e4a2eac1789becdfda3a971a
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
       <script src="../../JS/preseleccionarDep.js"></script>

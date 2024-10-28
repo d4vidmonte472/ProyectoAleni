@@ -19,6 +19,9 @@ import java.util.ArrayList;
 import java.util.List;
 import Clases.Quejas;
 import jakarta.servlet.http.HttpSession;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
 
 
 /**
@@ -100,6 +103,34 @@ public class svEditarQuejas extends HttpServlet {
       System.out.println("An error occurred.");
       e.printStackTrace();
     }
+               
+        
+        String nombreArchivoReporte = q.getNumQueja() + ".txt";
+            String rutaArchivoReporte = context.getRealPath("/Reportes/" + nombreArchivoReporte);
+       
+            String nombreConsumidor = "";
+            String nombreEmpresa = "";
+         try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivoReporte))) {
+    String linea;
+    while ((linea = br.readLine()) != null) {
+        // Buscamos las líneas que contienen la información del consumidor y del proveedor
+        if (linea.startsWith("Nombre del Consumidor: ")) {
+            nombreConsumidor = linea.replace("Nombre del Consumidor: ", "").trim();
+        } else if (linea.startsWith("Nombre de la Empresa: ")) {
+            nombreEmpresa = linea.replace("Nombre de la Empresa: ", "").trim();
+        }
+                  
+            
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(rutaArchivoReporte))) {
+                writer.write("Numero de Queja: " + q.getNumQueja() + "\n");
+                writer.write("Fecha de la queja: " + q.getFecha() + "\n");
+                writer.write("Nombre del Consumidor: " + nombreConsumidor + "\n");
+                writer.write("Nombre de la Empresa: " + nombreEmpresa + "\n");
+                writer.write("Solicitud: " + q.getSolicitud() + "\n");
+                writer.write("Detalle: " + q.getDetalle() + "\n");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
                  break;
                  
              }
@@ -109,7 +140,8 @@ public class svEditarQuejas extends HttpServlet {
         
          response.sendRedirect("JSP/Master/M.mQuejas.jsp");
          
-         
+             }
+         }
     }
 
    

@@ -158,7 +158,7 @@
                         
                         <td> 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <form action="${pageContext.request.contextPath}/svEditarConsumidores" method="POST" > 
+                            <form action="${pageContext.request.contextPath}/SvEditarConsumidor" method="POST" > 
                                 <input type="hidden" name="ConsumidorId" value="<%= cont-1 %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> </button>
                             </form>  
@@ -166,7 +166,7 @@
                                 <input type="hidden" name="ConsumidorId" value="<%= cont-1 %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-trash"></i> </button>
                             </form>
-                            <form action="${pageContext.request.contextPath}/SvMosConsumidores" method="POST"> 
+                            <form action="${pageContext.request.contextPath}/svMostrarConsumidores" method="GET"> 
                                 <input type="hidden" name="ConsumidorId" value="<%= cont-1 %>">
                                 <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-eye"></i> </button>
                             </form>

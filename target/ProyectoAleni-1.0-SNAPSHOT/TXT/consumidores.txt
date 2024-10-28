@@ -1,1 +1,2 @@
-guatemalteco,individual,12345678,12345678,Cindy3,Cindy4,Garcia3,Garcia4,assg,askdakjs,zona-2,22,2217,Baja Verapaz,12345678,12345678,12345678,gadiel.monterroso@gmail.com,true,m
+
+guatemalteco,individual,12345678,12345678,Cindyyy,Cindy4,Garcia3,Garcia3,assg,askdakjs,zona-2,null,2217,Baja Verapaz,12345678,12345678,12345678,gadiel.monterroso@gmail.com,true,m

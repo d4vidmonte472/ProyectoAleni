@@ -36,7 +36,7 @@ public class svMostrarConsumidores extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
-        Consumidor con1 = null;
+        Consumidor con1=null;
         //Ingresar el elemento del formulario que va a jalar la informacion para buscar en la lista
         ServletContext context = getServletContext();
         String rutaArchivoConsumidor = context.getRealPath("/TXT/consumidores.txt");
@@ -77,21 +77,15 @@ public class svMostrarConsumidores extends HttpServlet {
                 
                 
             }
-             int consumidorId = Integer.parseInt(request.getParameter("consumidorId"));
-
-    // Validar si el ID está dentro del rango de la lista
-    if (consumidorId >= 1 && consumidorId <= listaConsumidor.size()) {
-        // Restar 1 al consumidorId para obtener el índice (ya que las listas son 0-indexadas)
-        con1 = listaConsumidor.get(consumidorId - 1);
-        
+             int consumidorId = Integer.parseInt(request.getParameter("ConsumidorId"));
+             Consumidor con = listaConsumidor.get(consumidorId);
         HttpSession misesion = request.getSession();
-        misesion.setAttribute("con1", con1); // Guardar el consumidor en la sesión
-        response.sendRedirect("JSP/Master/M.mConsumidores.jsp");
-    } else {
-        // Si el ID no es válido, enviar error 404
-        response.sendError(HttpServletResponse.SC_NOT_FOUND, "Consumidor no encontrado.");
+        misesion.setAttribute("con", con); // Guardar el consumidor en la sesión
+        response.sendRedirect("JSP/Master/M.MostrarConsumidores.jsp");
+    
+       
     }
-        }
+        
     }
 
   

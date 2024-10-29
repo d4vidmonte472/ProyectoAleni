@@ -92,6 +92,10 @@
         <servlet-name>SvMosRepQue</servlet-name>
         <servlet-class>Servlets.SvMosRepQue</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SvMostrarreporte</servlet-name>
+        <servlet-class>Servlets.SvMostrarreporte</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
         <url-pattern>/svGuardarConsumidor</url-pattern>
@@ -183,6 +187,10 @@
     <servlet-mapping>
         <servlet-name>SvMosRepQue</servlet-name>
         <url-pattern>/SvMosRepQue</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvMostrarreporte</servlet-name>
+        <url-pattern>/SvMostrarreporte</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

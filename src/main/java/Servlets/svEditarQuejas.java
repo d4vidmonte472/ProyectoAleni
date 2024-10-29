@@ -106,7 +106,7 @@ public class svEditarQuejas extends HttpServlet {
                
         
         String nombreArchivoReporte = q.getNumQueja() + ".txt";
-            String rutaArchivoReporte = context.getRealPath("/Reportes/" + nombreArchivoReporte);
+            String rutaArchivoReporte = context.getRealPath("/Reportes/" +"r"+ nombreArchivoReporte);
        
             String nombreConsumidor = "";
             String nombreEmpresa = "";

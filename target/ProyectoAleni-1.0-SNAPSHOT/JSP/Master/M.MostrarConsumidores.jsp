@@ -221,10 +221,10 @@
 
                 <label>Sexo:</label>
                 <label>
-                    Masculino <input type="radio" name="sexo" value="M" <%= "M".equals(editado.getSexo()) ? "checked" : "" %>  disabled> <br>
+                    Masculino <input type="radio" name="sexo" value="h" <%= "h".equals(editado.getSexo()) ? "checked" : "" %>  disabled> <br>
                 </label>
                 <label>
-                    Femenino   <input type="radio" name="sexo" value="F" <%= "F".equals(editado.getSexo()) ? "checked" : "" %>   disabled>  <br>
+                    Femenino   <input type="radio" name="sexo" value="m" <%= "m".equals(editado.getSexo()) ? "checked" : "" %>   disabled>  <br>
                 </label>
                 
                 

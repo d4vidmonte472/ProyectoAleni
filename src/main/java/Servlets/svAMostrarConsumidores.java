@@ -89,6 +89,7 @@ public class svAMostrarConsumidores extends HttpServlet {
             Consumidor con = listaConsumidor.get(consumidorId);
             HttpSession misesion = request.getSession();
             misesion.setAttribute("con", con); // Guardar el consumidor en la sesión
+            
             response.sendRedirect("JSP/Admin/A.MostrarConsumidores.jsp");
         } else {
             response.sendError(HttpServletResponse.SC_NOT_FOUND, "Consumidor no encontrado.");

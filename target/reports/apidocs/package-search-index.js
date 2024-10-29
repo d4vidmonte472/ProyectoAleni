@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"Clases"},{"l":"com.aleni.proyectoaleni"},{"l":"com.aleni.proyectoaleni.resources"},{"l":"Servlets"}];updateSearchResults();

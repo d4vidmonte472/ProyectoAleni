@@ -1,9 +1,0 @@
-Numero de Queja: 2354
-Fecha de la queja: 2024-10-11
-Nombre del Consumidor: BigoteJose
-Nombre de la Empresa: Prueba
-Solicitud: qw
-Detalle: a
-
-
-

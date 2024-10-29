@@ -1,6 +1,0 @@
-Numero de Queja: 2353
-Fecha de la queja: 2024-10-11
-Nombre del Consumidor: BigoteJose
-Nombre de la Empresa: Prueba
-Solicitud: asd
-Detalle: asd

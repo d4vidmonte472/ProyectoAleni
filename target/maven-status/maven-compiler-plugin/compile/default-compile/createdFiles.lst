@@ -17,6 +17,7 @@ Clases\Proveedor.class
 Servlets\svMostrarConsumidores.class
 Servlets\SvEliminarProv.class
 Servlets\SvEditarProveedor.class
+Servlets\SvMosRepQue.class
 Servlets\svEditarQuejas.class
 Servlets\svGuardarConsumidor.class
 Servlets\SvEliminarQueja.class

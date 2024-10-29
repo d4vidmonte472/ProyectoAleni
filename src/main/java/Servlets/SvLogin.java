@@ -115,8 +115,8 @@ public class SvLogin extends HttpServlet {
                
             } 
             else {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Admin/Menu_admin.jsp");
-                dispatcher.forward(request, response);
+                response.sendRedirect("JSP/Admin/Menu_admin.jsp");
+               
             }
 
             

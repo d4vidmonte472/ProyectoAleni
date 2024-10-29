@@ -96,9 +96,9 @@ public class svAEditarConsumidores extends HttpServlet {
                  listaConsumidores.get(consumidorId).setApellidoCasada(request.getParameter("apellidoCasada"));
                  listaConsumidores.get(consumidorId).setDireccion(request.getParameter("direccion"));
                  listaConsumidores.get(consumidorId).setZona(request.getParameter("zona"));
-                 listaConsumidores.get(consumidorId).setDepartamento(request.getParameter("deparetamento"));
+                 listaConsumidores.get(consumidorId).setDepartamento(request.getParameter("departamento"));
                  listaConsumidores.get(consumidorId).setMunicipio(request.getParameter("municipio"));
-                 listaConsumidores.get(consumidorId).setSedeDiaco(request.getParameter("sede"));
+                 listaConsumidores.get(consumidorId).setSedeDiaco(request.getParameter("SedeD"));
                  listaConsumidores.get(consumidorId).setTelDom(Integer.parseInt(request.getParameter("telDom")));
                  listaConsumidores.get(consumidorId).setTel(Integer.parseInt(request.getParameter("tel")));
                  listaConsumidores.get(consumidorId).setTelRef(Integer.parseInt(request.getParameter("telRef")));

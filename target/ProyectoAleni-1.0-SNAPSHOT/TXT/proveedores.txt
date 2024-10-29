@@ -1,9 +1,7 @@
 
 
-Gadiel SA,12345678,12345678,asdfgd,zona-14,22,2204,12345678,gadiel.monterroso@gmail.com
+Gadieluqui SA,12345678,12345678,asdfgd,zona-14,5,504,12345678,gadiel.monterroso@gmail.com
 
 Prueba,Prueba,12467564,fhgfg,zona-17,15,1504,12456789,lamamadelamama@gmail.com
-
-Prueba,Prueba,12467564,fhgfg,zona-18,19,1902,12456789,david.monterrosod.g@gmail.com
 
 Prueba,Prueba,12467564,fhgfg,zona-17,18,1803,12456789,david.monterrosod.g@gmail.com

@@ -1,0 +1,6 @@
+Numero de Queja: 2331
+Fecha de la queja: 2024-10-17
+Nombre del Consumidor: PapiMaro
+Nombre de la Empresa: Prueba
+Solicitud: asd
+Detalle: asd

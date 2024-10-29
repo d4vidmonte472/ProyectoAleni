@@ -92,26 +92,19 @@
        <h1> REPORTES: <%= editado.getNumQueja() %> </h1>     
        
     
-           
-          <label>Numero de Queja:</label>
-                <input type="text" name="numQueja" value="<%= editado.getNumQueja()%>" required readonly><br>
-           
-           <label>Fecha:</label>
-                <input type="text" name="fecha" value="<%= editado.getFechaQueja()%>" required readonly><br>
-                     
-           
-                  <label>Nombre Consumidor:</label>
-                <input type="text" name="nitConsumidor" value="<%= editado.getNombreConsumidor()%>" required readonly><br>
-                
-                <label>Nombre Proveedor:</label>
-                <input type="text" name="nitProveedor" value="<%= editado.getNombreEmpresa()%>" required readonly><br>
-                
 
-                <label>Solicitud:</label>
-                <input type="text" name="solicitud" value="<%= editado.getSolicitud()%>" required readonly><br>
-                
-                
-                <button type="submit">Regresar</button>
+                <h2>Detalles del Reporte</h2>
+
+           <p><strong>Número de Queja:</strong> <%= editado.getNumQueja() %></p>
+           <p><strong>Fecha de la Queja:</strong> <%= editado.getFechaQueja() %></p>
+           <p><strong>Nombre del Consumidor:</strong> <%= editado.getNombreConsumidor() %></p>
+           <p><strong>Nombre de la Empresa:</strong> <%= editado.getNombreEmpresa() %></p>
+           <p><strong>Solicitud:</strong> <%= editado.getSolicitud() %></p>
+           <p><strong>Detalle:</strong> <%= editado.getDetalle() %></p>
+
+           <br>
+
+                <a type="button" href="M.mReportes.jsp">Regresar</a>
                 
            
                 </body>

@@ -1,0 +1,6 @@
+Numero de Queja: 2329
+Fecha de la queja: 2024-10-11
+Nombre del Consumidor: BigoteJose
+Nombre de la Empresa: Prueba
+Solicitud: ñuh
+Detalle: prueba

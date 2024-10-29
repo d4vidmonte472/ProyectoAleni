@@ -1,0 +1,6 @@
+Numero de Queja: 2330
+Fecha de la queja: 2024-10-12
+Nombre del Consumidor: BritoAlan
+Nombre de la Empresa: Prueba
+Solicitud: PRUEBAA
+Detalle: PRUEBA

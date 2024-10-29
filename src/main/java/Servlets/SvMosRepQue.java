@@ -37,12 +37,33 @@ public class SvMosRepQue extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-                ServletContext context = getServletContext();
-    String nombreArchivo = "r" + request.getParameter("numQueja") + ".txt";
+         ServletContext context = getServletContext();
+    String rutaArchivoUsuarios = context.getRealPath("/TXT/quejas.txt");
+    List<String> lineasQ = Files.readAllLines(Paths.get(rutaArchivoUsuarios));
+    List<Quejas> listaQuejas = new ArrayList<>();
+
+    // Cargar las quejas desde el archivo.
+    for (String linea : lineasQ) {
+        String[] partes = linea.split(",");
+        if (partes.length == 7) {
+            int numDocTxt = Integer.parseInt(partes[0].trim());
+            String fechaTxt = partes[1].trim();
+            String detalleTxt = partes[2].trim();
+            String solicitudTxt = partes[3].trim();
+            int nitProveedorTxt = Integer.parseInt(partes[4].trim());
+            int nitConsumidorTxt = Integer.parseInt(partes[5].trim());
+            int numQuejaTxt = Integer.parseInt(partes[6].trim());
+
+            listaQuejas.add(new Quejas(numDocTxt, fechaTxt, detalleTxt, solicitudTxt,
+                    nitProveedorTxt, nitConsumidorTxt, numQuejaTxt));
+        }
+    }
+              List<Reportes> listaReportes = new ArrayList<>(); 
+    for(Quejas q :listaQuejas){
+        String nombreArchivo = "r" + q.getNumQueja() + ".txt";
        String rutaArchivoReportes = context.getRealPath("/Reportes/"+nombreArchivo);
     List<String> lineas = Files.readAllLines(Paths.get(rutaArchivoReportes));
-    List<Reportes> listaReportes = new ArrayList<>();
+    
 
     // Cargar las quejas desde el archivo.
          
@@ -75,10 +96,11 @@ public class SvMosRepQue extends HttpServlet {
         else if(linea.startsWith("Numero de Queja: ")){
             numeroQueja = Integer.parseInt(linea.replace("Numero de Queja: ", "").trim());
         }
-        
-        listaReportes.add(new Reportes(numeroQueja, fechaQueja, nombreConsumidor, nombreEmpresa, solicitud, detalle));
-
     }
+     
+    }
+    listaReportes.add(new Reportes(numeroQueja, fechaQueja, nombreConsumidor, nombreEmpresa, solicitud, detalle));
+    
          }
         HttpSession misesion = request.getSession();
          misesion.setAttribute("listaReportes", listaReportes);

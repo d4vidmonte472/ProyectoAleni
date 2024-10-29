@@ -65,19 +65,13 @@
                         </form>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">REPORTES</a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                            <li>
-                                <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvMosRepven">
-                                    <button type="submit" class="dropdown-item">VENTAS</button>
-                                </form>
-                            </li>
-                            <li>
+                       
+                            
                                 <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvMosRepQue">
-                                    <button type="submit" class="dropdown-item">QUEJAS</button>
+                                    <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
                                 </form>
-                            </li>
-                        </ul>
+                           
+                       
                     </li>
                     <li class="nav-item">
                         <form id="Logout" method="GET" action="../../index.jsp">
@@ -91,7 +85,6 @@
     
     </div>
 </nav>
-
 
 
        <%  Consumidor editado = (Consumidor) request.getSession().getAttribute("con");  %>
@@ -237,10 +230,10 @@
      
         <div class="radio-group">
              <label>
-            Masculino<input type="radio" name="sexo" value="M" <%= "h".equals(editado.getSexo()) ? "checked" : "" %> > 
+            Masculino<input type="radio" name="sexo" value="h" <%= "h".equals(editado.getSexo()) ? "checked" : "" %> > 
             </label>
             <label>
-            Femenino<input type="radio" name="sexo" value="F" <%= "m".equals(editado.getSexo()) ? "checked" : "" %> > <br>  
+            Femenino<input type="radio" name="sexo" value="f" <%= "m".equals(editado.getSexo()) ? "checked" : "" %> > <br>  
             </label>
                 
                 

@@ -131,7 +131,7 @@ public class svAEditarConsumidores extends HttpServlet {
              Consumidor con = listaConsumidores.get(consumidorId);
         HttpSession misesion = request.getSession();
         misesion.setAttribute("con", con); // Guardar el consumidor en la sesión
-        response.sendRedirect("JSP/Master/A.mConsumidores.jsp");
+        response.sendRedirect("JSP/Admin/A.mConsumidores.jsp");
     
                  
              

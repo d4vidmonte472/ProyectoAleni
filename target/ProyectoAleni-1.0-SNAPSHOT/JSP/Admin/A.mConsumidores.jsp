@@ -87,34 +87,9 @@
     
     </div>
 </nav>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Consumidores</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-RQVJ4hku8BKmFbSeL5hZDx0Xvn/8ZfBIAu4MO63OjZ4eNnGTFS0vXYgU6sq43gpK" crossorigin="anonymous">
-</head>
-<body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Mi Aplicación</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/SvListaConsumidores">Lista de Consumidores</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/SvAgregarConsumidor">Agregar Consumidor</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+
+
 
     <h1 class="text-center my-4">LISTA DE CONSUMIDORES</h1>
 
@@ -158,15 +133,15 @@
                         <td><%= con.getSexo() %></td>
                         <td>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <form action="${pageContext.request.contextPath}/SvEditarConsumidor" method="POST">
+                                <form action="${pageContext.request.contextPath}/SvAEditarConsumidor" method="POST">
                                     <input type="hidden" name="ConsumidorId" value="<%= cont - 2 %>">
                                     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
                                 </form>
-                                <form action="${pageContext.request.contextPath}/SvEliminarConsumidores" method="GET">
+                                <form action="${pageContext.request.contextPath}/SvAEliminarConsumidores" method="GET">
                                     <input type="hidden" name="ConsumidorId" value="<%= cont - 2 %>">
                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
                                 </form>
-                                <form action="${pageContext.request.contextPath}/SvMostrarConsumidores" method="GET">
+                                <form action="${pageContext.request.contextPath}/svAMostrarConsumidores" method="GET">
                                     <input type="hidden" name="ConsumidorId" value="<%= cont - 2 %>">
                                     <button type="submit" class="btn btn-info btn-sm"><i class="fa-solid fa-eye"></i></button>
                                 </form>

@@ -99,7 +99,7 @@ public class SvAEditarProveedor extends HttpServlet {
             HttpSession misesion = request.getSession();
             misesion.setAttribute("que", que);
             misesion.setAttribute("idQuejaBuscada", idQuejaBuscada);
-            response.sendRedirect("JSP/Master/A.EditarProveedor.jsp");
+            response.sendRedirect("JSP/Admin/A.EditarProveedor.jsp");
                 
     }
 

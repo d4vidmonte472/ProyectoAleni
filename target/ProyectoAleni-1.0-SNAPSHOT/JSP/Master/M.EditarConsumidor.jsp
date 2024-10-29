@@ -233,7 +233,7 @@
             Masculino<input type="radio" name="sexo" value="h" <%= "h".equals(editado.getSexo()) ? "checked" : "" %> > 
             </label>
             <label>
-            Femenino<input type="radio" name="sexo" value="f" <%= "m".equals(editado.getSexo()) ? "checked" : "" %> > <br>  
+            Femenino<input type="radio" name="sexo" value="m" <%= "m".equals(editado.getSexo()) ? "checked" : "" %> > <br>  
             </label>
                 
                 

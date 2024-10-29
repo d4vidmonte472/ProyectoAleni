@@ -97,7 +97,7 @@ public class SvAMosProv extends HttpServlet {
             HttpSession misesion = request.getSession();
              misesion.setAttribute("idQuejaBuscada", idQuejaBuscada);
             misesion.setAttribute("que", que);
-            response.sendRedirect("JSP/Master/A.MosProveedor.jsp");
+            response.sendRedirect("JSP/Admin/A.MosProveedor.jsp");
     }
 
     /**

@@ -17,7 +17,6 @@
 
 </head>
 <body>
-
 <nav class="navbar navbar-danger-emphasis bg-info">
     <div class="container-fluid">
             <ul class="navbar-nav d-flex flex-row flex-grow-1 justify-content-around">

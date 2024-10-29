@@ -1,25 +1,18 @@
-guatemalteco,individual,12345678,12345678,Cindy3,Cindy4,Garcia3,Garcia4,assg,askdakjs,zona-2,22,2217,Baja Verapaz,12345678,12345678,12345678,gadiel.monterroso@gmail.com,true,m
-guatemalteco,individual,12346578,13245678,Jose,Maarco,Bigote,Camionetero,de Soto,asdasdasd,zona-3,2,203,Baja Verapaz,56897845,23457889,12568945,lamamadelamama@gmail.com,true,m
-otro,juridico,131836,3813,Tucci,318131,18318,8318318,18181,villa nueva,zona-11,11,1103,Quetzaltenango,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,juridico,131836,3813,Tucci,318131,18318,8318318,18181,villa nueva,zona-5,4,412,Totonicapán,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,juridico,131836,3813,Tucci,318131,18318,8318318,18181,villa nueva,zona-5,4,412,Totonicapán,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,12345678,12346578,Jose,Maarco,Bigote,Camionetero,de Soto,asdasdasd,zona-3,2,202,Escuintla,56897845,23457889,12568945,lamamadelamama@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
-guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
 
-
+guatemalteco,individual,12346578,13245678,Joseliño,Maarco,Bigote,Bigote,de Soto,asdasdasd,zona-3,null,1216,null,56897845,23457889,12568945,lamamadelamama@gmail.com,true,h
+guatemalteco,individual,12345678,12346578,Jose,Maarco,Bigote,Bigote,de Soto,asdasdasd,zona-3,null,1420,null,56897845,23457889,12568945,lamamadelamama@gmail.com,true,m
+guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,189168,1851183,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-12,15,1505,Sacatepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
 guatemalteco,individual,12345678,12345678,Jose,Maarco,Bigote,Camionetero,de Soto,asdasdasd,zona-2,17,1710,Baja Verapaz,56897845,23457889,12568945,lamamadelamama@gmail.com,true,h
 guatemalteco,individual,12345678,12345678,Alan,Rosa,Brito,Melano,de Maria,fhgfg,zona-18,18,1802,Baja Verapaz,12456789,23457889,12568945,david.monterrosod.g@gmail.com,true,h
 guatemalteco,individual,12345678,12345678,Maro,Rico,Papi,Rico,de Riko,fhgfg,zona-18,16,1603,Baja Verapaz,12456789,23457889,12345678,david.monterrosod.g@gmail.com,true,h

@@ -87,6 +87,7 @@
     
     </div>
 </nav>
+                                    
 <h1 class="text-center">LISTA DE PROVEEDORES</h1>
 <div class="container" style="max-width: 80%;">
     <div class="table-responsive">
@@ -128,15 +129,15 @@
                         <td><%= que.getCorreo() %></td>
                         <td>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <form action="${pageContext.request.contextPath}/SvEditarProveedorA" method="POST"> 
+                                <form action="${pageContext.request.contextPath}/SvAEditarProveedor" method="POST"> 
                                     <input type="hidden" name="ProveedorId" value="<%= cont - 2 %>">
                                     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
                                 </form>
-                                <form action="${pageContext.request.contextPath}/SvEliminarProvA" method="GET"> 
+                                <form action="${pageContext.request.contextPath}/SvAEliminarProv" method="GET"> 
                                     <input type="hidden" name="ProveedorId" value="<%= cont - 2 %>">
                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
                                 </form>
-                                <form action="${pageContext.request.contextPath}/SvMosProvA" method="POST"> 
+                                <form action="${pageContext.request.contextPath}/SvAMosProv" method="POST"> 
                                     <input type="hidden" name="ProveedorId" value="<%= cont - 2 %>">
                                     <button type="submit" class="btn btn-info btn-sm"><i class="fa-solid fa-eye"></i></button>
                                 </form>

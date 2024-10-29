@@ -126,15 +126,15 @@
                                 <td><%= que.getNumDoc() %></td>
                                 <td>
                                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                        <form action="${pageContext.request.contextPath}/SvEditarQuejaA" method="POST">
+                                        <form action="${pageContext.request.contextPath}/svAEditarQueja" method="POST">
                                             <input type="hidden" name="QuejasId" value="<%= que.getNumQueja() %>">
                                             <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
                                         </form>
-                                        <form action="${pageContext.request.contextPath}/SvEliminarQuejaA" method="GET">
+                                        <form action="${pageContext.request.contextPath}/SvAEliminarQueja" method="GET">
                                             <input type="hidden" name="QuejasId" value="<%= que.getNumQueja() %>">
                                             <button type="submit" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
                                         </form>
-                                        <form action="${pageContext.request.contextPath}/SvMosQuejaA" method="POST">
+                                        <form action="${pageContext.request.contextPath}/SvAMosQueja" method="POST">
                                             <input type="hidden" name="QuejasId" value="<%= que.getNumQueja() %>">
                                             <button type="submit" class="btn btn-info btn-sm"><i class="fa-solid fa-eye"></i></button>
                                         </form>

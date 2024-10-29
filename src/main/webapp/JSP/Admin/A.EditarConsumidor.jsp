@@ -17,13 +17,14 @@
 <body>
 <nav class="navbar navbar-danger-emphasis bg-info">
     <div class="container-fluid">
-        <ul class="navbar-nav d-flex flex-row flex-grow-1 justify-content-around">
+            <ul class="navbar-nav d-flex flex-row flex-grow-1 justify-content-around">
             <li class="nav-item">
                 <b> <a class="nav-link" href="Menu_admin.jsp">INICIO</a> </b>
             </li>
             <li class="nav-item">
                 <b> <a class="nav-link" href="ACardionica.jsp">CARDIONICA</a></b>
             </li>
+           
             <li class="nav-item">
                 <b> <a class="nav-link" href="AContacto.jsp">CONTACTO</a></b>
             </li>
@@ -43,11 +44,7 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <form id="Usuarios" method="GET" action="${pageContext.request.contextPath}/SvAMostrarUsuarios">
-                            <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">USUARIOS</button>
-                        </form>
-                    </li>
+                   
                     <li class="nav-item">
                         <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvAMosCons">
                             <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">CONSUMIDORES</button>
@@ -64,9 +61,13 @@
                         </form>
                     </li>
                     <li class="nav-item dropdown">
-                        <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvAMosRepQue">
-                            <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
-                        </form>
+                       
+                            
+                                <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvAMosRepQue">
+                                    <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
+                                </form>
+                           
+                       
                     </li>
                     <li class="nav-item">
                         <form id="Logout" method="GET" action="../../index.jsp">
@@ -76,14 +77,16 @@
                 </ul>
             </div>
         </div>
+
+    
     </div>
 </nav>
 
-<% Consumidor editado = (Consumidor) request.getSession().getAttribute("con"); %>
+      <%  Consumidor editado = (Consumidor) request.getSession().getAttribute("con");  %>
 
 <h1> Editar Consumidor: <%= editado.getNombre1() %> </h1>
 
-<form action="${pageContext.request.contextPath}/SvAEditarConsumidores" method="POST">
+<form action="${pageContext.request.contextPath}/svAEditarConsumidores" method="POST">
     <% int id = (int) request.getSession().getAttribute("consumidorId"); %>
     <input type="hidden" name="ConsumidorId" value="<%= id %>">
     
@@ -118,6 +121,7 @@
     <label for="apellido2">Segundo Apellido:</label>
     <input type="text" name="apellido2" value="<%= editado.getApellido2() %>" required><br>
 
+
     <label for="apellidoCasada">Apellido de Casada:</label>
     <input type="text" name="apellidoCasada" value="<%= editado.getApellidoCasada() %>" required><br>
 
@@ -128,7 +132,7 @@
     <!-- Zona (Select con valores precargados) -->
     <label for="zona">Zona:</label>
     <select id="zona" name="zona" required data-selected="<%= editado.getZona() %>">
-     <option value="sin-zona">Sin Zona</option>
+         <option value="sin-zona">Sin Zona</option>
             <option value="zona-1">Zona 1</option>
             <option value="zona-2">Zona 2</option>
             <option value="zona-3">Zona 3</option>
@@ -168,7 +172,7 @@
     </select><br>
 
     <!-- Sede de DIACO -->
-   <label for="SedeD">Sede de DIACO más cercana:</label>
+    <label for="SedeD">Sede de DIACO más cercana:</label>
     <select id="SedeD" name="SedeD" required data-selected="<%= editado.getSedeDiaco() %>">
         <option value="Baja Verapaz">-DIACO- BAJA VERAPAZ</option>
         <option value="Central">CENTRAL</option>
@@ -198,10 +202,44 @@
             <option value="Santa Rosa">SANTA ROSA - DIACO</option>
     </select><br>
 
-    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+    <!-- Teléfonos y Correo -->
+    <label for="telRef">Teléfono de Referencia:</label>
+    <input type="text" name="telRef" value="<%= editado.getTelRef() %>" required><br>
+
+    <label for="tel">Teléfono:</label>
+    <input type="text" name="tel" value="<%= editado.getTel() %>" required><br>
+
+    <label for="telDom">Teléfono Domicilio:</label>
+    <input type="text" name="telDom" value="<%= editado.getTelDom() %>" required><br>
+
+    <!-- Correo -->
+    <label for="correo">Correo:</label>
+    <input type="email" name="correo" value="<%= editado.getCorreo() %>" required><br>
+
+    <!-- Autorización -->
+    <label>Autorizacion:</label>
+                <input type="checkbox" name="autorizacion" <%= editado.getAutorizacion() ? "checked" : "" %>><br>
+
+    <!-- Sexo -->
+     <label>Sexo:</label>
+     
+        <div class="radio-group">
+             <label>
+            Masculino<input type="radio" name="sexo" value="h" <%= "h".equals(editado.getSexo()) ? "checked" : "" %> > 
+            </label>
+            <label>
+            Femenino<input type="radio" name="sexo" value="m" <%= "m".equals(editado.getSexo()) ? "checked" : "" %> > <br>  
+            </label>
+                
+                
+        </div>
+    <!-- Submit -->
+    <button type="submit">Aceptar</button>
 </form>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+Y7iD0yO3DJ1z7lmwN5Vo6cs2bni2" crossorigin="anonymous"></script>
-</body>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="../../JS/preseleccionarDep.js"></script>
+      <script src="../../JS/precargarotros.js"></script>
 </html>
 

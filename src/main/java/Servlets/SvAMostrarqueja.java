@@ -77,7 +77,7 @@ public class SvAMostrarqueja extends HttpServlet {
         HttpSession misesion = request.getSession();
         misesion.setAttribute("listaQuejas", listaQuejas);
         
-         response.sendRedirect("JSP/Master/A.mQuejas.jsp");
+         response.sendRedirect("JSP/Admin/A.mQuejas.jsp");
     }
 
     /**

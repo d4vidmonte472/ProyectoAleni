@@ -95,7 +95,7 @@ public class SvAMostrarreporte extends HttpServlet {
          }
         HttpSession misesion = request.getSession();
          misesion.setAttribute("listaReportes", listaReportes);
-        response.sendRedirect("JSP/Master/A.mReportes.jsp");
+        response.sendRedirect("JSP/Admin/A.mReportes.jsp");
     }
 
    

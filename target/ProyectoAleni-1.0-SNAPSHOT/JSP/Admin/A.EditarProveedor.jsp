@@ -45,11 +45,7 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <form id="Usuarios" method="GET" action="${pageContext.request.contextPath}/SvAMostrarUsuarios">
-                            <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">USUARIOS</button>
-                        </form>
-                    </li>
+                   
                     <li class="nav-item">
                         <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvAMosCons">
                             <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">CONSUMIDORES</button>
@@ -66,9 +62,13 @@
                         </form>
                     </li>
                     <li class="nav-item dropdown">
-                        <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvAMosRepQue">
-                            <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
-                        </form>
+                       
+                            
+                                <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvAMosRepQue">
+                                    <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
+                                </form>
+                           
+                       
                     </li>
                     <li class="nav-item">
                         <form id="Logout" method="GET" action="../../index.jsp">
@@ -78,6 +78,8 @@
                 </ul>
             </div>
         </div>
+
+    
     </div>
 </nav>
 
@@ -85,7 +87,7 @@
 
 <h1> EDITAR proveedor: <%= editado.getRazonSocial() %> </h1>
 
-<form action="${pageContext.request.contextPath}/SvAEditarProveedores" method="POST">
+<form action="${pageContext.request.contextPath}/svAEditarProveedores" method="POST">
     <% int id = (int) request.getSession().getAttribute("idQuejaBuscada"); %>
     <label>NIT:</label>
     <input type="text" name="nit" value="<%= editado.getNit() %>" required><br>
@@ -139,7 +141,7 @@
             <option value="zona-23">Zona 23</option>
             <option value="zona-24">Zona 24</option>
             <option value="zona-25">Zona 25</option>
-        <option value="zona-25">Zona 25</option>
+       
     </select>
 
     <label>DIRECCIÓN:</label>

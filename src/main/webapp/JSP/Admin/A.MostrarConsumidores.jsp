@@ -44,30 +44,30 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav flex-grow-1 pe-3">
+                   
                     <li class="nav-item">
-                        <form id="Usuarios" method="GET" action="${pageContext.request.contextPath}/AsvMostrarUsuarios">
-                            <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">USUARIOS</button>
-                        </form>
-                    </li>
-                    <li class="nav-item">
-                        <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/ASvMosCons">
+                        <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvAMosCons">
                             <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">CONSUMIDORES</button>
                         </form>
                     </li>
                     <li class="nav-item">
-                        <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/ASvMosproveedor">
+                        <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvAMosproveedor">
                             <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">PROVEEDORES</button>
                         </form>
                     </li>
                     <li class="nav-item">
-                        <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/ASvMostrarqueja">
+                        <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvAMostrarqueja">
                             <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">QUEJAS</button>
                         </form>
                     </li>
                     <li class="nav-item dropdown">
-                        <form id="Reports" method="GET" action="${pageContext.request.contextPath}/ASvMosRepQue">
-                            <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
-                        </form>
+                       
+                            
+                                <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvAMosRepQue">
+                                    <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
+                                </form>
+                           
+                       
                     </li>
                     <li class="nav-item">
                         <form id="Logout" method="GET" action="../../index.jsp">
@@ -77,6 +77,8 @@
                 </ul>
             </div>
         </div>
+
+    
     </div>
 </nav>
 
@@ -208,10 +210,10 @@
 
     <label>Sexo:</label>
     <label>
-        Masculino <input type="radio" name="sexo" value="M" <%= "M".equals(editado.getSexo()) ? "checked" : "" %> disabled> <br>
+        Masculino <input type="radio" name="sexo" value="M" <%= "h".equals(editado.getSexo()) ? "checked" : "" %> disabled> <br>
     </label>
     <label>
-        Femenino <input type="radio" name="sexo" value="F" <%= "F".equals(editado.getSexo()) ? "checked" : "" %> disabled> <br>
+        Femenino <input type="radio" name="sexo" value="F" <%= "m".equals(editado.getSexo()) ? "checked" : "" %> disabled> <br>
     </label>
     
     <button type="submit">Aceptar</button>

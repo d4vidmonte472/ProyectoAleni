@@ -20,16 +20,17 @@
     <div class="container-fluid">
             <ul class="navbar-nav d-flex flex-row flex-grow-1 justify-content-around">
             <li class="nav-item">
-                <b><a class="nav-link" href="Menu_admin.jsp">INICIO</a></b>
+                <b> <a class="nav-link" href="Menu_admin.jsp">INICIO</a> </b>
             </li>
             <li class="nav-item">
-                <b><a class="nav-link" href="ACardionica.jsp">CARDIONICA</a></b>
+                <b> <a class="nav-link" href="ACardionica.jsp">CARDIONICA</a></b>
+            </li>
+           
+            <li class="nav-item">
+                <b> <a class="nav-link" href="AContacto.jsp">CONTACTO</a></b>
             </li>
             <li class="nav-item">
-                <b><a class="nav-link" href="AContacto.jsp">CONTACTO</a></b>
-            </li>
-            <li class="nav-item">
-                <b><a class="nav-link" href="AQuejas.jsp">QUEJAS DIACO</a></b>
+                <b> <a class="nav-link" href="AQuejas.jsp">QUEJAS DIACO</a> </b>
             </li>
         </ul>
         <a class="navbar-brand" href="#">Admin MENU</a>
@@ -39,16 +40,12 @@
 
         <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">ADMIN</h5>
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MASTER</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <form id="Usuarios" method="GET" action="${pageContext.request.contextPath}/SvAMostrarUsuarios">
-                            <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">USUARIOS</button>
-                        </form>
-                    </li>
+                   
                     <li class="nav-item">
                         <form id="Proveedores" method="GET" action="${pageContext.request.contextPath}/SvAMosCons">
                             <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">CONSUMIDORES</button>
@@ -65,9 +62,13 @@
                         </form>
                     </li>
                     <li class="nav-item dropdown">
-                        <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvAMosRepQue">
-                            <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
-                        </form>
+                       
+                            
+                                <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvAMosRepQue">
+                                    <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
+                                </form>
+                           
+                       
                     </li>
                     <li class="nav-item">
                         <form id="Logout" method="GET" action="../../index.jsp">
@@ -77,6 +78,8 @@
                 </ul>
             </div>
         </div>
+
+    
     </div>
 </nav>
 
@@ -84,7 +87,7 @@
 
 <h1> EDITAR Queja No: <%= editado.getNumQueja() %> </h1>
 
-<form action="${pageContext.request.contextPath}/SvAEditarQuejas" method="POST">
+<form action="${pageContext.request.contextPath}/svAEditarQuejas" method="POST">
     <label>Numero de Queja:</label>
     <input type="text" name="numQueja" value="<%= editado.getNumQueja()%>" required readonly><br>
 

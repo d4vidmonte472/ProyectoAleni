@@ -108,7 +108,7 @@ public class SvAEliminarProv extends HttpServlet {
         misesion.setAttribute("listaProveedores", listaProveedores);
 
         // Redirigir a la página de quejas.
-        response.sendRedirect("JSP/Master/M.mProveedores.jsp");
+        response.sendRedirect("JSP/Master/A.mProveedores.jsp");
     }
 
     /**

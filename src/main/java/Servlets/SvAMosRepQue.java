@@ -103,7 +103,7 @@ public class SvAMosRepQue extends HttpServlet {
              
              HttpSession misesion = request.getSession();
         misesion.setAttribute("re1", re1);
-        response.sendRedirect("JSP/Master/M.MosReportes.jsp");
+        response.sendRedirect("JSP/Master/A.MosReportes.jsp");
          }else {
         // Si no se encontró, mostramos un mensaje de error.
         response.sendError(HttpServletResponse.SC_NOT_FOUND, "Reporte no encontrada.");

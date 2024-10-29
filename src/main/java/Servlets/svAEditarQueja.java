@@ -106,7 +106,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
         // Si la queja fue encontrada, se guarda en la sesión y se redirige.
         HttpSession misesion = request.getSession();
         misesion.setAttribute("que1", que1);
-        response.sendRedirect("JSP/Master/M.EditarQuejas.jsp");
+        response.sendRedirect("JSP/Master/A.EditarQuejas.jsp");
     } else {
         // Si no se encontró, mostramos un mensaje de error.
         response.sendError(HttpServletResponse.SC_NOT_FOUND, "Queja no encontrada.");

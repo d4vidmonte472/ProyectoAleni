@@ -107,7 +107,7 @@ public class SvAEliminarConsumidores extends HttpServlet {
         misesion.setAttribute("listaConsumidores", listaConsumidores);
 
         // Redirigir a la página de quejas.
-        response.sendRedirect("JSP/Master/M.mConsumidores.jsp");
+        response.sendRedirect("JSP/Master/A.mConsumidores.jsp");
     }
     }
   

@@ -17,7 +17,7 @@
     <div class="container-fluid">
             <ul class="navbar-nav d-flex flex-row flex-grow-1 justify-content-around">
             <li class="nav-item">
-                <b> <a class="nav-link" href="Acmenu.jsp">INICIO</a> </b>
+                <b> <a class="nav-link" href="Menu_admin.jsp">INICIO</a> </b>
             </li>
             <li class="nav-item">
                 <b> <a class="nav-link" href="ACardionica.jsp">CARDIONICA</a></b>

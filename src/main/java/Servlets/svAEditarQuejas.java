@@ -138,7 +138,7 @@ public class svAEditarQuejas extends HttpServlet {
          HttpSession misesion = request.getSession();
         misesion.setAttribute("listaQuejas", listaQuejas);
         
-         response.sendRedirect("JSP/Master/M.mQuejas.jsp");
+         response.sendRedirect("JSP/Master/A.mQuejas.jsp");
          
              }
          }

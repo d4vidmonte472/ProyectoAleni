@@ -76,7 +76,7 @@ public class SvAMosCons extends HttpServlet {
          
            HttpSession misesion = request.getSession();
         misesion.setAttribute("listaConsumidores", listaConsumidores);
-         response.sendRedirect("JSP/Master/M.mConsumidores.jsp");
+         response.sendRedirect("JSP/Master/A.mConsumidores.jsp");
     }
 
     

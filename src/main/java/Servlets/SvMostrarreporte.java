@@ -51,7 +51,9 @@ public class SvMostrarreporte extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         ServletContext context = getServletContext();
+        Reportes re1 = null;
+        
+        ServletContext context = getServletContext();
     String nombreArchivo = "r" + request.getParameter("numQueja") + ".txt";
        String rutaArchivoReportes = context.getRealPath("/Reportes/"+nombreArchivo);
     List<String> lineas = Files.readAllLines(Paths.get(rutaArchivoReportes));
@@ -93,9 +95,24 @@ public class SvMostrarreporte extends HttpServlet {
 
     }
          }
+         
+         int idReporteBuscado = Integer.parseInt(request.getParameter("ReporteId"));
+         for(Reportes re : listaReportes){
+             if(re.getNumQueja() == idReporteBuscado){
+                 re1 = re;
+                 break;
+             }
+         }
+         
+         if(re1 != null){
+             
         HttpSession misesion = request.getSession();
-         misesion.setAttribute("listaReportes", listaReportes);
-        response.sendRedirect("JSP/Master/M.mReportes.jsp");
+        misesion.setAttribute("re1", re1);
+        response.sendRedirect("JSP/Master/M.MosReportes.jsp");
+         }else {
+     
+    }
+
     }
 
    

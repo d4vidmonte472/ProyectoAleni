@@ -38,17 +38,7 @@ public class SvMosRepQue extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        
-        
-    }
-
-   
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        Reportes re1 = null;
-        
-        ServletContext context = getServletContext();
+                ServletContext context = getServletContext();
     String nombreArchivo = "r" + request.getParameter("numQueja") + ".txt";
        String rutaArchivoReportes = context.getRealPath("/Reportes/"+nombreArchivo);
     List<String> lineas = Files.readAllLines(Paths.get(rutaArchivoReportes));
@@ -90,24 +80,17 @@ public class SvMosRepQue extends HttpServlet {
 
     }
          }
-         
-         int idReporteBuscado = Integer.parseInt(request.getParameter("ReporteId"));
-         for(Reportes re : listaReportes){
-             if(re.getNumQueja() == idReporteBuscado){
-                 re1 = re;
-                 break;
-             }
-         }
-         
-         if(re1 != null){
-             
-             HttpSession misesion = request.getSession();
-        misesion.setAttribute("re1", re1);
-        response.sendRedirect("JSP/Master/M.MosReportes.jsp");
-         }else {
-        // Si no se encontró, mostramos un mensaje de error.
-        response.sendError(HttpServletResponse.SC_NOT_FOUND, "Reporte no encontrada.");
+        HttpSession misesion = request.getSession();
+         misesion.setAttribute("listaReportes", listaReportes);
+        response.sendRedirect("JSP/Master/M.mReportes.jsp");
+        
     }
+
+   
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
          
     }
    

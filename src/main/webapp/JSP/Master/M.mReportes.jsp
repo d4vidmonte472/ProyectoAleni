@@ -71,7 +71,7 @@
                     <li class="nav-item dropdown">
                        
                             
-                                <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvMostrarreporte">
+                                <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvMosRepQue">
                                     <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
                                 </form>
                            

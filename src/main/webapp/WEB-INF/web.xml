@@ -80,10 +80,10 @@
 
         <servlet-name>SvMosProv</servlet-name>
         <servlet-class>Servlets.SvMosProv</servlet-class>
-
+    </servlet>
+    <servlet>
         <servlet-name>SvEditarConsumidor</servlet-name>
         <servlet-class>Servlets.SvEditarConsumidor</servlet-class>
-
     </servlet>
     <servlet>
         <servlet-name>SvMosconsumidor</servlet-name>
@@ -166,13 +166,12 @@
         <url-pattern>/SvEliminarProv</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-
         <servlet-name>SvMosProv</servlet-name>
         <url-pattern>/SvMosProv</url-pattern>
-
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>SvEditarConsumidor</servlet-name>
         <url-pattern>/SvEditarConsumidor</url-pattern>
-
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvMosconsumidor</servlet-name>

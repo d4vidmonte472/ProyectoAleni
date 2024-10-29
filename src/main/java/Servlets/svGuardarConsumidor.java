@@ -234,7 +234,7 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
     }
          
                      
-            String nombreArchivo = quejas.getNumQueja() + ".txt";
+            String nombreArchivo = "r" + quejas.getNumQueja() + ".txt";
             File archivoReporte = new File(nombreArchivo);
        String rutaArchivoReportes = context.getRealPath("/Reportes/"+nombreArchivo);
          
@@ -264,10 +264,11 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
          
          
         //Guardar Archivos 
+        
         Part filePart = request.getPart("pruebas"); // "archivo" es el nombre del input
         String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
-         
-          String nuevoNombre = System.currentTimeMillis() + quejas.getNumQueja() + fileName;
+        
+          String nuevoNombre =  "A" + quejas.getNumQueja() + fileName;
           String savePath = context.getRealPath("/ArchivosQuejas"); // Cambia la ruta según tu proyecto
         File directorio = new File(savePath);
          if (!directorio.exists()) {

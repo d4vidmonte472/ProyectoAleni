@@ -97,7 +97,8 @@
                                      <th scope="col">#</th>
                                      <th scope="col">Fecha</th>
                                    <th scope="col">Nombre Proveedor</th>
-                                   <th scope="col">Acciones</th>
+                                   <th scope="col">Nombre Consumidor</th>
+                                   <th scope="col">Ver reporte</th>
                                </tr>
                            </thead>
                                     

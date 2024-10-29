@@ -1,3 +1,2 @@
 ferxo,1234,Master
-boa,5678,Admin
 coloch,1234,Admin

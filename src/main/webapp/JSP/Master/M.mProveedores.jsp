@@ -168,7 +168,7 @@
     </div>
 
     <!-- Paginación -->
-    <nav aria-label="Page navigation">
+    <nav aria-label="Page navigation" class="navegacion">
         <ul class="pagination justify-content-center">
             <% if (paginaActual > 1) { %>
             <li class="page-item">

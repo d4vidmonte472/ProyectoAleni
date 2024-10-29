@@ -4,6 +4,7 @@
     Author     : David
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page import="Clases.Reportes"%>
 <%@page import="Clases.Quejas"%>
 <%@page import="java.util.List"%>
@@ -89,54 +90,80 @@
     
     </div>
 </nav>
-                <h1>LISTA DE REPORTES</h1>
-
-                       <table class="table">
-                           <thead>
-                               <tr>
-                                     <th scope="col">#</th>
-                                     <th scope="col">Fecha</th>
-                                   <th scope="col">Nombre Proveedor</th>
-                                   <th scope="col">Nombre Consumidor</th>
-                                   <th scope="col">Ver reporte</th>
-                               </tr>
-                           </thead>
-                                    
-           <tbody>
+               <div class="container" style="max-width: 80%;">
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Nombre Proveedor</th>
+                    <th scope="col">Nombre Consumidor</th>
+                    <th scope="col">Ver reporte</th>
+                </tr>
+            </thead>
+            <tbody>
                 <% 
                     List<Reportes> lista = (List<Reportes>) request.getSession().getAttribute("listaReportes");
-                    int cont=0 ;
-                    if (lista != null && !lista.isEmpty()) {
-                        for (Reportes re : lista) {
-                        cont++;
+                    int totalItems = lista != null ? lista.size() : 0;
+                    int itemsPorPagina = 10; // Cantidad de reportes por página
+                    int paginaActual = request.getParameter("pagina") != null ? Integer.parseInt(request.getParameter("pagina")) : 1;
+                    int totalPaginas = (int) Math.ceil((double) totalItems / itemsPorPagina);
+                    int indiceInicio = (paginaActual - 1) * itemsPorPagina;
+
+                    // Sublistar los elementos de acuerdo a la página actual
+                    List<Reportes> reportesPagina = (lista != null && !lista.isEmpty()) ? 
+                        lista.subList(indiceInicio, Math.min(indiceInicio + itemsPorPagina, totalItems)) : new ArrayList<>();
+
+                    int cont = indiceInicio + 1; // Para mantener el conteo correcto
+                    if (reportesPagina != null && !reportesPagina.isEmpty()) {
+                        for (Reportes re : reportesPagina) {
                 %>
-                    <tr>
-                        <td> <%= re.getNumQueja() %> </td>
-                        <td><%= re.getFechaQueja() %></td>
-                        <td><%= re.getNombreEmpresa() %></td>
-                        <td><%= re.getNombreConsumidor() %></td>
-                        <td> 
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                           
-                            <form action="${pageContext.request.contextPath}/SvMostrarreporte" method="POST"> 
+                <tr>
+                    <td><%= cont++ %></td>
+                    <td><%= re.getFechaQueja() %></td>
+                    <td><%= re.getNombreEmpresa() %></td>
+                    <td><%= re.getNombreConsumidor() %></td>
+                    <td>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <form action="${pageContext.request.contextPath}/SvAMostrarreporte" method="POST"> 
                                 <input type="hidden" name="ReporteId" value="<%= re.getNumQueja() %>">
-                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-eye"></i> </button>
+                                <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-eye"></i></button>
                             </form>
-                            </div>
-                        </td>
-                    </tr>
+                        </div>
+                    </td>
+                </tr>
                 <% 
                         }
                     } else { 
                 %>
-                    <tr>
-                        <td colspan="4">No hay reportes disponibles.</td>
-                    </tr>
+                <tr>
+                    <td colspan="5" class="text-center">No hay reportes disponibles.</td>
+                </tr>
                 <% 
                     }
                 %>
             </tbody>
         </table>
+    </div>
+    <!-- Paginación -->
+    <nav aria-label="Page navigation" class="navegacion">
+        <ul class="pagination justify-content-center">
+            <li class="page-item <%= (paginaActual == 1) ? "disabled" : "" %>">
+                <a class="page-link" href="?pagina=<%= paginaActual - 1 %>">Anterior</a>
+            </li>
+            <% for (int i = 1; i <= totalPaginas; i++) { %>
+                <li class="page-item <%= (i == paginaActual) ? "active" : "" %>">
+                    <a class="page-link" href="?pagina=<%= i %>"><%= i %></a>
+                </li>
+            <% } %>
+            <li class="page-item <%= (paginaActual == totalPaginas) ? "disabled" : "" %>">
+                <a class="page-link" href="?pagina=<%= paginaActual + 1 %>">Siguiente</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
     </body>
     <script src="https://kit.fontawesome.com/efd3b94f53.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -160,7 +160,7 @@
                 </div>
 
                 <!-- Paginación -->
-                <nav aria-label="Page navigation">
+                <nav aria-label="Page navigation" class="navegacion">
                     <ul class="pagination justify-content-center">
                         <% for (int i = 1; i <= totalPaginas; i++) { %>
                             <li class="page-item <%= (i == paginaActual) ? "active" : "" %>">

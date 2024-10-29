@@ -4,12 +4,16 @@
     Author     : fboan
 --%>
 
+<%@page import="Clases.Reportes"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../CSS/styles.css">
+
     </head>
     <body>
         <nav class="navbar navbar-danger-emphasis bg-info">
@@ -57,15 +61,12 @@
                             <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">QUEJAS</button>
                         </form>
                     </li>
-                    <li class="nav-item dropdown">
-                       
+                   <li class="nav-item">
                             
                                 <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvAMosRepQue">
-                                    <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
+                                    <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">REPORTES QUEJAS</button>
                                 </form>
-                           
-                       
-                    </li>
+                     </li>  
                     <li class="nav-item">
                         <form id="Logout" method="GET" action="../../index.jsp">
                             <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">LOG OUT</button>
@@ -78,5 +79,27 @@
     
     </div>
 </nav>
-    </body>
+   <% Reportes editado = (Reportes) request.getSession().getAttribute("re1");  %>
+                                    
+       <h1> REPORTES: <%= editado.getNumQueja() %> </h1>     
+       
+    
+
+                <h2>Detalles del Reporte</h2>
+
+           <p><strong>Número de Queja:</strong> <%= editado.getNumQueja() %></p>
+           <p><strong>Fecha de la Queja:</strong> <%= editado.getFechaQueja() %></p>
+           <p><strong>Nombre del Consumidor:</strong> <%= editado.getNombreConsumidor() %></p>
+           <p><strong>Nombre de la Empresa:</strong> <%= editado.getNombreEmpresa() %></p>
+           <p><strong>Solicitud:</strong> <%= editado.getSolicitud() %></p>
+           <p><strong>Detalle:</strong> <%= editado.getDetalle() %></p>
+
+           <br>
+
+                <a type="button" href="A.mReportes.jsp">Regresar</a>
+                
+           
+                </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </html>

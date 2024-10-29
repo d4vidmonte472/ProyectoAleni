@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
@@ -24,6 +24,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.MultipartConfig;
+import jakarta.servlet.http.HttpSession;
 import jakarta.servlet.http.Part;
 import java.nio.file.*;
 import java.io.*;
@@ -283,7 +284,10 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
 
         response.getWriter().println("Datos guardados correctamente. Su numero de queja es: " + quejas.getNumQueja());
         
-    
+     HttpSession misesion = request.getSession();
+        misesion.setAttribute("numqueja", quejas.getNumQueja());
+        
+         response.sendRedirect("JSP/NumQueja.jsp");
     }
     
     

@@ -148,7 +148,7 @@
             </div>
             <!-- Paginación -->
     
-        <nav aria-label="Page navigation">
+        <nav aria-label="Page navigation" class="navegacion">
             <ul class="pagination justify-content-center">
                 <li class="page-item <%= (paginaActual == 1) ? "disabled" : "" %>">
                     <a class="page-link" href="?pagina=<%= paginaActual - 1 %>">Anterior</a>

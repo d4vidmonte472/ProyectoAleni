@@ -37,22 +37,33 @@ public class SvAMosRepQue extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        
-        
-    }
+          ServletContext context = getServletContext();
+    String rutaArchivoUsuarios = context.getRealPath("/TXT/quejas.txt");
+    List<String> lineasQ = Files.readAllLines(Paths.get(rutaArchivoUsuarios));
+    List<Quejas> listaQuejas = new ArrayList<>();
 
-   
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        Reportes re1 = null;
-        
-        ServletContext context = getServletContext();
-    String nombreArchivo = "r" + request.getParameter("numQueja") + ".txt";
+    // Cargar las quejas desde el archivo.
+    for (String linea : lineasQ) {
+        String[] partes = linea.split(",");
+        if (partes.length == 7) {
+            int numDocTxt = Integer.parseInt(partes[0].trim());
+            String fechaTxt = partes[1].trim();
+            String detalleTxt = partes[2].trim();
+            String solicitudTxt = partes[3].trim();
+            int nitProveedorTxt = Integer.parseInt(partes[4].trim());
+            int nitConsumidorTxt = Integer.parseInt(partes[5].trim());
+            int numQuejaTxt = Integer.parseInt(partes[6].trim());
+
+            listaQuejas.add(new Quejas(numDocTxt, fechaTxt, detalleTxt, solicitudTxt,
+                    nitProveedorTxt, nitConsumidorTxt, numQuejaTxt));
+        }
+    }
+              List<Reportes> listaReportes = new ArrayList<>(); 
+    for(Quejas q :listaQuejas){
+        String nombreArchivo = "r" + q.getNumQueja() + ".txt";
        String rutaArchivoReportes = context.getRealPath("/Reportes/"+nombreArchivo);
     List<String> lineas = Files.readAllLines(Paths.get(rutaArchivoReportes));
-    List<Reportes> listaReportes = new ArrayList<>();
+    
 
     // Cargar las quejas desde el archivo.
          
@@ -85,30 +96,25 @@ public class SvAMosRepQue extends HttpServlet {
         else if(linea.startsWith("Numero de Queja: ")){
             numeroQueja = Integer.parseInt(linea.replace("Numero de Queja: ", "").trim());
         }
+    }
+     
+    }
+    listaReportes.add(new Reportes(numeroQueja, fechaQueja, nombreConsumidor, nombreEmpresa, solicitud, detalle));
+    
+         }
+        HttpSession misesion = request.getSession();
+         misesion.setAttribute("listaReportes", listaReportes);
+        response.sendRedirect("JSP/Admin/A.mReportes.jsp");
+         
         
-        listaReportes.add(new Reportes(numeroQueja, fechaQueja, nombreConsumidor, nombreEmpresa, solicitud, detalle));
+        
+    }
 
-    }
-         }
-         
-         int idReporteBuscado = Integer.parseInt(request.getParameter("ReporteId"));
-         for(Reportes re : listaReportes){
-             if(re.getNumQueja() == idReporteBuscado){
-                 re1 = re;
-                 break;
-             }
-         }
-         
-         if(re1 != null){
-             
-             HttpSession misesion = request.getSession();
-        misesion.setAttribute("re1", re1);
-        response.sendRedirect("JSP/Admin/A.MosReportes.jsp");
-         }else {
-        // Si no se encontró, mostramos un mensaje de error.
-        response.sendError(HttpServletResponse.SC_NOT_FOUND, "Reporte no encontrada.");
-    }
-         
+   
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
     }
    
     @Override

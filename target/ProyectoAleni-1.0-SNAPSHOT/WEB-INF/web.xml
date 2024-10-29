@@ -9,6 +9,10 @@
         <servlet-class>Servlets.svMostrarConsumidores</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>svAMostrarConsumidores</servlet-name>
+        <servlet-class>Servlets.svAMostrarConsumidores</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>SvLogin</servlet-name>
         <servlet-class>Servlets.SvLogin</servlet-class>
     </servlet>
@@ -29,72 +33,140 @@
         <servlet-class>Servlets.SvMostrarqueja</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>SvAMostrarqueja</servlet-name>
+        <servlet-class>Servlets.SvAMostrarqueja</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>svEditarQueja</servlet-name>
         <servlet-class>Servlets.svEditarQueja</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>svAEditarQueja</servlet-name>
+        <servlet-class>Servlets.svAEditarQueja</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>svEditarQuejas</servlet-name>
         <servlet-class>Servlets.svEditarQuejas</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>svAEditarQuejas</servlet-name>
+        <servlet-class>Servlets.svAEditarQuejas</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>SvEliminarQueja</servlet-name>
         <servlet-class>Servlets.SvEliminarQueja</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvAEliminarQueja</servlet-name>
+        <servlet-class>Servlets.SvAEliminarQueja</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SvMosQueja</servlet-name>
         <servlet-class>Servlets.SvMosQueja</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>SvAMosQueja</servlet-name>
+        <servlet-class>Servlets.SvAMosQueja</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>SvMosproveedor</servlet-name>
         <servlet-class>Servlets.SvMosproveedor</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvAMosproveedor</servlet-name>
+        <servlet-class>Servlets.SvAMosproveedor</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SvEditarProveedor</servlet-name>
         <servlet-class>Servlets.SvEditarProveedor</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>SvAEditarProveedor</servlet-name>
+        <servlet-class>Servlets.SvAEditarProveedor</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>SvEditarProveedores</servlet-name>
         <servlet-class>Servlets.SvEditarProveedores</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvAEditarProveedores</servlet-name>
+        <servlet-class>Servlets.SvAEditarProveedores</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>svEditarProveedores</servlet-name>
         <servlet-class>Servlets.svEditarProveedores</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>SvMosCons</servlet-name>
-        <servlet-class>Servlets.SvMosCons</servlet-class>
+        <servlet-name>svAEditarProveedores</servlet-name>
+        <servlet-class>Servlets.svAEditarProveedores</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvAMosCons</servlet-name>
+        <servlet-class>Servlets.SvAMosCons</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SvEliminarConsumidores</servlet-name>
         <servlet-class>Servlets.SvEliminarConsumidores</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>SvAEliminarConsumidores</servlet-name>
+        <servlet-class>Servlets.SvAEliminarConsumidores</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>svEditarConsumidores</servlet-name>
         <servlet-class>Servlets.svEditarConsumidores</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>svAEditarConsumidores</servlet-name>
+        <servlet-class>Servlets.svAEditarConsumidores</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SvEliminarProv</servlet-name>
         <servlet-class>Servlets.SvEliminarProv</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>SvAEliminarProv</servlet-name>
+        <servlet-class>Servlets.SvAEliminarProv</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>SvMosProv</servlet-name>
         <servlet-class>Servlets.SvMosProv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvAMosProv</servlet-name>
+        <servlet-class>Servlets.SvAMosProv</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SvEditarConsumidor</servlet-name>
         <servlet-class>Servlets.SvEditarConsumidor</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>SvAEditarConsumidor</servlet-name>
+        <servlet-class>Servlets.SvAEditarConsumidor</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>SvMosconsumidor</servlet-name>
         <servlet-class>Servlets.SvMosconsumidor</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvAMosconsumidor</servlet-name>
+        <servlet-class>Servlets.SvAMosconsumidor</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SvMosRepQue</servlet-name>
         <servlet-class>Servlets.SvMosRepQue</servlet-class>
     </servlet>
+     <servlet>
+        <servlet-name>SvAMosRepQue</servlet-name>
+        <servlet-class>Servlets.SvAMosRepQue</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>SvMostrarreporte</servlet-name>
         <servlet-class>Servlets.SvMostrarreporte</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SvAMostrarreporte</servlet-name>
+        <servlet-class>Servlets.SvAMostrarreporte</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
@@ -107,6 +179,10 @@
     <servlet-mapping>
         <servlet-name>svMostrarConsumidores</servlet-name>
         <url-pattern>/svMostrarConsumidores</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>svAMostrarConsumidores</servlet-name>
+        <url-pattern>/svAMostrarConsumidores</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>svMostrarUsuarios</servlet-name>
@@ -125,72 +201,144 @@
         <url-pattern>/SvMostrarqueja</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>SvAMostrarqueja</servlet-name>
+        <url-pattern>/SvAMostrarqueja</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>svEditarQueja</servlet-name>
         <url-pattern>/svEditarQueja</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>svAEditarQueja</servlet-name>
+        <url-pattern>/svAEditarQueja</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>svEditarQuejas</servlet-name>
         <url-pattern>/svEditarQuejas</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>svAEditarQuejas</servlet-name>
+        <url-pattern>/svAEditarQuejas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>SvEliminarQueja</servlet-name>
         <url-pattern>/SvEliminarQueja</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvAEliminarQueja</servlet-name>
+        <url-pattern>/SvAEliminarQueja</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvMosQueja</servlet-name>
         <url-pattern>/SvMosQueja</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>SvAMosQueja</servlet-name>
+        <url-pattern>/SvAMosQueja</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>SvMosproveedor</servlet-name>
         <url-pattern>/SvMosproveedor</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>SvAMosproveedor</servlet-name>
+        <url-pattern>/SvAMosproveedor</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvEditarProveedor</servlet-name>
         <url-pattern>/SvEditarProveedor</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>SvAEditarProveedor</servlet-name>
+        <url-pattern>/SvAEditarProveedor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>SvEditarProveedores</servlet-name>
         <url-pattern>/SvEditarProveedores</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvAEditarProveedores</servlet-name>
+        <url-pattern>/SvAEditarProveedores</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>svEditarProveedores</servlet-name>
         <url-pattern>/svEditarProveedores</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>svAEditarProveedores</servlet-name>
+        <url-pattern>/svAEditarProveedores</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>SvMosCons</servlet-name>
         <url-pattern>/SvMosCons</url-pattern>
+    </servlet-mapping>
+      <servlet-mapping>
+        <servlet-name>SvAMosCons</servlet-name>
+        <url-pattern>/SvAMosCons</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>svEditarConsumidores</servlet-name>
         <url-pattern>/svEditarConsumidores</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>svAEditarConsumidores</servlet-name>
+        <url-pattern>/svAEditarConsumidores</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>SvEliminarConsumidores</servlet-name>
         <url-pattern>/SvEliminarConsumidores</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>SvAEliminarConsumidores</servlet-name>
+        <url-pattern>/SvAEliminarConsumidores</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvEliminarProv</servlet-name>
         <url-pattern>/SvEliminarProv</url-pattern>
     </servlet-mapping>
+      <servlet-mapping>
+        <servlet-name>SvAEliminarProv</servlet-name>
+        <url-pattern>/SvAEliminarProv</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvMosProv</servlet-name>
         <url-pattern>/SvMosProv</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>SvAMosProv</servlet-name>
+        <url-pattern>/SvAMosProv</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvEditarConsumidor</servlet-name>
         <url-pattern>/SvEditarConsumidor</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>SvAEditarConsumidor</servlet-name>
+        <url-pattern>/SvAEditarConsumidor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>SvMosconsumidor</servlet-name>
         <url-pattern>/SvMosconsumidor</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>SvAMosconsumidor</servlet-name>
+        <url-pattern>/SvAMosconsumidor</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SvMosRepQue</servlet-name>
         <url-pattern>/SvMosRepQue</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>SvAMosRepQue</servlet-name>
+        <url-pattern>/SvAMosRepQue</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>SvMostrarreporte</servlet-name>
         <url-pattern>/SvMostrarreporte</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SvAMostrarreporte</servlet-name>
+        <url-pattern>/SvAMostrarreporte</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

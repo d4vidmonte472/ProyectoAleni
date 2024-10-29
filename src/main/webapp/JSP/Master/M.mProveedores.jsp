@@ -4,18 +4,15 @@
     Author     : fboan
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page import="Clases.Proveedor"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <head>
+ 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuarios</title>
@@ -24,6 +21,7 @@
 
 
 </head>
+
 <body>
 
     <!-- Menú de navegación original -->
@@ -99,50 +97,59 @@
 </nav>
 
 
-<h1>LISTA DE PROVEEDORES</h1>
-
+<h1 class="text-center">LISTA DE PROVEEDORES</h1>
+<div class="container" style="max-width: 80%;">
+    <div class="table-responsive">
         <table class="table">
             <thead>
                 <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">NIT</th>
+                    <th scope="col">#</th>
+                    <th scope="col">NIT</th>
                     <th scope="col">RAZÓN SOCIAL</th>
                     <th scope="col">NOMBRE DE LA EMPRESA</th>
                     <th scope="col">TELEFONO</th>
                     <th scope="col">CORREO</th>
-                    <th scope="col">ACCIONESs</th>
+                    <th scope="col">ACCIONES</th>
                 </tr>
             </thead>
             <tbody>
                 <% 
                     List<Proveedor> lista = (List<Proveedor>) request.getSession().getAttribute("listaProveedores");
-                    int cont=0 ;
-                    if (lista != null && !lista.isEmpty()) {
-                        for (Proveedor que : lista) {
-                        cont++;
+                    int totalItems = lista != null ? lista.size() : 0;
+                    int itemsPorPagina = 10;
+                    int paginaActual = request.getParameter("pagina") != null ? Integer.parseInt(request.getParameter("pagina")) : 1;
+                    int totalPaginas = (int) Math.ceil((double) totalItems / itemsPorPagina);
+                    int indiceInicio = (paginaActual - 1) * itemsPorPagina;
+
+                    // Sublistar los elementos de acuerdo a la página actual
+                    List<Proveedor> proveedoresPagina = lista != null && !lista.isEmpty() ? 
+                        lista.subList(indiceInicio, Math.min(indiceInicio + itemsPorPagina, totalItems)) :  new ArrayList<>();
+
+                    int cont = indiceInicio + 1; // Para mantener el conteo correcto
+                    if (proveedoresPagina != null && !proveedoresPagina.isEmpty()) {
+                        for (Proveedor que : proveedoresPagina) {
                 %>
                     <tr>
-                         <td> <%= cont %> </td>
-                        <td> <%= que.getNit() %> </td>
+                        <td><%= cont++ %></td>
+                        <td><%= que.getNit() %></td>
                         <td><%= que.getRazonSocial() %></td>
                         <td><%= que.getNombreEmpresa() %></td>
                         <td><%= que.getTelefono() %></td>
                         <td><%= que.getCorreo() %></td>
-                        
-                        <td> 
+                        <td>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <form action="${pageContext.request.contextPath}/SvEditarProveedor" method="POST" > 
-                              <input type="hidden" name="ProveedorId" value="<%= cont-1 %>">
-                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-pen-to-square"></i> </button>
-                            </form>  
-                            <form action="${pageContext.request.contextPath}/SvEliminarProv" method="GET"> 
-                               <input type="hidden" name="ProveedorId" value="<%= cont -1 %>">
-                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-trash"></i> </button>
-                            </form>
-                            <form action="${pageContext.request.contextPath}/SvMosProv" method="POST"> 
-                               <input type="hidden" name="ProveedorId" value="<%= cont -1 %>">
-                                <button type="submit" class="tn btn-primary btn-sm"> <i class="fa-solid fa-eye"></i> </button>
-                            </form>
+                                <form action="${pageContext.request.contextPath}/SvEditarProveedor" method="POST"> 
+                                    <input type="hidden" name="ProveedorId" value="<%= cont - 2 %>">
+                                    <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
+                                </form>
+                                <form action="${pageContext.request.contextPath}/SvEliminarProv" method="GET"> 
+                                    <input type="hidden" name="ProveedorId" value="<%= cont - 2 %>">
+                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
+                                </form>
+                                <form action="${pageContext.request.contextPath}/SvMosProv" method="POST"> 
+                                    <input type="hidden" name="ProveedorId" value="<%= cont - 2 %>">
+                                    <button type="submit" class="btn btn-info btn-sm"><i class="fa-solid fa-eye"></i></button>
+                                </form>
                             </div>
                         </td>
                     </tr>
@@ -151,13 +158,40 @@
                     } else { 
                 %>
                     <tr>
-                        <td colspan="4">No hay quejas ingresadas.</td>
+                        <td colspan="7" class="text-center">No hay proveedores ingresados.</td>
                     </tr>
                 <% 
                     }
                 %>
             </tbody>
         </table>
+    </div>
+
+    <!-- Paginación -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <% if (paginaActual > 1) { %>
+            <li class="page-item">
+                <a class="page-link" href="?pagina=<%= paginaActual - 1 %>" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <% } %>
+            <% for (int i = 1; i <= totalPaginas; i++) { %>
+            <li class="page-item <%= (i == paginaActual) ? "active" : "" %>">
+                <a class="page-link" href="?pagina=<%= i %>"><%= i %></a>
+            </li>
+            <% } %>
+            <% if (paginaActual < totalPaginas) { %>
+            <li class="page-item">
+                <a class="page-link" href="?pagina=<%= paginaActual + 1 %>" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            <% } %>
+        </ul>
+    </nav>
+</div>
             
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

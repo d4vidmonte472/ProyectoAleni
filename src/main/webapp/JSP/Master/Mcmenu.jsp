@@ -95,7 +95,7 @@
 
     <!-- Sección de la página principal -->
     <header>
-        <h1>Bienvenido a ALENI, SEÑOR FERXO</h1>
+        <h1>Bienvenido a ALENI, SEÑOR MASTER</h1>
         <p>EN ESTE MENÚ PODRA EDITAR CUALQUIER ERROR EN VENTAS O ALGUNA DE LAS QUEJAS.</p>
     </header>
 

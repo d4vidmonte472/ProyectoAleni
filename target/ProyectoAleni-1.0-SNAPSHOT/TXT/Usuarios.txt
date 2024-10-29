@@ -1,2 +1,6 @@
 ferxo,1234,Master
+<<<<<<< HEAD
 boa,5678,Admin
+=======
+coloch,1234,Admin
+>>>>>>> d0f83a2b1f3f7e71e3b9c02f78a74e191b834751

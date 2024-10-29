@@ -101,6 +101,10 @@
         <servlet-class>Servlets.svAEditarProveedores</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>SvMosCons</servlet-name>
+        <servlet-class>Servlets.SvMosCons</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>SvAMosCons</servlet-name>
         <servlet-class>Servlets.SvAMosCons</servlet-class>
     </servlet>

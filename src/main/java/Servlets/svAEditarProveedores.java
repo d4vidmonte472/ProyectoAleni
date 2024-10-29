@@ -102,7 +102,7 @@ public class svAEditarProveedores extends HttpServlet {
         HttpSession misesion = request.getSession();
         misesion.setAttribute("listaProveedores", listaProveedores);
         
-         response.sendRedirect("JSP/Master/M.mProveedores.jsp");
+         response.sendRedirect("JSP/Master/A.mProveedores.jsp");
     }
 
    

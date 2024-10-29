@@ -108,7 +108,7 @@ public class SvAEditarConsumidor extends HttpServlet {
         HttpSession misesion = request.getSession();
         misesion.setAttribute("con", con); // Guardar el consumidor en la sesión
         misesion.setAttribute("consumidorId", consumidorId);
-        response.sendRedirect("JSP/Master/M.EditarConsumidor.jsp");
+        response.sendRedirect("JSP/Master/A.EditarConsumidor.jsp");
     
     }
 

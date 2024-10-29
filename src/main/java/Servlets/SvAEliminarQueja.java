@@ -72,7 +72,7 @@ public class SvAEliminarQueja extends HttpServlet {
         misesion.setAttribute("listaQuejas", listaQuejas);
 
         // Redirigir a la página de quejas.
-        response.sendRedirect("JSP/Master/M.mQuejas.jsp");
+        response.sendRedirect("JSP/Master/A.mQuejas.jsp");
     }
 
     @Override

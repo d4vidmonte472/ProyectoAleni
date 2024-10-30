@@ -115,19 +115,26 @@ public class svAEditarQuejas extends HttpServlet {
     while ((linea = br.readLine()) != null) {
         // Buscamos las líneas que contienen la información del consumidor y del proveedor
         if (linea.startsWith("Nombre del Consumidor: ")) {
-            nombreConsumidor = linea.replace("Nombre del Consumidor: ", "").trim();
+            nombreConsumidor = linea;
         } else if (linea.startsWith("Nombre de la Empresa: ")) {
-            nombreEmpresa = linea.replace("Nombre de la Empresa: ", "").trim();
+            nombreEmpresa = linea;
         }
+        }
+    br.close();
+} catch (IOException e) {
+    e.printStackTrace();
+}
+
                   
             
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(rutaArchivoReporte))) {
                 writer.write("Numero de Queja: " + q.getNumQueja() + "\n");
                 writer.write("Fecha de la queja: " + q.getFecha() + "\n");
-                writer.write("Nombre del Consumidor: " + nombreConsumidor + "\n");
-                writer.write("Nombre de la Empresa: " + nombreEmpresa + "\n");
+                writer.write(nombreConsumidor + "\n");
+                writer.write(nombreEmpresa + "\n");
                 writer.write("Solicitud: " + q.getSolicitud() + "\n");
                 writer.write("Detalle: " + q.getDetalle() + "\n");
+                writer.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -141,8 +148,7 @@ public class svAEditarQuejas extends HttpServlet {
          response.sendRedirect("JSP/Admin/A.mQuejas.jsp");
          
              }
-         }
-    }
+         
 
    
     @Override

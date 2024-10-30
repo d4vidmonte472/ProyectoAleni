@@ -1,6 +1,14 @@
 Numero de Queja: 2335
+<<<<<<< HEAD
 Fecha de la queja: 2024-10-22
 Nombre del Consumidor: Monterroso 3818181
 Nombre de la Empresa: 1135
 Solicitud: <das
 Detalle: as 
+=======
+Fecha de la queja: 2024-10-17
+Nombre del Consumidor: 
+Nombre de la Empresa: 
+Solicitud: asd
+Detalle: sdasd
+>>>>>>> 39a8a68e603130db9601cc90b879109c2903fd4f

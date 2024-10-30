@@ -1,6 +1,14 @@
 Numero de Queja: 2333
+<<<<<<< HEAD
 Fecha de la queja: 2024-10-16
 Nombre del Consumidor: Monterroso 318341
 Nombre de la Empresa: 1135
 Solicitud: que lo revivan
 Detalle: mataronn mataron a un inocente
+=======
+Fecha de la queja: 2024-11-09
+Nombre del Consumidor: 
+Nombre de la Empresa: 
+Solicitud: achu
+Detalle: raaaaaaaaaaaah
+>>>>>>> 39a8a68e603130db9601cc90b879109c2903fd4f

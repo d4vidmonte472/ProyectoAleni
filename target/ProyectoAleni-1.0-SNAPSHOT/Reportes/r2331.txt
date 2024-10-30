@@ -1,6 +1,6 @@
 Numero de Queja: 2331
 Fecha de la queja: 2024-10-17
-Nombre del Consumidor: ferxo	
-Nombre de la Empresa: Gadiel
+Nombre del Consumidor: aaaaaaa
+Nombre de la Empresa: aa
 Solicitud: asd
 Detalle: asd

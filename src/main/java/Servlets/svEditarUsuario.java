@@ -71,7 +71,8 @@ public class svEditarUsuario extends HttpServlet {
                  
                  HttpSession misesion = request.getSession();
                 misesion.setAttribute("usr", usr);
-        
+         String mensajeErr = null ;
+            misesion.setAttribute("mensajeError",mensajeErr );
          response.sendRedirect("JSP/Master/M.EditarUsuario.jsp");
                 
                 

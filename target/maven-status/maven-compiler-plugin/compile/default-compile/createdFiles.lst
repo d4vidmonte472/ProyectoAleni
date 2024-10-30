@@ -23,12 +23,14 @@ com\aleni\proyectoaleni\JakartaRestConfiguration.class
 Servlets\svAEditarProveedores.class
 Servlets\SvAMosQueja.class
 Clases\Consumidor.class
+Servlets\svMGuardarConsumidor.class
 Servlets\SvAEliminarConsumidores.class
 Servlets\svMostrarUsuarios.class
 Clases\Reportes.class
 Servlets\SvAMosCons.class
 Servlets\SvMostrarqueja.class
 Servlets\svAEditarQuejas.class
+Servlets\svAGuardarConsumidor.class
 Servlets\svEditarProveedores.class
 Servlets\svMostrarConsumidores.class
 Servlets\SvEliminarProv.class

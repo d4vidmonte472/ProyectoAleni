@@ -1,72 +1,82 @@
- /*
+/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package Servlets;
 
-
+import Clases.Consumidor;
+import Clases.Proveedor;
+import Clases.Quejas;
+import jakarta.servlet.ServletContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.FileWriter;
-import java.io.FileReader;
-import java.util.*;
-import Clases.Consumidor;
-import java.io.File;
-import jakarta.servlet.AsyncContext;
-import java.nio.file.Path;
-import Clases.Proveedor;
-import Clases.Quejas;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import jakarta.servlet.*;
-import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.http.HttpSession;
 import jakarta.servlet.http.Part;
-import java.nio.file.*;
-import java.io.*;
-import jakarta.servlet.http.Part;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.List;
 
-
-
-
-
-/*
+/**
  *
- * @author david
+ * @author fboan
  */
+public class svAGuardarConsumidor extends HttpServlet {
 
-
-@MultipartConfig(
-    fileSizeThreshold = 1024 * 1024 * 2, // 2MB
-    maxFileSize = 1024 * 1024 * 10,      // 10MB
-    maxRequestSize = 1024 * 1024 * 50    // 50MB
-)
-public class svGuardarConsumidor extends HttpServlet {
-
-    
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
         
     }
 
- 
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-  
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-              throws ServletException, IOException {
+            throws ServletException, IOException {
         
-        String nacionalidad = request.getParameter("nacionalidad");
+       String nacionalidad = request.getParameter("nacionalidad");
         String tipoConsumidor = request.getParameter("contribuyente");
         int nit = Integer.parseInt(request.getParameter("NIT"));
         int dpi = Integer.parseInt(request.getParameter("DPI"));
@@ -279,7 +289,7 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
         // Respuesta de éxito
         
         
-         int escondido = Integer.parseInt(request.getParameter("nume"));
+        
         
          filePart.write(savePath + File.separator + nuevoNombre);
 
@@ -287,19 +297,15 @@ int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
         
      HttpSession misesion = request.getSession();
         misesion.setAttribute("numqueja", quejas.getNumQueja());
-        if (1==escondido){
-         response.sendRedirect("JSP/NumQueja.jsp");}
-        else if (2==escondido){
-            response.sendRedirect("JSP/Admin/ANumQueja.jsp");
-        }
-        else {
-             response.sendRedirect("JSP/Master/MNumQueja.jsp");
-        }
+        
+         response.sendRedirect("JSP/Admin/ANumQueja.jsp");
     }
-    
-    
-    
-    
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
     @Override
     public String getServletInfo() {
         return "Short description";

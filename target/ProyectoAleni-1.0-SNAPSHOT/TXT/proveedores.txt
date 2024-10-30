@@ -6,3 +6,7 @@ CINDY ,CINDY ,12467564,CASA DE CINDY ,zona-17,15,1504,12456789,lamamadelamama@gm
 
 Prueba,Prueba,12467564,fhgfg,zona-17,18,1803,12456789,david.monterrosod.g@gmail.com
 1135,515,5515,35135,zona-2,12,1213,41131115,Mcospin2018ig@gmail.com
+1135,515,5515,35135,zona-12,2,202,41131115,Mcospin2018ig@gmail.com
+1135,515,5515,35135,zona-13,18,1803,41131115,Mcospin2018ig@gmail.com
+1135,515,5515,35135,zona-18,19,1906,41131115,Mcospin2018ig@gmail.com
+1135,515,5515,35135,sin-zona,4,413,41131115,Mcospin2018ig@gmail.com

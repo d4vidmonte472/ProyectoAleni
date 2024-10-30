@@ -15,3 +15,7 @@ guatemalteco,individual,12345678,12345678,Jose,Maarco,Bigote,Camionetero,de Soto
 guatemalteco,individual,12345678,12345678,Alan,Rosa,Brito,Melano,de Maria,fhgfg,zona-18,18,1802,Baja Verapaz,12456789,23457889,12568945,david.monterrosod.g@gmail.com,true,h
 guatemalteco,individual,12345678,12345678,Maro,Rico,Papi,Rico,de Riko,fhgfg,zona-18,16,1603,Baja Verapaz,12456789,23457889,12345678,david.monterrosod.g@gmail.com,true,h
 otro,juridico,12345679,884338453,Gadiel ,David,Monterroso ,Saber ,de san cristobal,villa nueva,zona-13,14,1416,Quiché,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,juridico,156181,12854,318341,David,Monterroso ,Saber ,de san cristobal,villa nueva,zona-2,13,1314,Baja Verapaz,411354,138131,123456,Mcospin2018ig@gmail.com,false,m
+guatemalteco,individual,12031,123456,318341,David,Monterroso ,Saber ,de san cristobal,villa nueva,sin-zona,15,1505,Baja Verapaz,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,151574,12345,3818181,David,Monterroso ,Saber ,de san cristobal,villa nueva,zona-13,14,1414,Suchitepéquez,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,151574,12345,3818181,David,Monterroso ,Saber ,de san cristobal,villa nueva,sin-zona,15,1504,Retalhuleu,411354,138131,123456,Mcospin2018ig@gmail.com,false,m

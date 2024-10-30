@@ -248,7 +248,7 @@
             </p>
             <label for="pruebas">ADJUNTAR PRUEBAS</label>
             <input type="file" name="pruebas">aqui puede adjuntar archivos o imagenes para poder probar lo que dice.
-        
+             <input type="hidden" name="nume" value="1">
     </div>
     <input type="submit" value="Enviar">
 </form>

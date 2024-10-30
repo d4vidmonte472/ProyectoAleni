@@ -1,6 +1,6 @@
 Numero de Queja: 2332
 Fecha de la queja: 2024-10-16
-Nombre del Consumidor: Monterroso Gadiel 
-Nombre de la Empresa: 1135
-Solicitud: Que dianita la siga abriendo 
+Nombre del Consumidor: aaa
+Nombre de la Empresa: eeee
+Solicitud: Que dianita la siga abriendo
 Detalle: Dianita me está abriendo la colita

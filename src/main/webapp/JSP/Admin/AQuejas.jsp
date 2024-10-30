@@ -83,7 +83,7 @@
 </nav>
 
   <h1>FORMULARIO DE QUEJAS DIACO</h1>
-    <form id="formularioQueja" method="POST" action="${pageContext.request.contextPath}/svAGuardarConsumidor" enctype="multipart/form-data">
+    <form id="formularioQueja" method="POST" action="${pageContext.request.contextPath}/svGuardarConsumidor" enctype="multipart/form-data">
 
     <div class="dformC" id="seccion1">
         
@@ -280,7 +280,7 @@
             <label for="email">Correo Electrónico:</label>
             <input type="email" id="email" name="email" required placeholder="example@example.com">
         
-        
+         <input type="hidden" name="nume" value="2">
     </div>
 
 </div>

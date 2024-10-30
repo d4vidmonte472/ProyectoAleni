@@ -315,6 +315,7 @@
             <input type="file" name="pruebas">aqui puede adjuntar archivos o imagenes para poder probar lo que dice.
         
     </div>
+        <input type="hidden" name="nume" value="3">
     <input type="submit" value="Enviar">
 </form>
         <footer>

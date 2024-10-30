@@ -126,7 +126,7 @@
                     <td><%= re.getNombreConsumidor() %></td>
                     <td>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <form action="${pageContext.request.contextPath}/SvAMostrarreporte" method="POST"> 
+                            <form action="${pageContext.request.contextPath}/SvMostrarreporte" method="POST"> 
                                 <input type="hidden" name="ReporteId" value="<%= re.getNumQueja() %>">
                                 <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-eye"></i></button>
                             </form>

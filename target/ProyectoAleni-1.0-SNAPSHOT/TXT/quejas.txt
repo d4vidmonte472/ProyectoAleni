@@ -1,5 +1,15 @@
 
 12345678,2024-10-17,asd,asd,12467564,12345678,2331
+<<<<<<< HEAD
+844,2024-10-16,Dianita me está abriendo la colita,Que dianita la siga abriendo ,5515,12345679,2332
+844,2024-10-16,mataronn mataron a un inocente,que lo revivan,5515,156181,2333
+844,,a sadq,dwads,5515,12031,2334
+844,2024-10-22,as ,<das,5515,151574,2335
+844,2024-10-22,qwse,qwwe,5515,151574,2336
+=======
 844,2024-10-16,Dianita me está abriendo la colita,Que dianita la siga abriendo,5515,12345679,2332
 12345678,2024-11-09,raaaaaaaaaaaah,achu,12467564,12345678,2333
 12345678,2024-10-17,sdasd,asd,12467564,1324578,2335
+>>>>>>> 39a8a68e603130db9601cc90b879109c2903fd4f
+
+844,2024-10-15,sad,sda,5515,151574,2336

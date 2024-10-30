@@ -254,5 +254,6 @@
 </form>
     <script src="../JS/municipios.js"></script>
     <script src="../JS/municipiosP.js"></script>
+    <script src="../JS/validacionFecha.js"></script>
 </body>
 </html>

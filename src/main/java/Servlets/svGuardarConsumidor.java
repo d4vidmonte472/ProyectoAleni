@@ -170,6 +170,8 @@ public class svGuardarConsumidor extends HttpServlet {
 
 int numDoc = Integer.parseInt(request.getParameter("NumDoc"));
          String fecha = request.getParameter("fecha");
+         
+         
          String detalle = request.getParameter("detalle");
          String solicitud = request.getParameter("solicitud");
          

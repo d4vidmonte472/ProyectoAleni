@@ -28,7 +28,7 @@ public class svEditarUsuarios extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        HttpSession misesion = request.getSession();
         // Obtiene la ruta del archivo de usuarios
         ServletContext context = getServletContext();
         String rutaArchivoUsuarios = context.getRealPath("/TXT/Usuarios.txt");
@@ -44,11 +44,24 @@ public class svEditarUsuarios extends HttpServlet {
             }
         }
 
+         // Obtiene las contraseñas del formulario
+        String nuevaContrasena = request.getParameter("password");
+        String confirmarContrasena = request.getParameter("Cpassword");
+        
+        // Verifica si las contraseñas coinciden
+        if (!nuevaContrasena.equals(confirmarContrasena)) {
+            // Si no coinciden, establece un mensaje de error y redirige al JSP
+            String mensajeErr = "Las contraseñas no coinciden.";
+            misesion.setAttribute("mensajeError",mensajeErr );
+            response.sendRedirect("JSP/Master/M.EditarUsuario.jsp");
+            return; // Sale del método si las contraseñas no coinciden
+        }
+
         // Busca al usuario que coincida con el parámetro usuarioId
         for (Usuario us : listaUsuarios) {
             if (us.getMaster() != null && us.getMaster().equals(request.getParameter("usuarioId"))) {
                 us.setUsuario(request.getParameter("usuario"));
-                us.setPassword(request.getParameter("password"));
+                us.setPassword(nuevaContrasena); // Guarda la nueva contraseña
                 break;
             }
         }
@@ -69,7 +82,7 @@ public class svEditarUsuarios extends HttpServlet {
         // Redirecciona al menú o a otra página según el resultado
         
 
-                  HttpSession misesion = request.getSession();
+                  
         misesion.setAttribute("listaUsuarios", listaUsuarios);
         
          response.sendRedirect("JSP/Master/M.mUsuarios.jsp");

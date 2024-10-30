@@ -1,0 +1,6 @@
+Numero de Queja: 2339
+Fecha de la queja: 2024-10-17
+Nombre del Consumidor: HernandezPedro
+Nombre de la Empresa: Huevos
+Solicitud: asdasda
+Detalle: asdasd

@@ -91,25 +91,58 @@
 
          <% Usuario editado = (Usuario) request.getSession().getAttribute("usr");  %>
          
+          <%-- Mostrar mensaje de error si existe --%>
+            <% String mensajeError = (String) request.getAttribute("mensajeError"); %>
+        <% if (mensajeError != null) { %>
+            <div class="alert alert-danger" role="alert">
+               <%= mensajeError %>
+            </div>
+        <% } %>
+
          
         <h1> EDITAR <%= editado.getUsuario() %> </h1>
         
-            <form action="${pageContext.request.contextPath}/svEditarUsuarios" method="POST">
-                <label>Usuario:</label>
-                <input type="text" name="usuario" value="<%= editado.getUsuario() %>" required><br>
+   
 
-                <label>Contraseña:</label>
-                <input type="password" name="password" value="<%= editado.getPassword() %>" required><br>
-                
-                <label>Nueva Contraseña:</label>
-                <input type="password" name="Cpassword" value="" required><br>
+        
+           <form action="${pageContext.request.contextPath}/svEditarUsuarios" method="POST" id="editarUsuarioForm">
+        <label>Usuario:</label>
+        <input type="text" name="usuario" value="<%= editado.getUsuario() %>" required><br>
 
-                <label>Rol:</label>
-                <input type="text" name="usuarioId" value="<%= editado.getMaster() %>" required readonly><br>
+        <label>Nueva Contraseña:</label>
+        <input type="password" name="password" required><br>
 
-                <button type="submit">Guardar Cambios</button>
-            </form>
+        <label>Confirmar Nueva Contraseña:</label>
+        <input type="password" name="Cpassword" required><br>
+        
+        <label>Rol:</label>
+        <input type="text" name="usuarioId" value="<%= editado.getMaster() %>" required readonly><br>
+
+        <!-- Modal de error de Bootstrap -->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="errorModalLabel">Error</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Las contraseñas no coinciden. Por favor, inténtelo nuevamente.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        <button type="submit">Guardar Cambios</button>
+    </form>
+                <script src="$../../js/validacionUsuario.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    
 
 </html>

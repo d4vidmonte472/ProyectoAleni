@@ -1,14 +1,6 @@
 Numero de Queja: 2334
-<<<<<<< HEAD
-Fecha de la queja: 
-Nombre del Consumidor: Monterroso 318341
-Nombre de la Empresa: 1135
-Solicitud: dwads
-Detalle: a sadq
-=======
-Fecha de la queja: 2024-11-09
+Fecha de la queja: 2024-10-01
 Nombre del Consumidor: elBorrachoGabriel
 Nombre de la Empresa: Prueba
-Solicitud: achu
-Detalle: raaaaaaaaaaaah
->>>>>>> 39a8a68e603130db9601cc90b879109c2903fd4f
+Solicitud: dwads
+Detalle: a sadq

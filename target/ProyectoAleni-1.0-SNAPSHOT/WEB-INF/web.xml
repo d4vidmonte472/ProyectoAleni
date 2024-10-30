@@ -172,14 +172,6 @@
         <servlet-name>SvAMostrarreporte</servlet-name>
         <servlet-class>Servlets.SvAMostrarreporte</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>svAGuardarConsumidor</servlet-name>
-        <servlet-class>Servlets.svAGuardarConsumidor</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>svMGuardarConsumidor</servlet-name>
-        <servlet-class>Servlets.svMGuardarConsumidor</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>svGuardarConsumidor</servlet-name>
         <url-pattern>/svGuardarConsumidor</url-pattern>
@@ -351,14 +343,6 @@
     <servlet-mapping>
         <servlet-name>SvAMostrarreporte</servlet-name>
         <url-pattern>/SvAMostrarreporte</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>svAGuardarConsumidor</servlet-name>
-        <url-pattern>/svAGuardarConsumidor</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>svMGuardarConsumidor</servlet-name>
-        <url-pattern>/svMGuardarConsumidor</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

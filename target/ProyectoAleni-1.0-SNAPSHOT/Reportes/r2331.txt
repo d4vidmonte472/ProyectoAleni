@@ -1,6 +1,6 @@
 Numero de Queja: 2331
-Fecha de la queja: 2024-10-17
+Fecha de la queja: 2024-10-06
 Nombre del Consumidor: aaaaaaa
 Nombre de la Empresa: aa
-Solicitud: asd
-Detalle: asd
+Solicitud: Cindy devuelvame mis horas de sueño
+Detalle: ya me dio sueñito

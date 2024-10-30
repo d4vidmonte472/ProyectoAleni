@@ -64,14 +64,10 @@
                             <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">QUEJAS</button>
                         </form>
                     </li>
-                    <li class="nav-item dropdown">
-                       
-                            
+                    <li class="nav-item ">
                                 <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvMosRepQue">
-                                    <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
+                                    <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf" >REPORTES QUEJAS</button>
                                 </form>
-                           
-                       
                     </li>
                     <li class="nav-item">
                         <form id="Logout" method="GET" action="../../index.jsp">
@@ -99,7 +95,8 @@
                 
                 
                 <label>Fecha:</label>
-                <input type="text" name="fecha" value="<%= editado.getFecha()%>" required><br>
+                <input type="date" id="fecha" name="fecha"  value="<%= editado.getFecha()%>" required="">
+          
                 
                 <label>Detalle:</label>
                 <input type="text" name="detalle" value="<%= editado.getDetalle()%>" required><br>
@@ -121,5 +118,5 @@
             </form>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <script src="../../JS/validacionFecha.js"></script>    
 </html>

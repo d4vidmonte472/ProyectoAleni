@@ -255,10 +255,9 @@
     
     <script src="../JS/municipios.js"></script>
     <script src="../JS/municipiosP.js"></script>
-<<<<<<< HEAD
     <script src="../JS/validacionFecha.js"></script>
-=======
+
    <script src="../JS/validacion.js" defer></script>
->>>>>>> d0abf2e61c924eda0e0f7fbb50e9362d18eed55c
+
 </body>
 </html>

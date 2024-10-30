@@ -65,14 +65,10 @@
                             <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf">QUEJAS</button>
                         </form>
                     </li>
-                    <li class="nav-item dropdown">
-                       
-                            
+                    <li class="nav-item ">
                                 <form id="Reports" method="GET" action="${pageContext.request.contextPath}/SvMosRepQue">
-                                    <button type="submit" class="dropdown-item">REPORTES QUEJAS</button>
+                                    <button type="submit" class="btn btn-dark btn-lg" style="color:#bcbebf" >REPORTES QUEJAS</button>
                                 </form>
-                           
-                       
                     </li>
                     <li class="nav-item">
                         <form id="Logout" method="GET" action="../../index.jsp">

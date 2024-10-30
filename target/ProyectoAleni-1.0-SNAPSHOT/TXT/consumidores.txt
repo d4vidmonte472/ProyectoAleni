@@ -24,3 +24,5 @@ otro,juridico,12345679,884338453,Gadiel,David,Monterroso,Saber,de san cristobal,
 guatemalteco,individual,12345678,12345678,Gabriel,Pito,elBorracho,Corto,de la ChupaChups,AASASFGA,zona-16,17,1709,Mixco,12456789,23457889,12345678,eeee@gmail.com,true,h
 guatemalteco,individual,1324578,1346578,Jorge,Andre,Gil,saber,de Mynor ntt son bromas Mynor se te quiere no se enoje ,fhgfg,zona-4,18,1802,Izabal,12456789,23457889,12345678,david.monterrosod.g@gmail.com,false,h
 >>>>>>> 39a8a68e603130db9601cc90b879109c2903fd4f
+
+guatemalteco,individual,151574,12345,3818181,David,Monterroso ,Saber ,de san cristobal,villa nueva,sin-zona,4,413,Baja Verapaz,411354,138131,123456,Mcospin2018ig@gmail.com,false,h

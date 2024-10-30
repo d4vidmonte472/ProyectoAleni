@@ -1,4 +1,5 @@
 Numero de Queja: 2337
+<<<<<<< HEAD
 Fecha de la queja: 2024-10-14
 Nombre del Consumidor: LonganizaHuevo
 Nombre de la Empresa: Huevos
@@ -10,3 +11,10 @@ Se trata de una actividad específicamente humana relacionada con el mantenimien
 La acción esta dirigida hacia objetos determinados o conjunto de objetos y apunta hacia fuera y más allá de si misma.  Por otra parte, la acción entra y penetra al sujeto, lo cambia. 
 
 Detalle: La muerte no solo presente en el término de la vida, sino que se anuncia a través del dolor y la enfermedad. La conciencia de la muerte está ligada al sentido o sinsentido de la vida, “La interpretación de la muerte es algo que depende de la concepción que se tenga sobre el hombre y su existencia corporal” J. Pieper.
+=======
+Fecha de la queja: 2024-10-31
+Nombre del Consumidor: Monterroso 3818181
+Nombre de la Empresa: 1135
+Solicitud: dsadssda
+Detalle: sdaadda
+>>>>>>> d0abf2e61c924eda0e0f7fbb50e9362d18eed55c

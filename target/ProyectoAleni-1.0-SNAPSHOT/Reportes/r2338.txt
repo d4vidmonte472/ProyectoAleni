@@ -1,6 +1,14 @@
 Numero de Queja: 2338
+<<<<<<< HEAD
 Fecha de la queja: 2024-10-11
 Nombre del Consumidor: LonganizaHuevo
 Nombre de la Empresa: Huevos
 Solicitud: no se que tnto aguante
 Detalle: 123456789132456789132456897132
+=======
+Fecha de la queja: 2024-10-30
+Nombre del Consumidor: Monterroso 3818181
+Nombre de la Empresa: 1135
+Solicitud: fsd
+Detalle: df
+>>>>>>> d0abf2e61c924eda0e0f7fbb50e9362d18eed55c

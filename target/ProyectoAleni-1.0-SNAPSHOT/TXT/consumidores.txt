@@ -20,8 +20,22 @@ guatemalteco,individual,151574,12345,3818181,David,Monterroso,Saber,de san crist
 guatemalteco,individual,151574,12345,3818181,David,Monterroso,Saber,de san cristobal,villa nueva,sin-zona,15,1504,Retalhuleu,411354,138131,123456,Mcospin2018ig@gmail.com,false,m
 otro,juridico,12345679,884338453,Gadiel,David,Monterroso,Saber,de san cristobal,villa nueva,zona-13,14,1416,Quiché,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
 guatemalteco,individual,12345678,12345678,Gabriel,Pito,elBorracho,Corto,de la ChupaChups,AASASFGA,zona-16,17,1709,Mixco,12456789,23457889,12345678,eeee@gmail.com,true,h
+<<<<<<< HEAD
 guatemalteco,individual,1324578,1346578,Jorge,Andre,Gil,saber,de Mynor ntt son bromas Mynor se te quiere no se enoje,fhgfg,zona-4,18,1802,Izabal,12456789,23457889,12345678,david.monterrosod.g@gmail.com,false,h
 guatemalteco,individual,151574,12345,3818181,David,Monterroso,Saber,de san cristobal,villa nueva,sin-zona,4,413,Baja Verapaz,411354,138131,123456,Mcospin2018ig@gmail.com,false,h
 guatemalteco,individual,13245678,12345678,Huevo,Pollo,Longaniza,Remolacha,Sopa China,tu corazon beibi,zona-17,17,1708,San Marcos,1324578,1324578,65986532,cindycindy@gmail.com,true,m
 guatemalteco,individual,13245678,13456789,Huevo,Pollo,Longaniza,Remolacha,Sopa China,tu corazon beibi,zona-3,18,1803,Baja Verapaz,1324578,1324578,65986532,cindycindy@gmail.com,true,h
 guatemalteco,individual,12345678,13246578,Pedro,Ricardo,Hernandez,Rodrigez,de Fajardo,tu corazon beibi,zona-18,17,1710,Chiquimula,23568978,56897845,65986532,cindycindy@gmail.com,false,h
+=======
+guatemalteco,individual,1324578,1346578,Jorge,Andre,Gil,saber,de Mynor ntt son bromas Mynor se te quiere no se enoje ,fhgfg,zona-4,18,1802,Izabal,12456789,23457889,12345678,david.monterrosod.g@gmail.com,false,h
+>>>>>>> 39a8a68e603130db9601cc90b879109c2903fd4f
+
+guatemalteco,individual,151574,12345,3818181,David,Monterroso ,Saber ,de san cristobal,villa nueva,sin-zona,4,413,Baja Verapaz,411354,138131,123456,Mcospin2018ig@gmail.com,false,h
+guatemalteco,individual,151574,12345,3818181,David,Monterroso ,Saber ,de san cristobal,villa nueva,zona-13,15,1505,Zacapa,411354,138131,123456,Mcospin2018ig@gmail.com,false,h
+guatemalteco,individual,151574,12345,3818181,David,Monterroso ,Saber ,de san cristobal,villa nueva,sin-zona,2,202,Chiquimula,411354,138131,123456,Mcospin2018ig@gmail.com,false,h
+guatemalteco,individual,151574,12345,3818181,David,Monterroso ,Saber ,de san cristobal,villa nueva,sin-zona,4,410,Baja Verapaz,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,151574,12345,3818181,David,Monterroso ,Saber ,de san cristobal,villa nueva,sin-zona,12,1214,Chimaltenango,411354,138131,123456,Mcospin2018ig@gmail.com,true,h
+guatemalteco,individual,151574,12345,3818181,David,Monterroso ,Saber ,de san cristobal,villa nueva,sin-zona,10,1011,Baja Verapaz,411354,138131,123456,Mcospin2018ig@gmail.com,false,h
+guatemalteco,individual,151574,12345,3818181,David,Monterroso ,Saber ,de san cristobal,villa nueva,sin-zona,4,410,Baja Verapaz,411354,138131,123456,Mcospin2018ig@gmail.com,false,h
+guatemalteco,individual,151574,12345,3818181,David,Monterroso ,Saber ,de san cristobal,villa nueva,sin-zona,12,1213,Baja Verapaz,411354,138131,123456,Mcospin2018ig@gmail.com,false,h
+>>>>>>> d0abf2e61c924eda0e0f7fbb50e9362d18eed55c

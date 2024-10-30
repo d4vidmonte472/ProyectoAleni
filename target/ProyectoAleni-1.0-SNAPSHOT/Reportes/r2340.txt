@@ -1,0 +1,6 @@
+Numero de Queja: 2340
+Fecha de la queja: 2024-11-07
+Nombre del Consumidor: Monterroso 3818181
+Nombre de la Empresa: 1135
+Solicitud: dfs
+Detalle:  wssf

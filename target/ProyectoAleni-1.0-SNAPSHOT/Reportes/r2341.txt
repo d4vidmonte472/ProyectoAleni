@@ -1,0 +1,6 @@
+Numero de Queja: 2341
+Fecha de la queja: 2024-10-23
+Nombre del Consumidor: Monterroso 3818181
+Nombre de la Empresa: 1135
+Solicitud: sda
+Detalle: sda

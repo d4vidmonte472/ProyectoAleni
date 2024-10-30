@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/bootstrap.min.css">
     <script src="../JS/bootstrap.bundle.min.js"></script>
-    <script src="../JS/validacion.js" defer></script>
+    
 </head>
 <body>
     <nav>
@@ -252,8 +252,13 @@
     </div>
     <input type="submit" value="Enviar">
 </form>
+    
     <script src="../JS/municipios.js"></script>
     <script src="../JS/municipiosP.js"></script>
+<<<<<<< HEAD
     <script src="../JS/validacionFecha.js"></script>
+=======
+   <script src="../JS/validacion.js" defer></script>
+>>>>>>> d0abf2e61c924eda0e0f7fbb50e9362d18eed55c
 </body>
 </html>

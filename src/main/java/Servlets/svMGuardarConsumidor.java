@@ -98,6 +98,8 @@ public class svMGuardarConsumidor extends HttpServlet {
         Boolean autorizacion = Boolean.valueOf(request.getParameter("check"));
         
         
+        
+        
         Consumidor consumidor = new Consumidor(nacionalidad, tipoConsumidor, nit, dpi, nombre1, nombre2, apellido1, apellido2, apellidoCasada, direccion, zona, departamento, municipio, sede, telDom, tel, telRef, correo, autorizacion, sexo);
     
        
